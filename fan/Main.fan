@@ -96,15 +96,15 @@ class Main : AbstractMain
     // return output to console that aligns with point's match condition
     if (hasFullMatch) 
     {
-      echo("   " + toDis(point) + " | proto:" + theseMatches)
-    }
+      a:=1 //echo("   " + toDis(point) + " | proto:" + theseMatches)
+    } 
     else if (theseMatches.isEmpty)
     {
-      echo("   NO MATCH: " + toDis(point) + "")
+      echo("   " + toDis(point) + ": NO MATCH")
     }
     else
     {
-      echo("   PARTIAL MATCHES: " + toDis(point) + "")
+      echo("   " + toDis(point) + ": PARTIAL MATCHES")
       theseMatches.each |matchList| {
         echo("     - $matchList")
       }
@@ -219,6 +219,7 @@ class Main : AbstractMain
        else if (proto.has("equip"))
          findProtoPoints(acc, proto)
     }
+    acc= acc.findAll |p| {p.has("point")}.findAll |row| {row.has("sensor") || row.has("sp") || row.has("cmd")}
     return acc
   }
 
