@@ -81,7 +81,7 @@ class Main : AbstractMain
   {
     
     // get list of tags on point to match to protos
-    thisPointTagList:= reduceProtoToTagList(point)  //replace with Etc.dictFindAll
+    thisPointTagList:= reduceProtoToTagList(point) //replace with Etc.dictFindAll
 
     // set hasFullMatch flag to false
     hasFullMatch:= false
@@ -109,7 +109,6 @@ class Main : AbstractMain
         echo("     - $matchList")
       }
     }
-
   }
 
   ** Create a list of matches. If 100% match, update point and return null, else return list of top matches
@@ -118,54 +117,52 @@ class Main : AbstractMain
     // create empty list to store prototype matches
     matchedProtos:= Dict[,]
     
-    // if proto variable is not empty
-    if (protos.size > 0)
+    // if the protos variable is empty, return an empty list.
+    if (protos.isEmpty) return [,]
+      
+    // iterate the protos and if a match is found, add to matchedProtos list
+    protos.each |row| 
     {
-      // iterate the protos and if a match is found, add to matchedProtos list
-      protos.each |row| 
-      {
-        thisPercentMatch:= protoMatchPercent(point, row, ns)
-        Dict newRow:= Etc.makeDict2("tagList", reduceProtoToTagList(row), "percentMatch", thisPercentMatch)
-        matchedProtos= matchedProtos.add(newRow)
-      }
-      
-      // reverse sort matchedProtos list
-      closeMatches:= Etc.makeDictsGrid(null, matchedProtos).sortColr("percentMatch")
-      
-      // get the highest percent match
-      bestMatchPercent:= closeMatches[0]->percentMatch
-      
-      // if there is a full match (100%), return the list of tags of the matched prototype (returns Str[])
-      if (bestMatchPercent == Number(100)) 
-      {
-        thisTagList:= closeMatches[0]->tagList
-        point= Etc.dictSet(point, "protoMatch", thisTagList)
-        return thisTagList
-      }
-      // if not, return a list of the matched prototypes tags (returns List[])
-      else
-      {
-        // filter matches for only those with the highest match precent
-        bestMatches:= closeMatches.findAll |matchRow| {matchRow->percentMatch == bestMatchPercent}
-        thesePartialMatches:= List[,]
-        
-        // add the bestMatches to thisPartialMatches var
-        bestMatchSize:= bestMatches.size
-        if (bestMatchSize >= 5)
-          bestMatches= bestMatches[0..4]
-        
-        bestMatches.each |bestMatch| 
-        {
-          thisTagList:= bestMatch->tagList 
-          thesePartialMatches=  thesePartialMatches.add(thisTagList)
-        }
-        
-        return thesePartialMatches
-      }
+      thisPercentMatch:= protoMatchPercent(point, row, ns)
+      tags:= reduceProtoToTagList(row)
+      Dict newRow:= Etc.makeDict2("tagList", tags, "percentMatch", thisPercentMatch)
+      matchedProtos= matchedProtos.add(newRow)
     }
     
-    // if there are no matches, return an empty lsit
-    else return [,]
+    // reverse sort matchedProtos list
+    closeMatches:= Etc.makeDictsGrid(null, matchedProtos).sortColr("percentMatch")
+    
+    // get the highest percent match
+    bestMatchPercent:= closeMatches[0]->percentMatch
+    
+    // if there is a full match (100%), return the list of tags of the matched prototype (returns Str[])
+    if (bestMatchPercent == Number(100)) 
+    {
+      thisTagList:= closeMatches[0]->tagList
+      point= Etc.dictSet(point, "protoMatch", thisTagList)
+      return thisTagList
+    }
+    // if not, return a list of the matched prototypes tags (returns List[])
+    else
+    {
+      // filter matches for only those with the highest match precent
+      bestMatches:= closeMatches.findAll |matchRow| {matchRow->percentMatch == bestMatchPercent}
+      thesePartialMatches:= List[,]
+      
+      // add the bestMatches to thisPartialMatches var
+      bestMatchSize:= bestMatches.size
+      if (bestMatchSize >= 5)
+        bestMatches= bestMatches[0..4]
+      
+      bestMatches.each |bestMatch| 
+      {
+        thisTagList:= bestMatch->tagList 
+        thesePartialMatches=  thesePartialMatches.add(thisTagList)
+      }
+      
+      return thesePartialMatches
+    }
+    
   }
 
   ** return percentage of matching defs between point and proto (0-100)
@@ -177,30 +174,10 @@ class Main : AbstractMain
     // reflect point to get tags to match
     pointReflect:= ns.reflect(point).toGrid.findAll |row| {(!(row->def.toStr.contains("Ref") || row->def.toStr == "point"))}.keepCols(["def"])
 
-    // build a grid that will tally tag matches
-    gb:= GridBuilder()
-    gb= gb.addCol("protoDef")
-    gb= gb.addCol("matchInPoint")
-    
-    // for each def of the protoReflect, look to see if the point also has that def.
-    protoReflect.each |protoRow| 
-    {
-      isMatched:=false
-      match:= pointReflect.find |ptRow| {ptRow["def"] == protoRow["def"]}
-  
-      if (match is Dict) isMatched= true
+    matchGrid:= pointReflect.findAll |protoDef| {protoReflect.colToList("def").contains(protoDef->def)}
 
-      // add tag and matched status to grid
-      gb= gb.addRow([protoRow["def"], isMatched])
-    }
-    
-    matchGrid:= gb.toGrid
-
-    // make a list of the matched tags
-    isMatchedList:= matchGrid.findAll|row| {row->matchInPoint == true}
-
-    matchedSize:= Number(isMatchedList.size)
-    gridSize:= Number(matchGrid.size)
+    matchedSize:= Number(matchGrid.size)
+    gridSize:= Number(protoReflect.size)
     
     // calculate matchedPercent
     isMatched:= ((matchedSize / gridSize) * Number(100))
