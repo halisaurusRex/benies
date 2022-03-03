@@ -1,0 +1,626 @@
+ver:"3.0" numPoints:562 numSpaces:0 anonymized numWeathers:8 numEquips:52 donatedBy:"Thomas Duke" doc:"One tenant's space in a multi-story office building."
+id,ac,actuator,ahu,air,airRef,area,atmospheric,boiler,chilled,chiller,cmd,co2,cooling,cur,current,damper,daytime,demand,dewPoint,dis,discharge,effective,elec,enable,energy,entering,enum,equip,equipRef,fan,feelsLike,flow,geoAddr,geoCity,geoCoord,geoCountry,geoPostalCode,geoState,geoStreet,heat,heating,his,hisTotalized,hot,humidity,kind,leaving,light,maxVal,meter,minVal,mixed,occ,occupied,outside,point,power,precipitation,pressure,primaryFunction,pump,reactive,return,run,sensor,site,siteMeter,siteRef,sp,speed,submeterOf,temp,tz,unit,unocc,valve,vav,volume,water,weather,weatherCond,weatherStationRef,weatherStation,yearBuilt,zone,custom
+@c-0000,,,,,,50000ft²,,,,,,,,,,,,,,"Charlie",,,,,,,,,,,,,"123 Some Rd, Troy, MI 48007","Troy",,"US","48007","MI","123 Some Rd",,,,,,,,,,,,,,,,,,,,,"Office",,,,,,M,,,,,,,"Detroit",,,,,,,,,@c-0267,,1995,,
+@c-0001,,,M,,,,,,,,,,,,,,,,,"Charlie AHU 1",,,,,,,,M,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,@c-0000,,,,,,,,,,,,,,,,,,{equipGroup:"AHUs"}
+@c-0002,,,,M,,,,,,,,M,,M,,,,,,"Charlie AHU 1 CO2",,,,,,,,,@c-0001,,,,,,,,,,,,,M,,,,"Number",,,,,,,,,,M,,,,,,,,,M,,,@c-0000,,,,,"New_York","ppm",,,,,,,,,,,M,
+@c-0003,,,,M,,,,,,,,M,,M,,,,,,"Charlie AHU 1 CO2 Setpoint",,,,,,,,,@c-0001,,,,,,,,,,,,,M,,,,"Number",,,,,,,,,,M,,,,,,,,,,,,@c-0000,M,,,,"New_York","ppm",,,,,,,,,,,M,
+@c-0004,,,,,,,,,M,,M,,,M,,,,,,"Charlie AHU 1 Chilled Water Valve Status",,,,,,,,,@c-0001,,,,,,,,,,,,,M,,,,"Number",,,,,,,,,,M,,,,,,,,,,,,@c-0000,,,,,"New_York","%",,M,,,M,,,,,,,
+@c-0005,,,,M,,,,,,,,,,M,,,,,,"Charlie AHU 1 Discharge Air Pressure",M,,,,,,,,@c-0001,,,,,,,,,,,,,M,,,,"Number",,,,,,,,,,M,,,M,,,,,,M,,,@c-0000,,,,,"New_York","inH₂O",,,,,,,,,,,,{precision:2}
+@c-0006,,,,M,,,,,,,,,,M,,,,,,"Charlie AHU 1 Discharge Air Pressure Setpoint",M,,,,,,,,@c-0001,,,,,,,,,,,,,M,,,,"Number",,,,,,,,,,M,,,M,,,,,,,,,@c-0000,M,,,,"New_York","inH₂O",,,,,,,,,,,,{precision:2}
+@c-0007,,,,M,,,,,,,,,,M,,,,,,"Charlie AHU 1 Discharge Air Temp",M,,,,,,,,@c-0001,,,,,,,,,,,,,M,,,,"Number",,,,,,,,,,M,,,,,,,,,M,,,@c-0000,,,,M,"New_York","°F",,,,,,,,,,,,
+@c-0008,,,,M,,,,,,,,,,M,,,,,,"Charlie AHU 1 Discharge Air Temp Reset",M,,,,,,,,@c-0001,,,,,,,,,,,,,M,,,,"Number",,,,,,,,,,M,,,,,,,,,,,,@c-0000,M,,,M,"New_York","°F",,,,,,,,,,,,{rest}
+@c-0009,,,,M,,,,,,,M,,,M,,M,,,,"Charlie AHU 1 Mixed Air Damper Command",,,,,,,,,@c-0001,,,,,,,,,,,,,M,,,,"Number",,,,,,M,,,,M,,,,,,,,,,,,@c-0000,,,,,"New_York",,,,,,,,,,,,,{precision:1}
+@c-000a,,,,M,,,,,,,,,,M,,,,,,"Charlie AHU 1 Mixed Air Temp Sensor",,,,,,,,,@c-0001,,,,,,,,,,,,,M,,,,"Number",,,,,,M,,,,M,,,,,,,,,M,,,@c-0000,,,,M,"New_York","°F",,,,,,,,,,,,
+@c-000b,,,,M,,,,,,,,,,M,,,,,,"Charlie AHU 1 Mixed Air Temp Setpoint",,,,,,,,,@c-0001,,,,,,,,,,,,,M,,,,"Number",,,,,,M,,,,M,,,,,,,,,,,,@c-0000,M,,,M,"New_York","°F",,,,,,,,,,,,
+@c-000c,,,,,,,,,,,M,,,M,,,,,,"Charlie AHU 1 Occupied Command",,,,,,,"UnOccupied,Occupied",,@c-0001,,,,,,,,,,,,,M,,,,"Bool",,,,,,,,M,,M,,,,,,,,,,,,@c-0000,,,,,"New_York",,,,,,,,,,,,,
+@c-000d,,,,M,,,,,,,,,,M,,,,,,"Charlie AHU 1 Outside Air Temp Sensor",,,,,,,,,@c-0001,,,,,,,,,,,,,M,,,,"Number",,,,,,,,,M,M,,,,,,,,,M,,,@c-0000,,,,M,"New_York","°F",,,,,,,,,,,,
+@c-000e,,,,M,,,,,,,,,,M,,,,,,"Charlie AHU 1 Return Air Temp Sensor",,,,,,,,,@c-0001,,,,,,,,,,,,,M,,,,"Number",,,,,,,,,,M,,,,,,,M,,M,,,@c-0000,,,,M,"New_York","°F",,,,,,,,,,,,
+@c-000f,,,,M,,,,,,,M,,,M,,,,,,"Charlie AHU 1 Return Fan Command",,,,,,,"Off,On",,@c-0001,M,,,,,,,,,,,,M,,,,"Bool",,,,,,,,,,M,,,,,,,M,,,,,@c-0000,,,,,"New_York",,,,,,,,,,,,,
+@c-0010,,,,M,,,,,,,,,,M,,,,,,"Charlie AHU 1 Return Fan Status",,,,,,,"Off,On",,@c-0001,M,,,,,,,,,,,,M,,,,"Bool",,,,,,,,,,M,,,,,,,M,M,M,,,@c-0000,,,,,"New_York",,,,,,,,,,,,,
+@c-0011,,,,M,,,,,,,M,,,M,,,,,,"Charlie AHU 1 Return Fan VFD Signal",,,,,,,,,@c-0001,M,,,,,,,,,,,,M,,,,"Number",,,,,,,,,,M,,,,,,,M,,,,,@c-0000,,M,,,"New_York","%",,,,,,,,,,,,
+@c-0012,,,,M,,,,,,,M,,,M,,,,,,"Charlie AHU 1 ReturnFan",,,,,,,"false,true",,@c-0001,M,,,,,,,,,,,,M,,,,"Bool",,,,,,,,,,M,,,,,,,M,,,,,@c-0000,,,,,"New_York",,,,,,,,,,,,,
+@c-0013,,,,M,,,,,,,,,,M,,,,,,"Charlie AHU 1 ReturnFanStatus",,,,,,,"false,true",,@c-0001,M,,,,,,,,,,,,M,,,,"Bool",,,,,,,,,,M,,,,,,,M,M,M,,,@c-0000,,,,,"New_York",,,,,,,,,,,,,
+@c-0014,,,,M,,,,,,,M,,,M,,,,,,"Charlie AHU 1 Supply Fan Command",M,,,,,,"Off,On",,@c-0001,M,,,,,,,,,,,,M,,,,"Bool",,,,,,,,,,M,,,,,,,,,,,,@c-0000,,,,,"New_York",,,,,,,,,,,,,
+@c-0015,,,,M,,,,,,,,,,M,,,,,,"Charlie AHU 1 Supply Fan Status",M,,,,,,"Off,On",,@c-0001,M,,,,,,,,,,,,M,,,,"Bool",,,,,,,,,,M,,,,,,,,,M,,,@c-0000,,,,,"New_York",,,,,,,,,,,,,
+@c-0016,,,,M,,,,,,,M,,,M,,,,,,"Charlie AHU 1 Supply Fan VFD Speed",M,,,,,,,,@c-0001,M,,,,,,,,,,,,M,,,,"Number",,,,,,,,,,M,,,,,,,,,,,,@c-0000,,M,,,"New_York","%",,,,,,,,,,,,
+@c-0017,,,,M,,,,,,,M,,,M,,,,,,"Charlie AHU 1 SupplyFan",M,,,,,,"false,true",,@c-0001,M,,,,,,,,,,,,M,,,,"Bool",,,,,,,,,,M,,,,,,,,,,,,@c-0000,,,,,"New_York",,,,,,,,,,,,,
+@c-0018,,,,M,,,,,,,,,,M,,,,,,"Charlie AHU 1 SupplyfanStatus",M,,,,,,"false,true",,@c-0001,M,,,,,,,,,,,,M,,,,"Bool",,,,,,,,,,M,,,,,,,,M,M,,,@c-0000,,,,,"New_York",,,,,,,,,,,,,
+@c-0019,,,,M,,,,,,,,,,M,,,,,,"Charlie AHU 1 Zone Air Temp Sensor",,,,,,,,,@c-0001,,,,,,,,,,,,,M,,,,"Number",,,,,,,,,,M,,,,,,,,,M,,,@c-0000,,,,M,"New_York","°F",,,,,,,,,,,M,
+@c-001a,,,M,,,,,,,,,,,,,,,,,"Charlie AHU-2",,,,,,,,M,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,@c-0000,,,,,,,,,,,,,,,,,,{equipGroup:"AHUs"}
+@c-001b,,,,M,,,,,,,,,,M,,,,,,"Charlie AHU-2 AHU2-BLD~2dP-SetPoint",M,,,,,,,,@c-001a,,,,,,,,,,,,,M,,,,"Number",,,,,,,,,,M,,,M,,,,,,,,,@c-0000,M,,,,"New_York","in/wc",,,,,,,,,,,,{precision:2}
+@c-001c,,,,M,,,,,,,,,,M,,,,,,"Charlie AHU-2 AHU2-BLD~2dPressure",M,,,,,,,,@c-001a,,,,,,,,,,,,,M,,,,"Number",,,,,,,,,,M,,,M,,,,,,M,,,@c-0000,,,,,"New_York","in/wc",,,,,,,,,,,,{precision:2}
+@c-001d,,,,,,,,,M,,M,,,M,,,,,,"Charlie AHU-2 AHU2-CHW~2dValve",,,,,,,,,@c-001a,,,,,,,,,,,,,M,,,,"Number",,,,,,,,,,M,,,,,,,,,,,,@c-0000,,,,,"New_York","%",,M,,,M,,,,,,,
+@c-001e,,,,M,,,,,,,,,,M,,,,,,"Charlie AHU-2 AHU2-DA~2dP",M,,,,,,,,@c-001a,,,,,,,,,,,,,M,,,,"Number",,,,,,,,,,M,,,M,,,,,,M,,,@c-0000,,,,,"New_York","in/wc",,,,,,,,,,,,{precision:2}
+@c-001f,,,,M,,,,,,,,,,M,,,,,,"Charlie AHU-2 AHU2-DA~2dP-SetPoint",M,,,,,,,,@c-001a,,,,,,,,,,,,,M,,,,"Number",,,,,,,,,,M,,,M,,,,,,,,,@c-0000,M,,,,"New_York","in/wc",,,,,,,,,,,,{precision:2}
+@c-0020,,,,M,,,,,,,,,,M,,,,,,"Charlie AHU-2 AHU2-Discharge Air Temp-Reset",M,,,,,,,,@c-001a,,,,,,,,,,,,,M,,,,"Number",,,,,,,,,,M,,,,,,,,,,,,@c-0000,M,,,M,"New_York","°F",,,,,,,,,,,,{reset}
+@c-0021,,,,,,,,,,,M,,,M,,,,,,"Charlie AHU-2 AHU2-OCC~2dC",,,,,,,"UnOccupied,Occupied",,@c-001a,,,,,,,,,,,,,M,,,,"Bool",,,,,,,,M,,M,,,,,,,,,,,,@c-0000,,,,,"New_York",,,,,,,,,,,,,
+@c-0022,,,,,,,,,,,,,,M,,,,,,"Charlie AHU-2 AHU2-Override",,,,,,,"Off,On",,@c-001a,,,,,,,,,,,,,M,,,,"Bool",,,,,,,,M,,M,,,,,,,,,M,,,@c-0000,,,,,"New_York",,,,,,,,,,,,,
+@c-0023,,,,M,,,,,,,,,,M,,,,,,"Charlie AHU-2 AHU2-RF~2dS",,,,,,,"Off,On",,@c-001a,M,,,,,,,,,,,,M,,,,"Bool",,,,,,,,,,M,,,,,,,M,M,M,,,@c-0000,,,,,"New_York",,,,,,,,,,,,,
+@c-0024,,,,M,,,,,,,M,,,M,,,,,,"Charlie AHU-2 AHU2-RF~2dVFD",,,,,,,,,@c-001a,M,,,,,,,,,,,,M,,,,"Number",,,,,,,,,,M,,,,,,,M,,,,,@c-0000,,M,,,"New_York","%",,,,,,,,,,,,
+@c-0025,,,,M,,,,,,,M,,,M,,,,,,"Charlie AHU-2 AHU2-SF~2dC",M,,,,,,"Off,On",,@c-001a,M,,,,,,,,,,,,M,,,,"Bool",,,,,,,,,,M,,,,,,,,,,,,@c-0000,,,,,"New_York",,,,,,,,,,,,,
+@c-0026,,,,M,,,,,,,,,,M,,,,,,"Charlie AHU-2 AHU2-SF~2dS",M,,,,,,"Off,On",,@c-001a,M,,,,,,,,,,,,M,,,,"Bool",,,,,,,,,,M,,,,,,,,,M,,,@c-0000,,,,,"New_York",,,,,,,,,,,,,
+@c-0027,,,,M,,,,,,,M,,,M,,,,,,"Charlie AHU-2 AHU2-SF~2dVFD",M,,,,,,,,@c-001a,M,,,,,,,,,,,,M,,,,"Number",,,,,,,,,,M,,,,,,,,,,,,@c-0000,,M,,,"New_York","%",,,,,,,,,,,,
+@c-0028,,,,M,,,,,,,,M,,M,,,,,,"Charlie AHU-2 AHU2CO2SetPoint",,,,,,,,,@c-001a,,,,,,,,,,,,,M,,,,"Number",,,,,,,,,,M,,,,,,,,,,,,@c-0000,M,,,,"New_York","ppm",,,,,,,,,,,M,
+@c-0029,,,,M,,,,,,,,,,M,,,,,,"Charlie AHU-2 Discharge Air Temp",M,,,,,,,,@c-001a,,,,,,,,,,,,,M,,,,"Number",,,,,,,,,,M,,,,,,,,,M,,,@c-0000,,,,M,"New_York","°F",,,,,,,,,,,,
+@c-002a,,,,M,,,,,,,,,,M,,,,,,"Charlie AHU-2 Mixed Air Temp Sensor",,,,,,,,,@c-001a,,,,,,,,,,,,,M,,,,"Number",,,,,,M,,,,M,,,,,,,,,M,,,@c-0000,,,,M,"New_York","°F",,,,,,,,,,,,
+@c-002b,,,,M,,,,,,,,,,M,,,,,,"Charlie AHU-2 Mixed Air Temp Setpoint",,,,,,,,,@c-001a,,,,,,,,,,,,,M,,,,"Number",,,,,,M,,,,M,,,,,,,,,,,,@c-0000,M,,,M,"New_York","°F",,,,,,,,,,,,
+@c-002c,,,,M,,,,,,,,,,M,,,,,,"Charlie AHU-2 Outside Air Temp Sensor",,,,,,,,,@c-001a,,,,,,,,,,,,,M,,,,"Number",,,,,,,,,M,M,,,,,,,,,M,,,@c-0000,,,,M,"New_York","°F",,,,,,,,,,,,
+@c-002d,,,,M,,,,,,,,,,M,,,,,,"Charlie AHU-2 Return Air Temp Sensor",,,,,,,,,@c-001a,,,,,,,,,,,,,M,,,,"Number",,,,,,,,,,M,,,,,,,M,,M,,,@c-0000,,,,M,"New_York","°F",,,,,,,,,,,,
+@c-002e,,,,M,,,,,,,M,,,M,,,,,,"Charlie AHU-2 ReturnFan",,,,,,,"false,true",,@c-001a,M,,,,,,,,,,,,M,,,,"Bool",,,,,,,,,,M,,,,,,,M,,,,,@c-0000,,,,,"New_York",,,,,,,,,,,,,
+@c-002f,,,,M,,,,,,,,,,M,,,,,,"Charlie AHU-2 ReturnFanStatus",,,,,,,"false,true",,@c-001a,M,,,,,,,,,,,,M,,,,"Bool",,,,,,,,,,M,,,,,,,M,M,M,,,@c-0000,,,,,"New_York",,,,,,,,,,,,,
+@c-0030,,,,M,,,,,,,M,,,M,,,,,,"Charlie AHU-2 SupplyFan",M,,,,,,"false,true",,@c-001a,M,,,,,,,,,,,,M,,,,"Bool",,,,,,,,,,M,,,,,,,,,,,,@c-0000,,,,,"New_York",,,,,,,,,,,,,
+@c-0031,,,,M,,,,,,,,,,M,,,,,,"Charlie AHU-2 SupplyfanStatus",M,,,,,,"false,true",,@c-001a,M,,,,,,,,,,,,M,,,,"Bool",,,,,,,,,,M,,,,,,,,M,M,,,@c-0000,,,,,"New_York",,,,,,,,,,,,,
+@c-0032,,,,M,,,,,,,,,,M,,,,,,"Charlie AHU-2 Zone Air Temp Sensor",,,,,,,,,@c-001a,,,,,,,,,,,,,M,,,,"Number",,,,,,,,,,M,,,,,,,,,M,,,@c-0000,,,,M,"New_York","°F",,,,,,,,,,,M,
+@c-0033,,,,,,,,M,,,,,,,,,,,,"Charlie B100 BOILERS PUMPS",,,,,,,,M,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,@c-0000,,,,,,,,,,,,,,,,,,{equipGroup:"Hot Water Systems"}
+@c-0034,,,,,,,,M,,,M,,,M,,,,,,"Charlie B100 BOILERS PUMPS BLR1~2dC",,,,M,,,"On,Off",,@c-0033,,,,,,,,,,,,,M,,,,"Bool",,,,,,,,,,M,,,,,,,,,,,,@c-0000,,,,,"New_York",,,,,,,,,,,,,
+@c-0035,,,,,,,,M,,,M,,,M,,,,,,"Charlie B100 BOILERS PUMPS BLR2~2dC-",,,,M,,,"On,Off",,@c-0033,,,,,,,,,,,,,M,,,,"Bool",,,,,,,,,,M,,,,,,,,,,,,@c-0000,,,,,"New_York",,,,,,,,,,,,,
+@c-0036,,,,,,,,M,,,,,,M,,,,,,"Charlie B100 BOILERS PUMPS Boiler-Reset",,,,,,,,,@c-0033,,,,,,,,,,,,,M,,,,"Number",,,,,,,,,,M,,,,,,,,,,,,@c-0000,M,,,,"New_York","°F",,,,,,,,,,,,{reset}
+@c-0037,,,,,,,,M,,,M,,,M,,,,,,"Charlie B100 BOILERS PUMPS Boiler1",,,,M,,,"false,true",,@c-0033,,,,,,,,,,,,,M,,,,"Bool",,,,,,,,,,M,,,,,,,,,,,,@c-0000,,,,,"New_York",,,,,,,,,,,,,
+@c-0038,,,,,,,,M,,,M,,,M,,,,,,"Charlie B100 BOILERS PUMPS Boiler2",,,,M,,,"false,true",,@c-0033,,,,,,,,,,,,,M,,,,"Bool",,,,,,,,,,M,,,,,,,,,,,,@c-0000,,,,,"New_York",,,,,,,,,,,,,
+@c-0039,,,,,,,,,,,M,,,M,,,,,,"Charlie B100 BOILERS PUMPS HWP1~2dC",,,,,,,"On,Off",,@c-0033,,,,,,,,,,,,,M,,M,,"Bool",,,,,,,,,,M,,,,,M,,,M,,,,@c-0000,,,,,"New_York",,,,,,M,,,,,,,
+@c-003a,,,,,,,,,,,,,,M,,,,,,"Charlie B100 BOILERS PUMPS HWP1~2dS",,,,,,,"Off,On",,@c-0033,,,,,,,,,,,,,M,,M,,"Bool",,,,,,,,,,M,,,,,M,,,M,M,,,@c-0000,,,,,"New_York",,,,,,M,,,,,,,
+@c-003b,,,,,,,,,,,M,,,M,,,,,,"Charlie B100 BOILERS PUMPS HWP2~2dC",,,,,,,"On,Off",,@c-0033,,,,,,,,,,,,,M,,M,,"Bool",,,,,,,,,,M,,,,,M,,,M,,,,@c-0000,,,,,"New_York",,,,,,M,,,,,,,
+@c-003c,,,,,,,,,,,,,,M,,,,,,"Charlie B100 BOILERS PUMPS HWP2~2dS",,,,,,,"Off,On",,@c-0033,,,,,,,,,,,,,M,,M,,"Bool",,,,,,,,,,M,,,,,M,,,M,M,,,@c-0000,,,,,"New_York",,,,,,M,,,,,,,
+@c-003d,,,,,,,,,,,M,,,M,,,,,,"Charlie B100 BOILERS PUMPS HWP3~2dC",,,,,,,"On,Off",,@c-0033,,,,,,,,,,,,,M,,M,,"Bool",,,,,,,,,,M,,,,,M,,,M,,,,@c-0000,,,,,"New_York",,,,,,M,,,,,,,
+@c-003e,,,,,,,,,,,,,,M,,,,,,"Charlie B100 BOILERS PUMPS HWP3~2dS",,,,,,,"Off,On",,@c-0033,,,,,,,,,,,,,M,,M,,"Bool",,,,,,,,,,M,,,,,M,,,M,M,,,@c-0000,,,,,"New_York",,,,,,M,,,,,,,
+@c-003f,,,,,,,,,,,,,,M,,,,,,"Charlie B100 BOILERS PUMPS HWR~2dT",,,,,,M,,,@c-0033,,,,,,,,,,,,,M,,M,,"Number",,,,,,,,,,M,,,,,,,,,M,,,@c-0000,,,,M,"New_York","°F",,,,,M,,,,,,,
+@c-0040,,,,,,,,,,,,,,M,,,,,,"Charlie B100 BOILERS PUMPS HWS~2dT",,,,,,,,,@c-0033,,,,,,,,,,,,,M,,M,,"Number",M,,,,,,,,,M,,,,,,,,,M,,,@c-0000,,,,M,"New_York","°F",,,,,M,,,,,,,
+@c-0041,,,,M,,,,,,,,,,M,,,,,,"Charlie B100 BOILERS PUMPS Outside Air Temp Sensor Lockout Setpoint",,,,,,,,,@c-0033,,,,,,,,,,,,,M,,,,"Number",,,,,,,,,M,M,,,,,,,,,,,,@c-0000,M,,,M,"New_York","°F",,,,,,,,,,,,{lockout}
+@c-0042,,,,,,,,,,M,,,,,,,,,,"Charlie B100 CHILLER-1",,,,,,,,M,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,@c-0000,,,,,,,,,,,,,,,,,,{equipGroup:"Chilled Water System"}
+@c-0043,,,,,,,,,M,,,,,M,,,,,,"Charlie B100 CHILLER-1 CHWR~2dT",,,,,,M,,,@c-0042,,,,,,,,,,,,,M,,,,"Number",,,,,,,,,,M,,,,,,,,,M,,,@c-0000,,,,M,"New_York","°F",,,,,M,,,,,,,
+@c-0044,,,,,,,,,M,,,,,M,,,,,,"Charlie B100 CHILLER-1 CHWS~2dT",,,,,,,,,@c-0042,,,,,,,,,,,,,M,,,,"Number",M,,,,,,,,,M,,,,,,,,,M,,,@c-0000,,,,M,"New_York","°F",,,,,M,,,,,,,
+@c-0045,,,,,,,,,,M,M,,,M,,,,,,"Charlie B100 CHILLER-1 Chiler-Override",,,,M,,,"Off,On",,@c-0042,,,,,,,,,,,,,M,,,,"Bool",,,,,,,,,,M,,,,,,,,,,,,@c-0000,,,,,"New_York",,,,,,,,,,,,,
+@c-0046,,,,,,,,,,,,,,M,M,,,,,"Charlie B100 CHILLER-1 Chiller-1-Amps",,,M,,,,,,@c-0042,,,,,,,,,,,,,M,,,,"Number",,,,,,,,,,M,,,,,,,,,M,,,@c-0000,,,,,"New_York","A",,,,,,,,,,,,{precision:1}
+@c-0047,,,,,,,,,,M,M,,,M,,,,,,"Charlie B100 CHILLER-1 Chiller-1-Command",,,,M,,,"Off,On",,@c-0042,,,,,,,,,,,,,M,,,,"Bool",,,,,,,,,,M,,,,,,,,,,,,@c-0000,,,,,"New_York",,,,,,,,,,,,,
+@c-0048,,,,M,,,,,,,,,,M,,,,,,"Charlie B100 CHILLER-1 OAT-Chiller-Enable-SetPoint",,,,,,,,,@c-0042,,,,,,,,,,,,,M,,,,"Number",,,,,,,,,M,M,,,,,,,,,,,,@c-0000,M,,,M,"New_York","°F",,,,,,,,,,,,
+@c-0049,,,,,,,,,,,,,,,,,,,,"Charlie BLOCK HEAT",,,,,,,,M,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,@c-0000,,,,,,,,,,,,,,,,,,{equipGroup:"Misc"}
+@c-004a,,,,,,,,,,,,,,M,,,,,,"Charlie BLOCK HEAT Block Temperature",,,,,,,,,@c-0049,,,,,,,,,,,,,M,,M,,"Number",M,,,,,,,,,M,,,,,,,,,M,,,@c-0000,,,,M,"New_York","°F",,,,,M,,,,,,,
+@c-004b,,,,,,,,,,,M,,,M,,,,,,"Charlie BLOCK HEAT Valve Command",,,,,,,,,@c-0049,,,,,,,,,,,,,M,,M,,"Number",,,,,,,,,,M,,,,,,,,,,,,@c-0000,,,,,"New_York","%",,M,,,M,,,,,,,
+@c-004c,,,,,,,,,,M,,,,,,,,,,"Charlie CHILLER-2",,,,,,,,M,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,@c-0000,,,,,,,,,,,,,,,,,,{equipGroup:"Chilled Water System"}
+@c-004d,,,,,,,,,M,,,,,M,,,,,,"Charlie CHILLER-2 CHWR~2dT",,,,,,M,,,@c-004c,,,,,,,,,,,,,M,,,,"Number",,,,,,,,,,M,,,,,,,,,M,,,@c-0000,,,,M,"New_York","°F",,,,,M,,,,,,,
+@c-004e,,,,,,,,,M,,,,,M,,,,,,"Charlie CHILLER-2 CHWS~2dT",,,,,,,,,@c-004c,,,,,,,,,,,,,M,,,,"Number",M,,,,,,,,,M,,,,,,,,,M,,,@c-0000,,,,M,"New_York","°F",,,,,M,,,,,,,
+@c-004f,,,,,,,,,,M,M,,,M,,,,,,"Charlie CHILLER-2 Chiler-Override",,,,M,,,"Off,On",,@c-004c,,,,,,,,,,,,,M,,,,"Bool",,,,,,,,,,M,,,,,,,,,,,,@c-0000,,,,,"New_York",,,,,,,,,,,,,
+@c-0050,,,,,,,,,,,,,,M,M,,,,,"Charlie CHILLER-2 Chiller-2-Amps",,,M,,,,,,@c-004c,,,,,,,,,,,,,M,,,,"Number",,,,,,,,,,M,,,,,,,,,M,,,@c-0000,,,,,"New_York","A",,,,,,,,,,,,{precision:1}
+@c-0051,,,,,,,,,,M,M,,,M,,,,,,"Charlie CHILLER-2 Chiller-2-Command",,,,M,,,"Off,On",,@c-004c,,,,,,,,,,,,,M,,,,"Bool",,,,,,,,,,M,,,,,,,,,,,,@c-0000,,,,,"New_York",,,,,,,,,,,,,
+@c-0052,,,,M,,,,,,,,,,M,,,,,,"Charlie CHILLER-2 OAT-Chiller-Enable-SetPoint",,,,,,,,,@c-004c,,,,,,,,,,,,,M,,,,"Number",,,,,,,,,M,M,,,,,,,,,,,,@c-0000,M,,,M,"New_York","°F",,,,,,,,,,,,
+@c-0053,M,,,,,,,,,,,,,,,,,,,"Charlie CWS_Pump1_Meter",,,M,,,,,M,,,,,,,,,,,,,,,,,,,,,,M,,,,,,,,,,,,,,,,,,@c-0000,,,@c-007d,,,,,,,,,,,,,,,{equipGroup:"Meters"}
+@c-0054,,,,,,,,,,,,,,M,M,,,,,"Charlie CWS_Pump1_Meter Current Sum Element N",,,,,,,,,@c-0053,,,,,,,,,,,,,M,,,,"Number",,,,,,,,,,M,,,,,,,,,M,,,@c-0000,,,,,"Detroit","A",,,,,,,,,,,,
+@c-0055,,,,,,,,,,,,,,M,,,,,,"Charlie CWS_Pump1_Meter Power Demand Peak Element N",,,M,,,,,,@c-0053,,,,,,,,,,,,,M,,,,"Number",,,,,,,,,,M,M,,,,,,,,M,,,@c-0000,,,,,"Detroit","kW",,,,,,,,,,,,
+@c-0056,,,,,,,,,,,,,,M,,,,,,"Charlie CWS_Pump1_Meter Power Sum Element N",,,M,,,,,,@c-0053,,,,,,,,,,,,,M,,,,"Number",,,,,,,,,,M,M,,,,,,,,M,,,@c-0000,,,,,"Detroit","kW",,,,,,,,,,,,
+@c-0057,,,,,,,,,,,,,,M,,,,,,"Charlie CWS_Pump1_Meter VA Demand Peak Element N",,,,,,,,,@c-0053,,,,,,,,,,,,,M,,,,"Number",,,,,,,,,,M,,,,,,M,,,M,,,@c-0000,,,,,"Detroit","kVA",,,,,,,,,,,,
+@c-0058,,,,,,,,,,,,,,M,,,,,,"Charlie CWS_Pump1_Meter VA Sum Element N",,,,,,,,,@c-0053,,,,,,,,,,,,,M,,,,"Number",,,,,,,,,,M,,,,,,M,,,M,,,@c-0000,,,,,"Detroit","kVA",,,,,,,,,,,,
+@c-0059,M,,,,,,,,,,,,,,,,,,,"Charlie CWS_Pump2_Meter",,,M,,,,,M,,,,,,,,,,,,,,,,,,,,,,M,,,,,,,,,,,,,,,,,,@c-0000,,,@c-007d,,,,,,,,,,,,,,,{equipGroup:"Meters"}
+@c-005a,,,,,,,,,,,,,,M,M,,,,,"Charlie CWS_Pump2_Meter Current Sum Element C",,,,,,,,,@c-0059,,,,,,,,,,,,,M,,,,"Number",,,,,,,,,,M,,,,,,,,,M,,,@c-0000,,,,,"Detroit","A",,,,,,,,,,,,
+@c-005b,,,,,,,,,,,,,,M,,,,,,"Charlie CWS_Pump2_Meter Energy Net Sum Element C",,,M,,M,,,,@c-0059,,,,,,,,,,,,,M,,,,"Number",,,,,,,,,,M,,,,,,,,,M,,,@c-0000,,,,,"Detroit","kWh",,,,,,,,,,,,
+@c-005c,,,,,,,,,,,,,,M,,,,,,"Charlie CWS_Pump2_Meter Power Demand Peak Element C",,,M,,,,,,@c-0059,,,,,,,,,,,,,M,,,,"Number",,,,,,,,,,M,M,,,,,,,,M,,,@c-0000,,,,,"Detroit","kW",,,,,,,,,,,,
+@c-005d,,,,,,,,,,,,,,M,,,,,,"Charlie CWS_Pump2_Meter Power Sum Element C",,,M,,,,,,@c-0059,,,,,,,,,,,,,M,,,,"Number",,,,,,,,,,M,M,,,,,,,,M,,,@c-0000,,,,,"Detroit","kW",,,,,,,,,,,,
+@c-005e,,,,,,,,,,,,,,M,,,,,,"Charlie CWS_Pump2_Meter VA Demand Peak Element C",,,,,,,,,@c-0059,,,,,,,,,,,,,M,,,,"Number",,,,,,,,,,M,,,,,,M,,,M,,,@c-0000,,,,,"Detroit","kVA",,,,,,,,,,,,
+@c-005f,M,,,,,,,,,,,,,,,,,,,"Charlie Chiller1_Meter",,,M,,,,,M,,,,,,,,,,,,,,,,,,,,,,M,,,,,,,,,,,,,,,,,,@c-0000,,,@c-007d,,,,,,,,,,,,,,,{equipGroup:"Meters"}
+@c-0060,,,,,,,,,,,,,,M,M,,,,,"Charlie Chiller1_Meter Current Sum Element D",,,,,,,,,@c-005f,,,,,,,,,,,,,M,,,,"Number",,,,,,,,,,M,,,,,,,,,M,,,@c-0000,,,,,"Detroit","A",,,,,,,,,,,,
+@c-0061,,,,,,,,,,,,,,M,,,,,,"Charlie Chiller1_Meter Power Demand Peak Element D",,,M,,,,,,@c-005f,,,,,,,,,,,,,M,,,,"Number",,,,,,,,,,M,M,,,,,,,,M,,,@c-0000,,,,,"Detroit","kW",,,,,,,,,,,,
+@c-0062,,,,,,,,,,,,,,M,,,,,,"Charlie Chiller1_Meter Power Sum Element D",,,M,,,,,,@c-005f,,,,,,,,,,,,,M,,,,"Number",,,,,,,,,,M,M,,,,,,,,M,,,@c-0000,,,,,"Detroit","kW",,,,,,,,,,,,
+@c-0063,,,,,,,,,,,,,,M,,,,,,"Charlie Chiller1_Meter VA Demand Peak Element D",,,,,,,,,@c-005f,,,,,,,,,,,,,M,,,,"Number",,,,,,,,,,M,,,,,,M,,,M,,,@c-0000,,,,,"Detroit","kVA",,,,,,,,,,,,
+@c-0064,,,,,,,,,,,,,,M,,,,,,"Charlie Chiller1_Meter VA Sum Element D",,,,,,,,,@c-005f,,,,,,,,,,,,,M,,,,"Number",,,,,,,,,,M,,,,,,M,,,M,,,@c-0000,,,,,"Detroit","kVA",,,,,,,,,,,,
+@c-0065,M,,,,,,,,,,,,,,,,,,,"Charlie Chiller2_Meter",,,M,,,,,M,,,,,,,,,,,,,,,,,,,,,,M,,,,,,,,,,,,,,,,,,@c-0000,,,@c-007d,,,,,,,,,,,,,,,{equipGroup:"Meters"}
+@c-0066,,,,,,,,,,,,,,M,M,,,,,"Charlie Chiller2_Meter Current Sum Element H",,,,,,,,,@c-0065,,,,,,,,,,,,,M,,,,"Number",,,,,,,,,,M,,,,,,,,,M,,,@c-0000,,,,,"Detroit","A",,,,,,,,,,,,
+@c-0067,,,,,,,,,,,,,,M,,,,,,"Charlie Chiller2_Meter Power Demand Peak Element H",,,M,,,,,,@c-0065,,,,,,,,,,,,,M,,,,"Number",,,,,,,,,,M,M,,,,,,,,M,,,@c-0000,,,,,"Detroit","kW",,,,,,,,,,,,
+@c-0068,,,,,,,,,,,,,,M,,,,,,"Charlie Chiller2_Meter Power Sum Element H",,,M,,,,,,@c-0065,,,,,,,,,,,,,M,,,,"Number",,,,,,,,,,M,M,,,,,,,,M,,,@c-0000,,,,,"Detroit","kW",,,,,,,,,,,,
+@c-0069,,,,,,,,,,,,,,M,,,,,,"Charlie Chiller2_Meter VA Demand Peak Element H",,,,,,,,,@c-0065,,,,,,,,,,,,,M,,,,"Number",,,,,,,,,,M,,,,,,M,,,M,,,@c-0000,,,,,"Detroit","kVA",,,,,,,,,,,,
+@c-006a,,,,,,,,,,,,,,M,,,,,,"Charlie Chiller2_Meter VA Sum Element H",,,,,,,,,@c-0065,,,,,,,,,,,,,M,,,,"Number",,,,,,,,,,M,,,,,,M,,,M,,,@c-0000,,,,,"Detroit","kVA",,,,,,,,,,,,
+@c-006b,M,,,,,,,,,,,,,,,,,,,"Charlie Cooling_Tower_Meter",,,M,,,,,M,,,,,,,,,,,,,,,,,,,,,,M,,,,,,,,,,,,,,,,,,@c-0000,,,@c-007d,,,,,,,,,,,,,,,{equipGroup:"Meters"}
+@c-006c,,,,,,,,,,,,,,M,M,,,,,"Charlie Cooling_Tower_Meter Current Sum Element O",,,,,,,,,@c-006b,,,,,,,,,,,,,M,,,,"Number",,,,,,,,,,M,,,,,,,,,M,,,@c-0000,,,,,"Detroit","A",,,,,,,,,,,,
+@c-006d,,,,,,,,,,,,,,M,,,,,,"Charlie Cooling_Tower_Meter Power Demand Peak Element O",,,M,,,,,,@c-006b,,,,,,,,,,,,,M,,,,"Number",,,,,,,,,,M,M,,,,,,,,M,,,@c-0000,,,,,"Detroit","kW",,,,,,,,,,,,
+@c-006e,,,,,,,,,,,,,,M,,,,,,"Charlie Cooling_Tower_Meter Power Sum Element O",,,M,,,,,,@c-006b,,,,,,,,,,,,,M,,,,"Number",,,,,,,,,,M,M,,,,,,,,M,,,@c-0000,,,,,"Detroit","kW",,,,,,,,,,,,
+@c-006f,,,,,,,,,,,,,,M,,,,,,"Charlie Cooling_Tower_Meter VA Demand Peak Element O",,,,,,,,,@c-006b,,,,,,,,,,,,,M,,,,"Number",,,,,,,,,,M,,,,,,M,,,M,,,@c-0000,,,,,"Detroit","kVA",,,,,,,,,,,,
+@c-0070,,,,,,,,,,,,,,M,,,,,,"Charlie Cooling_Tower_Meter VA Sum Element O",,,,,,,,,@c-006b,,,,,,,,,,,,,M,,,,"Number",,,,,,,,,,M,,,,,,M,,,M,,,@c-0000,,,,,"Detroit","kVA",,,,,,,,,,,,
+@c-0071,M,,,,@c-0001,,,,,,,,,,,,,,,"Charlie East_Return_Fan_Meter",,,M,,,,,M,@c-0001,,,,,,,,,,,,,,,,,,,,,M,,,,,,,,,,,,,,,,,,@c-0000,,,@c-007d,,,,,,,,,,,,,,,{equipGroup:"Meters"}
+@c-0072,,,,,,,,,,,,,,M,M,,,,,"Charlie East_Return_Fan_Meter Current Sum Element K",,,,,,,,,@c-0071,,,,,,,,,,,,,M,,,,"Number",,,,,,,,,,M,,,,,,,,,M,,,@c-0000,,,,,"Detroit","A",,,,,,,,,,,,
+@c-0073,M,,,,,,,,,,,,,M,,,,M,,"Charlie East_Return_Fan_Meter Power Demand Peak Element K",,,M,,,,,,@c-0071,,,,,,,,,,,,,M,,,,"Number",,,,,,,,,,M,M,,,,,,,,M,,,@c-0000,,,,,"Detroit","kW",,,,,,,,,,,,
+@c-0074,M,,,,,,,,,,,,,M,,,,,,"Charlie East_Return_Fan_Meter Power Sum Element K",,,M,,,,,,@c-0071,,,,,,,,,,,,,M,,,,"Number",,,,,,,,,,M,M,,,,,,,,M,,,@c-0000,,,,,"Detroit","kW",,,,,,,,,,,,
+@c-0075,,,,,,,,,,,,,,M,,,,,,"Charlie East_Return_Fan_Meter VA Demand Peak Element K",,,,,,,,,@c-0071,,,,,,,,,,,,,M,,,,"Number",,,,,,,,,,M,,,,,,M,,,M,,,@c-0000,,,,,"Detroit","kVA",,,,,,,,,,,,
+@c-0076,,,,,,,,,,,,,,M,,,,,,"Charlie East_Return_Fan_Meter VA Sum Element K",,,,,,,,,@c-0071,,,,,,,,,,,,,M,,,,"Number",,,,,,,,,,M,,,,,,M,,,M,,,@c-0000,,,,,"Detroit","kVA",,,,,,,,,,,,
+@c-0077,M,,,,@c-0001,,,,,,,,,,,,,,,"Charlie East_Supply_Fan_Meter",,,M,,,,,M,@c-0001,,,,,,,,,,,,,,,,,,,,,M,,,,,,,,,,,,,,,,,,@c-0000,,,@c-007d,,,,,,,,,,,,,,,{equipGroup:"Meters"}
+@c-0078,,,,,,,,,,,,,,M,M,,,,,"Charlie East_Supply_Fan_Meter Current Sum Element L",,,,,,,,,@c-0077,,,,,,,,,,,,,M,,,,"Number",,,,,,,,,,M,,,,,,,,,M,,,@c-0000,,,,,"Detroit","A",,,,,,,,,,,,
+@c-0079,M,,,,,,,,,,,,,M,,,,M,,"Charlie East_Supply_Fan_Meter Power Demand Peak Element L",,,M,,,,,,@c-0077,,,,,,,,,,,,,M,,,,"Number",,,,,,,,,,M,M,,,,,,,,M,,,@c-0000,,,,,"Detroit","kW",,,,,,,,,,,,
+@c-007a,M,,,,,,,,,,,,,M,,,,,,"Charlie East_Supply_Fan_Meter Power Sum Element L",,,M,,,,,,@c-0077,,,,,,,,,,,,,M,,,,"Number",,,,,,,,,,M,M,,,,,,,,M,,,@c-0000,,,,,"Detroit","kW",,,,,,,,,,,,
+@c-007b,,,,,,,,,,,,,,M,,,,,,"Charlie East_Supply_Fan_Meter VA Demand Peak Element L",,,,,,,,,@c-0077,,,,,,,,,,,,,M,,,,"Number",,,,,,,,,,M,,,,,,M,,,M,,,@c-0000,,,,,"Detroit","kVA",,,,,,,,,,,,
+@c-007c,,,,,,,,,,,,,,M,,,,,,"Charlie East_Supply_Fan_Meter VA Sum Element L",,,,,,,,,@c-0077,,,,,,,,,,,,,M,,,,"Number",,,,,,,,,,M,,,,,,M,,,M,,,@c-0000,,,,,"Detroit","kVA",,,,,,,,,,,,
+@c-007d,M,,,,,,,,,,,,,,,,,,,"Charlie Elec_Main_100_Meter",,,M,,,,,M,,,,,,,,,,,,,,,,,,,,,,M,,,,,,,,,,,,,,,,,M,@c-0000,,,,,,,,,,,,,,,,,,{equipGroup:"Meters"}
+@c-007e,M,,,,,,,,,,,,,M,,,,M,,"Charlie Elec_Main_100_Meter kW System",,,M,,,,,,@c-007d,,,,,,,,,,,,,M,,,,"Number",,,,,,,,,,M,M,,,,,,,,M,,,@c-0000,,,,,"Detroit","kW",,,,,,,,,,,,
+@c-007f,M,,,,,,,,,,,,,M,,,,,,"Charlie Elec_Main_100_Meter kWh System Total",,,M,,M,,,,@c-007d,,,,,,,,,,,,,M,M,,,"Number",,,,,,,,,,M,,,,,,,,,M,,,@c-0000,,,,,"Detroit","kWh",,,,,,,,,,,,{pointType:""}
+@c-0080,M,,,,,,,,,,,,,,,,,,,"Charlie Floor-4 400L-Meter",,,M,,,,,M,,,,,,,,,,,,,,,,,,,,,,M,,,,,,,,,,,,,,,,,,@c-0000,,,@c-007d,,,,,,,,,,,,,,,{equipGroup:"Meters"}
+@c-0081,,,,,,,,,,,,,,M,,,,,,"Charlie Floor-4 400L-Meter Energy Total",,,M,,M,,,,@c-0080,,,,,,,,,,,,,M,,,,"Number",,,,,,,,,,M,,,,,,,,,M,,,@c-0000,,,,,"Detroit","kWh",,,,,,,,,,,,
+@c-0082,,,,,,,,,,,,,,M,,,,,,"Charlie Floor-4 400L-Meter Line Voltage AB",,,,,,,,,@c-0080,,,,,,,,,,,,,M,,,,"Number",,,,,,,,,,M,,,,,,,,,M,,,@c-0000,,,,,"Detroit","V",,,,,,,,,,,,
+@c-0083,,,,,,,,,,,,,,M,,,,,,"Charlie Floor-4 400L-Meter Line Voltage BC",,,,,,,,,@c-0080,,,,,,,,,,,,,M,,,,"Number",,,,,,,,,,M,,,,,,,,,M,,,@c-0000,,,,,"Detroit","V",,,,,,,,,,,,
+@c-0084,,,,,,,,,,,,,,M,,,,,,"Charlie Floor-4 400L-Meter Line Voltage CA",,,,,,,,,@c-0080,,,,,,,,,,,,,M,,,,"Number",,,,,,,,,,M,,,,,,,,,M,,,@c-0000,,,,,"Detroit","V",,,,,,,,,,,,
+@c-0085,,,,,,,,,,,,,,M,,,,,,"Charlie Floor-4 400L-Meter Total Active Power",,,M,,,,,,@c-0080,,,,,,,,,,,,,M,,,,"Number",,,,,,,,,,M,M,,,,,,,,M,,,@c-0000,,,,,"Detroit","kW",,,,,,,,,,,,
+@c-0086,M,,,,,,,,,,,,,,,,,,,"Charlie Floor-4 400R-Meter",,,M,,,,,M,,,,,,,,,,,,,,,,,,,,,,M,,,,,,,,,,,,,,,,,,@c-0000,,,@c-007d,,,,,,,,,,,,,,,{equipGroup:"Meters"}
+@c-0087,,,,,,,,,,,,,,M,,,,,,"Charlie Floor-4 400R-Meter Energy Total",,,M,,M,,,,@c-0086,,,,,,,,,,,,,M,,,,"Number",,,,,,,,,,M,,,,,,,,,M,,,@c-0000,,,,,"Detroit","kWh",,,,,,,,,,,,
+@c-0088,,,,,,,,,,,,,,M,,,,,,"Charlie Floor-4 400R-Meter Line Voltage AB",,,,,,,,,@c-0086,,,,,,,,,,,,,M,,,,"Number",,,,,,,,,,M,,,,,,,,,M,,,@c-0000,,,,,"Detroit","V",,,,,,,,,,,,
+@c-0089,,,,,,,,,,,,,,M,,,,,,"Charlie Floor-4 400R-Meter Line Voltage BC",,,,,,,,,@c-0086,,,,,,,,,,,,,M,,,,"Number",,,,,,,,,,M,,,,,,,,,M,,,@c-0000,,,,,"Detroit","V",,,,,,,,,,,,
+@c-008a,,,,,,,,,,,,,,M,,,,,,"Charlie Floor-4 400R-Meter Line Voltage CA",,,,,,,,,@c-0086,,,,,,,,,,,,,M,,,,"Number",,,,,,,,,,M,,,,,,,,,M,,,@c-0000,,,,,"Detroit","V",,,,,,,,,,,,
+@c-008b,,,,,,,,,,,,,,,,,,,,"Charlie Floor-4 400R-Meter Offline Meter",,,,,,,,,@c-0086,,,,,,,,,,,,,M,,,,"Number",,,,,,,,,,M,,,,,,,,,M,,,@c-0000,,,,,"Detroit",,,,,,,,,,,,,{offlineMeter}
+@c-008c,,,,,,,,,,,,,,M,,,,,,"Charlie Floor-4 400R-Meter Total Active Power",,,M,,,,,,@c-0086,,,,,,,,,,,,,M,,,,"Number",,,,,,,,,,M,M,,,,,,,,M,,,@c-0000,,,,,"Detroit","kW",,,,,,,,,,,,
+@c-008d,,,,,,,,,,,,,,,,,,,,"Charlie Floor-4 VAV_1",,,,,,,,M,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,@c-0000,,,,,,,,,M,,,,,,,,,{equipGroup:"VAVs"}
+@c-008e,,,,M,,,,,,,,,,M,,M,,,,"Charlie Floor-4 VAV_1 dpr_pos",,,,,,,,,@c-008d,,,,,,,,,,,,,M,,,,"Number",,,,,,,,,,M,,,,,,,,,M,,,@c-0000,,,,,"Detroit","%",,,,,,,,,,,,
+@c-008f,,,,M,,,,,,,,,M,M,,,,,,"Charlie Floor-4 VAV_1 eff_cl_stpt",,M,,,,,,,@c-008d,,,,,,,,,,,,,M,,,,"Number",,,,,,,M,,,M,,,,,,,,,,,,@c-0000,M,,,M,"Detroit","°F",,,,,,,,,,,M,
+@c-0090,,,,M,,,,,,,,,,M,,,,,,"Charlie Floor-4 VAV_1 eff_ht_stpt",,M,,,,,,,@c-008d,,,,,,,,,,,,M,M,,,,"Number",,,,,,,M,,,M,,,,,,,,,,,,@c-0000,M,,,M,"Detroit","°F",,,,,,,,,,,M,
+@c-0091,,,,M,,,,,,,,,,M,,,,,,"Charlie Floor-4 VAV_1 flow_input",M,,,,,,,,@c-008d,,,M,,,,,,,,,,M,,,,"Number",,,96,,45,,,,,M,,,,,,,,,M,,,@c-0000,,,,,"Detroit","cfm",,,,,,,,,,,,{precision:0}
+@c-0092,,,,,,,,,,,,,,M,,,,,,"Charlie Floor-4 VAV_1 hw_valve",,,,,,,,,@c-008d,,,,,,,,,,,M,,M,,,,"Number",,,100,,0,,,,,M,,,,,,,,,M,,,@c-0000,,,,,"Detroit","%",,M,,,,,,,,,,{precision:0}
+@c-0093,,,,,,,,,,,,,,M,,,,,,"Charlie Floor-4 VAV_1 link_ahu_mode",,,,,,,"OFF,WARM\$2dUP,HEAT,COOL,FREECOOL,PRESSURIZE,EVACUATE,VENT",,@c-008d,,,,,,,,,,,,,M,,,,"Str",,,,,,,,,,M,,,,,,,,,M,,,@c-0000,,,,,"Detroit",,,,,,,,,,,,,
+@c-0094,,,,M,,,,,,,,,M,M,,,,,,"Charlie Floor-4 VAV_1 occ_cl_stpt",,,,,,,,,@c-008d,,,,,,,,,,,,,M,,,,"Number",,,,,,,M,,,M,,,,,,,,,,,,@c-0000,M,,,M,"Detroit","°F",,,,,,,,,,,M,
+@c-0095,,,,M,,,,,,,,,,M,,,,,,"Charlie Floor-4 VAV_1 occ_ht_stpt",,,,,,,,,@c-008d,,,,,,,,,,,,M,M,,,,"Number",,,,,,,M,,,M,,,,,,,,,,,,@c-0000,M,,,M,"Detroit","°F",,,,,,,,,,,M,
+@c-0096,,,,,,,,,,,M,,,M,,,,,,"Charlie Floor-4 VAV_1 occ_status",,,,,,,"Unoccupied,Occupied",,@c-008d,,,,,,,,,,,,,M,,,,"Bool",,,,,,,,M,,M,,,,,,,,,,,,@c-0000,,,,,"Detroit",,,,,,,,,,,,,
+@c-0097,,,,,,,,,,,,,,M,,,,,,"Charlie Floor-4 VAV_1 occ_switch",,,,,,,"Open,Closed",,@c-008d,,,,,,,,,,,,,M,,,,"Bool",,,,,,,,M,,M,,,,,,,,,M,,,@c-0000,,,,,"Detroit",,,,,,,,,,,,,
+@c-0098,,,,M,,,,,,,,,,M,,,,,,"Charlie Floor-4 VAV_1 sa_temp",M,,,,,,,,@c-008d,,,,,,,,,,,,,M,,,,"Number",,,,,,,,,,M,,,,,,,,,M,,,@c-0000,,,,M,"Detroit","°F",,,,,,,,,,,,
+@c-0099,,,,M,,,,,,,,,,M,,,,,,"Charlie Floor-4 VAV_1 space_temp",,,,,,,,,@c-008d,,,,,,,,,,,,,M,,,,"Number",,,,,,,,,,M,,,,,,,,,M,,,@c-0000,,,,M,"Detroit","°F",,,,,,,,,,,M,
+@c-009a,,,,,,,,,,,,,,M,,,,,,"Charlie Floor-4 VAV_1 terminal_status",,,,,,,"Off,Heating,Warm\$2dUp,Vent,N\$2fA,Cooling,Dehumidify,Reheat,Pressurize,Evacuate,Shutdown,IAQ\$20Override,Air\$20Balancing",,@c-008d,,,,,,,,,,,,,M,,,,"Str",,,,,,,,,,M,,,,,,,,,M,,,@c-0000,,,,,"Detroit",,,,,,,,,,,,,
+@c-009b,,,,M,,,,,,,,,M,M,,,,,,"Charlie Floor-4 VAV_1 unocc_cl_stpt",,,,,,,,,@c-008d,,,,,,,,,,,,,M,,,,"Number",,,,,,,,,,M,,,,,,,,,,,,@c-0000,M,,,M,"Detroit","°F",M,,,,,,,,,,M,
+@c-009c,,,,M,,,,,,,,,,M,,,,,,"Charlie Floor-4 VAV_1 unocc_ht_stpt",,,,,,,,,@c-008d,,,,,,,,,,,,M,M,,,,"Number",,,,,,,,,,M,,,,,,,,,,,,@c-0000,M,,,M,"Detroit","°F",M,,,,,,,,,,M,
+@c-009d,,,,,,,,,,,,,,,,,,,,"Charlie Floor-4 VAV_10",,,,,,,,M,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,@c-0000,,,,,,,,,M,,,,,,,,,{equipGroup:"VAVs"}
+@c-009e,,,,M,,,,,,,,,,M,,M,,,,"Charlie Floor-4 VAV_10 dpr_pos",,,,,,,,,@c-009d,,,,,,,,,,,,,M,,,,"Number",,,,,,,,,,M,,,,,,,,,M,,,@c-0000,,,,,"Detroit","%",,,,,,,,,,,,
+@c-009f,,,,M,,,,,,,,,M,M,,,,,,"Charlie Floor-4 VAV_10 eff_cl_stpt",,M,,,,,,,@c-009d,,,,,,,,,,,,,M,,,,"Number",,,,,,,M,,,M,,,,,,,,,,,,@c-0000,M,,,M,"Detroit","°F",,,,,,,,,,,M,
+@c-00a0,,,,M,,,,,,,,,,M,,,,,,"Charlie Floor-4 VAV_10 eff_ht_stpt",,M,,,,,,,@c-009d,,,,,,,,,,,,M,M,,,,"Number",,,,,,,M,,,M,,,,,,,,,,,,@c-0000,M,,,M,"Detroit","°F",,,,,,,,,,,M,
+@c-00a1,,,,M,,,,,,,,,,M,,,,,,"Charlie Floor-4 VAV_10 flow_input",M,,,,,,,,@c-009d,,,M,,,,,,,,,,M,,,,"Number",,,96,,45,,,,,M,,,,,,,,,M,,,@c-0000,,,,,"Detroit","cfm",,,,,,,,,,,,{precision:0}
+@c-00a2,,,,,,,,,,,,,,M,,,,,,"Charlie Floor-4 VAV_10 hw_valve",,,,,,,,,@c-009d,,,,,,,,,,,M,,M,,,,"Number",,,100,,0,,,,,M,,,,,,,,,M,,,@c-0000,,,,,"Detroit","%",,M,,,,,,,,,,{precision:0}
+@c-00a3,,,,M,,,,,,,,,M,M,,,,,,"Charlie Floor-4 VAV_10 occ_cl_stpt",,,,,,,,,@c-009d,,,,,,,,,,,,,M,,,,"Number",,,,,,,M,,,M,,,,,,,,,,,,@c-0000,M,,,M,"Detroit","°F",,,,,,,,,,,M,
+@c-00a4,,,,M,,,,,,,,,,M,,,,,,"Charlie Floor-4 VAV_10 occ_ht_stpt",,,,,,,,,@c-009d,,,,,,,,,,,,M,M,,,,"Number",,,,,,,M,,,M,,,,,,,,,,,,@c-0000,M,,,M,"Detroit","°F",,,,,,,,,,,M,
+@c-00a5,,,,,,,,,,,M,,,M,,,,,,"Charlie Floor-4 VAV_10 occ_status",,,,,,,"Unoccupied,Occupied",,@c-009d,,,,,,,,,,,,,M,,,,"Bool",,,,,,,,M,,M,,,,,,,,,,,,@c-0000,,,,,"Detroit",,,,,,,,,,,,,
+@c-00a6,,,,,,,,,,,,,,M,,,,,,"Charlie Floor-4 VAV_10 occ_switch",,,,,,,"Open,Closed",,@c-009d,,,,,,,,,,,,,M,,,,"Bool",,,,,,,,M,,M,,,,,,,,,M,,,@c-0000,,,,,"Detroit",,,,,,,,,,,,,
+@c-00a7,,,,M,,,,,,,,,,M,,,,,,"Charlie Floor-4 VAV_10 sa_temp",M,,,,,,,,@c-009d,,,,,,,,,,,,,M,,,,"Number",,,,,,,,,,M,,,,,,,,,M,,,@c-0000,,,,M,"Detroit","°F",,,,,,,,,,,,
+@c-00a8,,,,M,,,,,,,,,,M,,,,,,"Charlie Floor-4 VAV_10 space_temp",,,,,,,,,@c-009d,,,,,,,,,,,,,M,,,,"Number",,,,,,,,,,M,,,,,,,,,M,,,@c-0000,,,,M,"Detroit","°F",,,,,,,,,,,M,
+@c-00a9,,,,M,,,,,,,,,M,M,,,,,,"Charlie Floor-4 VAV_10 unocc_cl_stpt",,,,,,,,,@c-009d,,,,,,,,,,,,,M,,,,"Number",,,,,,,,,,M,,,,,,,,,,,,@c-0000,M,,,M,"Detroit","°F",M,,,,,,,,,,M,
+@c-00aa,,,,M,,,,,,,,,,M,,,,,,"Charlie Floor-4 VAV_10 unocc_ht_stpt",,,,,,,,,@c-009d,,,,,,,,,,,,M,M,,,,"Number",,,,,,,,,,M,,,,,,,,,,,,@c-0000,M,,,M,"Detroit","°F",M,,,,,,,,,,M,
+@c-00ab,,,,,,,,,,,,,,,,,,,,"Charlie Floor-4 VAV_11",,,,,,,,M,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,@c-0000,,,,,,,,,M,,,,,,,,,{equipGroup:"VAVs"}
+@c-00ac,,,,M,,,,,,,,,,M,,M,,,,"Charlie Floor-4 VAV_11 dpr_pos",,,,,,,,,@c-00ab,,,,,,,,,,,,,M,,,,"Number",,,,,,,,,,M,,,,,,,,,M,,,@c-0000,,,,,"Detroit","%",,,,,,,,,,,,
+@c-00ad,,,,M,,,,,,,,,M,M,,,,,,"Charlie Floor-4 VAV_11 eff_cl_stpt",,M,,,,,,,@c-00ab,,,,,,,,,,,,,M,,,,"Number",,,,,,,M,,,M,,,,,,,,,,,,@c-0000,M,,,M,"Detroit","°F",,,,,,,,,,,M,
+@c-00ae,,,,M,,,,,,,,,,M,,,,,,"Charlie Floor-4 VAV_11 eff_ht_stpt",,M,,,,,,,@c-00ab,,,,,,,,,,,,M,M,,,,"Number",,,,,,,M,,,M,,,,,,,,,,,,@c-0000,M,,,M,"Detroit","°F",,,,,,,,,,,M,
+@c-00af,,,,M,,,,,,,,,,M,,,,,,"Charlie Floor-4 VAV_11 flow_input",M,,,,,,,,@c-00ab,,,M,,,,,,,,,,M,,,,"Number",,,96,,45,,,,,M,,,,,,,,,M,,,@c-0000,,,,,"Detroit","cfm",,,,,,,,,,,,{precision:0}
+@c-00b0,,,,,,,,,,,,,,M,,,,,,"Charlie Floor-4 VAV_11 hw_valve",,,,,,,,,@c-00ab,,,,,,,,,,,M,,M,,,,"Number",,,100,,0,,,,,M,,,,,,,,,M,,,@c-0000,,,,,"Detroit","%",,M,,,,,,,,,,{precision:0}
+@c-00b1,,,,M,,,,,,,,,M,M,,,,,,"Charlie Floor-4 VAV_11 occ_cl_stpt",,,,,,,,,@c-00ab,,,,,,,,,,,,,M,,,,"Number",,,,,,,M,,,M,,,,,,,,,,,,@c-0000,M,,,M,"Detroit","°F",,,,,,,,,,,M,
+@c-00b2,,,,M,,,,,,,,,,M,,,,,,"Charlie Floor-4 VAV_11 occ_ht_stpt",,,,,,,,,@c-00ab,,,,,,,,,,,,M,M,,,,"Number",,,,,,,M,,,M,,,,,,,,,,,,@c-0000,M,,,M,"Detroit","°F",,,,,,,,,,,M,
+@c-00b3,,,,,,,,,,,M,,,M,,,,,,"Charlie Floor-4 VAV_11 occ_status",,,,,,,"Unoccupied,Occupied",,@c-00ab,,,,,,,,,,,,,M,,,,"Bool",,,,,,,,M,,M,,,,,,,,,,,,@c-0000,,,,,"Detroit",,,,,,,,,,,,,
+@c-00b4,,,,,,,,,,,,,,M,,,,,,"Charlie Floor-4 VAV_11 occ_switch",,,,,,,"Open,Closed",,@c-00ab,,,,,,,,,,,,,M,,,,"Bool",,,,,,,,M,,M,,,,,,,,,M,,,@c-0000,,,,,"Detroit",,,,,,,,,,,,,
+@c-00b5,,,,M,,,,,,,,,,M,,,,,,"Charlie Floor-4 VAV_11 sa_temp",M,,,,,,,,@c-00ab,,,,,,,,,,,,,M,,,,"Number",,,,,,,,,,M,,,,,,,,,M,,,@c-0000,,,,M,"Detroit","°F",,,,,,,,,,,,
+@c-00b6,,,,M,,,,,,,,,,M,,,,,,"Charlie Floor-4 VAV_11 space_temp",,,,,,,,,@c-00ab,,,,,,,,,,,,,M,,,,"Number",,,,,,,,,,M,,,,,,,,,M,,,@c-0000,,,,M,"Detroit","°F",,,,,,,,,,,M,
+@c-00b7,,,,M,,,,,,,,,M,M,,,,,,"Charlie Floor-4 VAV_11 unocc_cl_stpt",,,,,,,,,@c-00ab,,,,,,,,,,,,,M,,,,"Number",,,,,,,,,,M,,,,,,,,,,,,@c-0000,M,,,M,"Detroit","°F",M,,,,,,,,,,M,
+@c-00b8,,,,M,,,,,,,,,,M,,,,,,"Charlie Floor-4 VAV_11 unocc_ht_stpt",,,,,,,,,@c-00ab,,,,,,,,,,,,M,M,,,,"Number",,,,,,,,,,M,,,,,,,,,,,,@c-0000,M,,,M,"Detroit","°F",M,,,,,,,,,,M,
+@c-00b9,,,,,,,,,,,,,,,,,,,,"Charlie Floor-4 VAV_12",,,,,,,,M,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,@c-0000,,,,,,,,,M,,,,,,,,,{equipGroup:"VAVs"}
+@c-00ba,,,,M,,,,,,,,,,M,,M,,,,"Charlie Floor-4 VAV_12 dpr_pos",,,,,,,,,@c-00b9,,,,,,,,,,,,,M,,,,"Number",,,,,,,,,,M,,,,,,,,,M,,,@c-0000,,,,,"Detroit","%",,,,,,,,,,,,
+@c-00bb,,,,M,,,,,,,,,M,M,,,,,,"Charlie Floor-4 VAV_12 eff_cl_stpt",,M,,,,,,,@c-00b9,,,,,,,,,,,,,M,,,,"Number",,,,,,,M,,,M,,,,,,,,,,,,@c-0000,M,,,M,"Detroit","°F",,,,,,,,,,,M,
+@c-00bc,,,,M,,,,,,,,,,M,,,,,,"Charlie Floor-4 VAV_12 eff_ht_stpt",,M,,,,,,,@c-00b9,,,,,,,,,,,,M,M,,,,"Number",,,,,,,M,,,M,,,,,,,,,,,,@c-0000,M,,,M,"Detroit","°F",,,,,,,,,,,M,
+@c-00bd,,,,M,,,,,,,,,,M,,,,,,"Charlie Floor-4 VAV_12 flow_input",M,,,,,,,,@c-00b9,,,M,,,,,,,,,,M,,,,"Number",,,96,,45,,,,,M,,,,,,,,,M,,,@c-0000,,,,,"Detroit","cfm",,,,,,,,,,,,{precision:0}
+@c-00be,,,,,,,,,,,,,,M,,,,,,"Charlie Floor-4 VAV_12 hw_valve",,,,,,,,,@c-00b9,,,,,,,,,,,M,,M,,,,"Number",,,100,,0,,,,,M,,,,,,,,,M,,,@c-0000,,,,,"Detroit","%",,M,,,,,,,,,,{precision:0}
+@c-00bf,,,,M,,,,,,,,,M,M,,,,,,"Charlie Floor-4 VAV_12 occ_cl_stpt",,,,,,,,,@c-00b9,,,,,,,,,,,,,M,,,,"Number",,,,,,,M,,,M,,,,,,,,,,,,@c-0000,M,,,M,"Detroit","°F",,,,,,,,,,,M,
+@c-00c0,,,,M,,,,,,,,,,M,,,,,,"Charlie Floor-4 VAV_12 occ_ht_stpt",,,,,,,,,@c-00b9,,,,,,,,,,,,M,M,,,,"Number",,,,,,,M,,,M,,,,,,,,,,,,@c-0000,M,,,M,"Detroit","°F",,,,,,,,,,,M,
+@c-00c1,,,,,,,,,,,M,,,M,,,,,,"Charlie Floor-4 VAV_12 occ_status",,,,,,,"Unoccupied,Occupied",,@c-00b9,,,,,,,,,,,,,M,,,,"Bool",,,,,,,,M,,M,,,,,,,,,,,,@c-0000,,,,,"Detroit",,,,,,,,,,,,,
+@c-00c2,,,,,,,,,,,,,,M,,,,,,"Charlie Floor-4 VAV_12 occ_switch",,,,,,,"Open,Closed",,@c-00b9,,,,,,,,,,,,,M,,,,"Bool",,,,,,,,M,,M,,,,,,,,,M,,,@c-0000,,,,,"Detroit",,,,,,,,,,,,,
+@c-00c3,,,,M,,,,,,,,,,M,,,,,,"Charlie Floor-4 VAV_12 sa_temp",M,,,,,,,,@c-00b9,,,,,,,,,,,,,M,,,,"Number",,,,,,,,,,M,,,,,,,,,M,,,@c-0000,,,,M,"Detroit","°F",,,,,,,,,,,,
+@c-00c4,,,,M,,,,,,,,,,M,,,,,,"Charlie Floor-4 VAV_12 space_temp",,,,,,,,,@c-00b9,,,,,,,,,,,,,M,,,,"Number",,,,,,,,,,M,,,,,,,,,M,,,@c-0000,,,,M,"Detroit","°F",,,,,,,,,,,M,
+@c-00c5,,,,M,,,,,,,,,M,M,,,,,,"Charlie Floor-4 VAV_12 unocc_cl_stpt",,,,,,,,,@c-00b9,,,,,,,,,,,,,M,,,,"Number",,,,,,,,,,M,,,,,,,,,,,,@c-0000,M,,,M,"Detroit","°F",M,,,,,,,,,,M,
+@c-00c6,,,,M,,,,,,,,,,M,,,,,,"Charlie Floor-4 VAV_12 unocc_ht_stpt",,,,,,,,,@c-00b9,,,,,,,,,,,,M,M,,,,"Number",,,,,,,,,,M,,,,,,,,,,,,@c-0000,M,,,M,"Detroit","°F",M,,,,,,,,,,M,
+@c-00c7,,,,,,,,,,,,,,,,,,,,"Charlie Floor-4 VAV_13",,,,,,,,M,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,@c-0000,,,,,,,,,M,,,,,,,,,{equipGroup:"VAVs"}
+@c-00c8,,,,M,,,,,,,,,,M,,M,,,,"Charlie Floor-4 VAV_13 dpr_pos",,,,,,,,,@c-00c7,,,,,,,,,,,,,M,,,,"Number",,,,,,,,,,M,,,,,,,,,M,,,@c-0000,,,,,"Detroit","%",,,,,,,,,,,,
+@c-00c9,,,,M,,,,,,,,,M,M,,,,,,"Charlie Floor-4 VAV_13 eff_cl_stpt",,M,,,,,,,@c-00c7,,,,,,,,,,,,,M,,,,"Number",,,,,,,M,,,M,,,,,,,,,,,,@c-0000,M,,,M,"Detroit","°F",,,,,,,,,,,M,
+@c-00ca,,,,M,,,,,,,,,,M,,,,,,"Charlie Floor-4 VAV_13 eff_ht_stpt",,M,,,,,,,@c-00c7,,,,,,,,,,,,M,M,,,,"Number",,,,,,,M,,,M,,,,,,,,,,,,@c-0000,M,,,M,"Detroit","°F",,,,,,,,,,,M,
+@c-00cb,,,,M,,,,,,,,,,M,,,,,,"Charlie Floor-4 VAV_13 flow_input",M,,,,,,,,@c-00c7,,,M,,,,,,,,,,M,,,,"Number",,,96,,45,,,,,M,,,,,,,,,M,,,@c-0000,,,,,"Detroit","cfm",,,,,,,,,,,,{precision:0}
+@c-00cc,,,,,,,,,,,,,,M,,,,,,"Charlie Floor-4 VAV_13 hw_valve",,,,,,,,,@c-00c7,,,,,,,,,,,M,,M,,,,"Number",,,100,,0,,,,,M,,,,,,,,,M,,,@c-0000,,,,,"Detroit","%",,M,,,,,,,,,,{precision:0}
+@c-00cd,,,,M,,,,,,,,,M,M,,,,,,"Charlie Floor-4 VAV_13 occ_cl_stpt",,,,,,,,,@c-00c7,,,,,,,,,,,,,M,,,,"Number",,,,,,,M,,,M,,,,,,,,,,,,@c-0000,M,,,M,"Detroit","°F",,,,,,,,,,,M,
+@c-00ce,,,,M,,,,,,,,,,M,,,,,,"Charlie Floor-4 VAV_13 occ_ht_stpt",,,,,,,,,@c-00c7,,,,,,,,,,,,M,M,,,,"Number",,,,,,,M,,,M,,,,,,,,,,,,@c-0000,M,,,M,"Detroit","°F",,,,,,,,,,,M,
+@c-00cf,,,,,,,,,,,M,,,M,,,,,,"Charlie Floor-4 VAV_13 occ_status",,,,,,,"Unoccupied,Occupied",,@c-00c7,,,,,,,,,,,,,M,,,,"Bool",,,,,,,,M,,M,,,,,,,,,,,,@c-0000,,,,,"Detroit",,,,,,,,,,,,,
+@c-00d0,,,,,,,,,,,,,,M,,,,,,"Charlie Floor-4 VAV_13 occ_switch",,,,,,,"Open,Closed",,@c-00c7,,,,,,,,,,,,,M,,,,"Bool",,,,,,,,M,,M,,,,,,,,,M,,,@c-0000,,,,,"Detroit",,,,,,,,,,,,,
+@c-00d1,,,,M,,,,,,,,,,M,,,,,,"Charlie Floor-4 VAV_13 sa_temp",M,,,,,,,,@c-00c7,,,,,,,,,,,,,M,,,,"Number",,,,,,,,,,M,,,,,,,,,M,,,@c-0000,,,,M,"Detroit","°F",,,,,,,,,,,,
+@c-00d2,,,,M,,,,,,,,,,M,,,,,,"Charlie Floor-4 VAV_13 space_temp",,,,,,,,,@c-00c7,,,,,,,,,,,,,M,,,,"Number",,,,,,,,,,M,,,,,,,,,M,,,@c-0000,,,,M,"Detroit","°F",,,,,,,,,,,M,
+@c-00d3,,,,M,,,,,,,,,M,M,,,,,,"Charlie Floor-4 VAV_13 unocc_cl_stpt",,,,,,,,,@c-00c7,,,,,,,,,,,,,M,,,,"Number",,,,,,,,,,M,,,,,,,,,,,,@c-0000,M,,,M,"Detroit","°F",M,,,,,,,,,,M,
+@c-00d4,,,,M,,,,,,,,,,M,,,,,,"Charlie Floor-4 VAV_13 unocc_ht_stpt",,,,,,,,,@c-00c7,,,,,,,,,,,,M,M,,,,"Number",,,,,,,,,,M,,,,,,,,,,,,@c-0000,M,,,M,"Detroit","°F",M,,,,,,,,,,M,
+@c-00d5,,,,,,,,,,,,,,,,,,,,"Charlie Floor-4 VAV_14",,,,,,,,M,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,@c-0000,,,,,,,,,M,,,,,,,,,{equipGroup:"VAVs"}
+@c-00d6,,,,M,,,,,,,,,,M,,M,,,,"Charlie Floor-4 VAV_14 dpr_pos",,,,,,,,,@c-00d5,,,,,,,,,,,,,M,,,,"Number",,,,,,,,,,M,,,,,,,,,M,,,@c-0000,,,,,"Detroit","%",,,,,,,,,,,,
+@c-00d7,,,,M,,,,,,,,,M,M,,,,,,"Charlie Floor-4 VAV_14 eff_cl_stpt",,M,,,,,,,@c-00d5,,,,,,,,,,,,,M,,,,"Number",,,,,,,M,,,M,,,,,,,,,,,,@c-0000,M,,,M,"Detroit","°F",,,,,,,,,,,M,
+@c-00d8,,,,M,,,,,,,,,,M,,,,,,"Charlie Floor-4 VAV_14 eff_ht_stpt",,M,,,,,,,@c-00d5,,,,,,,,,,,,M,M,,,,"Number",,,,,,,M,,,M,,,,,,,,,,,,@c-0000,M,,,M,"Detroit","°F",,,,,,,,,,,M,
+@c-00d9,,,,M,,,,,,,,,,M,,,,,,"Charlie Floor-4 VAV_14 flow_input",M,,,,,,,,@c-00d5,,,M,,,,,,,,,,M,,,,"Number",,,96,,45,,,,,M,,,,,,,,,M,,,@c-0000,,,,,"Detroit","cfm",,,,,,,,,,,,{precision:0}
+@c-00da,,,,,,,,,,,,,,M,,,,,,"Charlie Floor-4 VAV_14 hw_valve",,,,,,,,,@c-00d5,,,,,,,,,,,M,,M,,,,"Number",,,100,,0,,,,,M,,,,,,,,,M,,,@c-0000,,,,,"Detroit","%",,M,,,,,,,,,,{precision:0}
+@c-00db,,,,M,,,,,,,,,M,M,,,,,,"Charlie Floor-4 VAV_14 occ_cl_stpt",,,,,,,,,@c-00d5,,,,,,,,,,,,,M,,,,"Number",,,,,,,M,,,M,,,,,,,,,,,,@c-0000,M,,,M,"Detroit","°F",,,,,,,,,,,M,
+@c-00dc,,,,M,,,,,,,,,,M,,,,,,"Charlie Floor-4 VAV_14 occ_ht_stpt",,,,,,,,,@c-00d5,,,,,,,,,,,,M,M,,,,"Number",,,,,,,M,,,M,,,,,,,,,,,,@c-0000,M,,,M,"Detroit","°F",,,,,,,,,,,M,
+@c-00dd,,,,,,,,,,,M,,,M,,,,,,"Charlie Floor-4 VAV_14 occ_status",,,,,,,"Unoccupied,Occupied",,@c-00d5,,,,,,,,,,,,,M,,,,"Bool",,,,,,,,M,,M,,,,,,,,,,,,@c-0000,,,,,"Detroit",,,,,,,,,,,,,
+@c-00de,,,,,,,,,,,,,,M,,,,,,"Charlie Floor-4 VAV_14 occ_switch",,,,,,,"Open,Closed",,@c-00d5,,,,,,,,,,,,,M,,,,"Bool",,,,,,,,M,,M,,,,,,,,,M,,,@c-0000,,,,,"Detroit",,,,,,,,,,,,,
+@c-00df,,,,M,,,,,,,,,,M,,,,,,"Charlie Floor-4 VAV_14 sa_temp",M,,,,,,,,@c-00d5,,,,,,,,,,,,,M,,,,"Number",,,,,,,,,,M,,,,,,,,,M,,,@c-0000,,,,M,"Detroit","°F",,,,,,,,,,,,
+@c-00e0,,,,M,,,,,,,,,,M,,,,,,"Charlie Floor-4 VAV_14 space_temp",,,,,,,,,@c-00d5,,,,,,,,,,,,,M,,,,"Number",,,,,,,,,,M,,,,,,,,,M,,,@c-0000,,,,M,"Detroit","°F",,,,,,,,,,,M,
+@c-00e1,,,,M,,,,,,,,,M,M,,,,,,"Charlie Floor-4 VAV_14 unocc_cl_stpt",,,,,,,,,@c-00d5,,,,,,,,,,,,,M,,,,"Number",,,,,,,,,,M,,,,,,,,,,,,@c-0000,M,,,M,"Detroit","°F",M,,,,,,,,,,M,
+@c-00e2,,,,M,,,,,,,,,,M,,,,,,"Charlie Floor-4 VAV_14 unocc_ht_stpt",,,,,,,,,@c-00d5,,,,,,,,,,,,M,M,,,,"Number",,,,,,,,,,M,,,,,,,,,,,,@c-0000,M,,,M,"Detroit","°F",M,,,,,,,,,,M,
+@c-00e3,,,,,,,,,,,,,,,,,,,,"Charlie Floor-4 VAV_15",,,,,,,,M,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,@c-0000,,,,,,,,,M,,,,,,,,,{equipGroup:"VAVs"}
+@c-00e4,,,,M,,,,,,,,,,M,,M,,,,"Charlie Floor-4 VAV_15 dpr_pos",,,,,,,,,@c-00e3,,,,,,,,,,,,,M,,,,"Number",,,,,,,,,,M,,,,,,,,,M,,,@c-0000,,,,,"Detroit","%",,,,,,,,,,,,
+@c-00e5,,,,M,,,,,,,,,M,M,,,,,,"Charlie Floor-4 VAV_15 eff_cl_stpt",,M,,,,,,,@c-00e3,,,,,,,,,,,,,M,,,,"Number",,,,,,,M,,,M,,,,,,,,,,,,@c-0000,M,,,M,"Detroit","°F",,,,,,,,,,,M,
+@c-00e6,,,,M,,,,,,,,,,M,,,,,,"Charlie Floor-4 VAV_15 eff_ht_stpt",,M,,,,,,,@c-00e3,,,,,,,,,,,,M,M,,,,"Number",,,,,,,M,,,M,,,,,,,,,,,,@c-0000,M,,,M,"Detroit","°F",,,,,,,,,,,M,
+@c-00e7,,,,M,,,,,,,,,,M,,,,,,"Charlie Floor-4 VAV_15 flow_input",M,,,,,,,,@c-00e3,,,M,,,,,,,,,,M,,,,"Number",,,96,,45,,,,,M,,,,,,,,,M,,,@c-0000,,,,,"Detroit","cfm",,,,,,,,,,,,{precision:0}
+@c-00e8,,,,,,,,,,,,,,M,,,,,,"Charlie Floor-4 VAV_15 hw_valve",,,,,,,,,@c-00e3,,,,,,,,,,,M,,M,,,,"Number",,,100,,0,,,,,M,,,,,,,,,M,,,@c-0000,,,,,"Detroit","%",,M,,,,,,,,,,{precision:0}
+@c-00e9,,,,M,,,,,,,,,M,M,,,,,,"Charlie Floor-4 VAV_15 occ_cl_stpt",,,,,,,,,@c-00e3,,,,,,,,,,,,,M,,,,"Number",,,,,,,M,,,M,,,,,,,,,,,,@c-0000,M,,,M,"Detroit","°F",,,,,,,,,,,M,
+@c-00ea,,,,M,,,,,,,,,,M,,,,,,"Charlie Floor-4 VAV_15 occ_ht_stpt",,,,,,,,,@c-00e3,,,,,,,,,,,,M,M,,,,"Number",,,,,,,M,,,M,,,,,,,,,,,,@c-0000,M,,,M,"Detroit","°F",,,,,,,,,,,M,
+@c-00eb,,,,,,,,,,,M,,,M,,,,,,"Charlie Floor-4 VAV_15 occ_status",,,,,,,"Unoccupied,Occupied",,@c-00e3,,,,,,,,,,,,,M,,,,"Bool",,,,,,,,M,,M,,,,,,,,,,,,@c-0000,,,,,"Detroit",,,,,,,,,,,,,
+@c-00ec,,,,,,,,,,,,,,M,,,,,,"Charlie Floor-4 VAV_15 occ_switch",,,,,,,"Open,Closed",,@c-00e3,,,,,,,,,,,,,M,,,,"Bool",,,,,,,,M,,M,,,,,,,,,M,,,@c-0000,,,,,"Detroit",,,,,,,,,,,,,
+@c-00ed,,,,M,,,,,,,,,,M,,,,,,"Charlie Floor-4 VAV_15 sa_temp",M,,,,,,,,@c-00e3,,,,,,,,,,,,,M,,,,"Number",,,,,,,,,,M,,,,,,,,,M,,,@c-0000,,,,M,"Detroit","°F",,,,,,,,,,,,
+@c-00ee,,,,M,,,,,,,,,,M,,,,,,"Charlie Floor-4 VAV_15 space_temp",,,,,,,,,@c-00e3,,,,,,,,,,,,,M,,,,"Number",,,,,,,,,,M,,,,,,,,,M,,,@c-0000,,,,M,"Detroit","°F",,,,,,,,,,,M,
+@c-00ef,,,,M,,,,,,,,,M,M,,,,,,"Charlie Floor-4 VAV_15 unocc_cl_stpt",,,,,,,,,@c-00e3,,,,,,,,,,,,,M,,,,"Number",,,,,,,,,,M,,,,,,,,,,,,@c-0000,M,,,M,"Detroit","°F",M,,,,,,,,,,M,
+@c-00f0,,,,M,,,,,,,,,,M,,,,,,"Charlie Floor-4 VAV_15 unocc_ht_stpt",,,,,,,,,@c-00e3,,,,,,,,,,,,M,M,,,,"Number",,,,,,,,,,M,,,,,,,,,,,,@c-0000,M,,,M,"Detroit","°F",M,,,,,,,,,,M,
+@c-00f1,,,,,,,,,,,,,,,,,,,,"Charlie Floor-4 VAV_16",,,,,,,,M,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,@c-0000,,,,,,,,,M,,,,,,,,,{equipGroup:"VAVs"}
+@c-00f2,,,,M,,,,,,,,,,M,,M,,,,"Charlie Floor-4 VAV_16 dpr_pos",,,,,,,,,@c-00f1,,,,,,,,,,,,,M,,,,"Number",,,,,,,,,,M,,,,,,,,,M,,,@c-0000,,,,,"Detroit","%",,,,,,,,,,,,
+@c-00f3,,,,M,,,,,,,,,M,M,,,,,,"Charlie Floor-4 VAV_16 eff_cl_stpt",,M,,,,,,,@c-00f1,,,,,,,,,,,,,M,,,,"Number",,,,,,,M,,,M,,,,,,,,,,,,@c-0000,M,,,M,"Detroit","°F",,,,,,,,,,,M,
+@c-00f4,,,,M,,,,,,,,,,M,,,,,,"Charlie Floor-4 VAV_16 eff_ht_stpt",,M,,,,,,,@c-00f1,,,,,,,,,,,,M,M,,,,"Number",,,,,,,M,,,M,,,,,,,,,,,,@c-0000,M,,,M,"Detroit","°F",,,,,,,,,,,M,
+@c-00f5,,,,M,,,,,,,,,,M,,,,,,"Charlie Floor-4 VAV_16 flow_input",M,,,,,,,,@c-00f1,,,M,,,,,,,,,,M,,,,"Number",,,96,,45,,,,,M,,,,,,,,,M,,,@c-0000,,,,,"Detroit","cfm",,,,,,,,,,,,{precision:0}
+@c-00f6,,,,,,,,,,,,,,M,,,,,,"Charlie Floor-4 VAV_16 hw_valve",,,,,,,,,@c-00f1,,,,,,,,,,,M,,M,,,,"Number",,,100,,0,,,,,M,,,,,,,,,M,,,@c-0000,,,,,"Detroit","%",,M,,,,,,,,,,{precision:0}
+@c-00f7,,,,M,,,,,,,,,M,M,,,,,,"Charlie Floor-4 VAV_16 occ_cl_stpt",,,,,,,,,@c-00f1,,,,,,,,,,,,,M,,,,"Number",,,,,,,M,,,M,,,,,,,,,,,,@c-0000,M,,,M,"Detroit","°F",,,,,,,,,,,M,
+@c-00f8,,,,M,,,,,,,,,,M,,,,,,"Charlie Floor-4 VAV_16 occ_ht_stpt",,,,,,,,,@c-00f1,,,,,,,,,,,,M,M,,,,"Number",,,,,,,M,,,M,,,,,,,,,,,,@c-0000,M,,,M,"Detroit","°F",,,,,,,,,,,M,
+@c-00f9,,,,,,,,,,,M,,,M,,,,,,"Charlie Floor-4 VAV_16 occ_status",,,,,,,"Unoccupied,Occupied",,@c-00f1,,,,,,,,,,,,,M,,,,"Bool",,,,,,,,M,,M,,,,,,,,,,,,@c-0000,,,,,"Detroit",,,,,,,,,,,,,
+@c-00fa,,,,,,,,,,,,,,M,,,,,,"Charlie Floor-4 VAV_16 occ_switch",,,,,,,"Open,Closed",,@c-00f1,,,,,,,,,,,,,M,,,,"Bool",,,,,,,,M,,M,,,,,,,,,M,,,@c-0000,,,,,"Detroit",,,,,,,,,,,,,
+@c-00fb,,,,M,,,,,,,,,,M,,,,,,"Charlie Floor-4 VAV_16 sa_temp",M,,,,,,,,@c-00f1,,,,,,,,,,,,,M,,,,"Number",,,,,,,,,,M,,,,,,,,,M,,,@c-0000,,,,M,"Detroit","°F",,,,,,,,,,,,
+@c-00fc,,,,M,,,,,,,,,,M,,,,,,"Charlie Floor-4 VAV_16 space_temp",,,,,,,,,@c-00f1,,,,,,,,,,,,,M,,,,"Number",,,,,,,,,,M,,,,,,,,,M,,,@c-0000,,,,M,"Detroit","°F",,,,,,,,,,,M,
+@c-00fd,,,,M,,,,,,,,,M,M,,,,,,"Charlie Floor-4 VAV_16 unocc_cl_stpt",,,,,,,,,@c-00f1,,,,,,,,,,,,,M,,,,"Number",,,,,,,,,,M,,,,,,,,,,,,@c-0000,M,,,M,"Detroit","°F",M,,,,,,,,,,M,
+@c-00fe,,,,M,,,,,,,,,,M,,,,,,"Charlie Floor-4 VAV_16 unocc_ht_stpt",,,,,,,,,@c-00f1,,,,,,,,,,,,M,M,,,,"Number",,,,,,,,,,M,,,,,,,,,,,,@c-0000,M,,,M,"Detroit","°F",M,,,,,,,,,,M,
+@c-00ff,,,,,,,,,,,,,,,,,,,,"Charlie Floor-4 VAV_17",,,,,,,,M,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,@c-0000,,,,,,,,,M,,,,,,,,,{equipGroup:"VAVs"}
+@c-0100,,,,M,,,,,,,,,,M,,M,,,,"Charlie Floor-4 VAV_17 dpr_pos",,,,,,,,,@c-00ff,,,,,,,,,,,,,M,,,,"Number",,,,,,,,,,M,,,,,,,,,M,,,@c-0000,,,,,"Detroit","%",,,,,,,,,,,,
+@c-0101,,,,M,,,,,,,,,M,M,,,,,,"Charlie Floor-4 VAV_17 eff_cl_stpt",,M,,,,,,,@c-00ff,,,,,,,,,,,,,M,,,,"Number",,,,,,,M,,,M,,,,,,,,,,,,@c-0000,M,,,M,"Detroit","°F",,,,,,,,,,,M,
+@c-0102,,,,M,,,,,,,,,,M,,,,,,"Charlie Floor-4 VAV_17 eff_ht_stpt",,M,,,,,,,@c-00ff,,,,,,,,,,,,M,M,,,,"Number",,,,,,,M,,,M,,,,,,,,,,,,@c-0000,M,,,M,"Detroit","°F",,,,,,,,,,,M,
+@c-0103,,,,M,,,,,,,,,,M,,,,,,"Charlie Floor-4 VAV_17 flow_input",M,,,,,,,,@c-00ff,,,M,,,,,,,,,,M,,,,"Number",,,96,,45,,,,,M,,,,,,,,,M,,,@c-0000,,,,,"Detroit","cfm",,,,,,,,,,,,{precision:0}
+@c-0104,,,,,,,,,,,,,,M,,,,,,"Charlie Floor-4 VAV_17 hw_valve",,,,,,,,,@c-00ff,,,,,,,,,,,M,,M,,,,"Number",,,100,,0,,,,,M,,,,,,,,,M,,,@c-0000,,,,,"Detroit","%",,M,,,,,,,,,,{precision:0}
+@c-0105,,,,M,,,,,,,,,M,M,,,,,,"Charlie Floor-4 VAV_17 occ_cl_stpt",,,,,,,,,@c-00ff,,,,,,,,,,,,,M,,,,"Number",,,,,,,M,,,M,,,,,,,,,,,,@c-0000,M,,,M,"Detroit","°F",,,,,,,,,,,M,
+@c-0106,,,,M,,,,,,,,,,M,,,,,,"Charlie Floor-4 VAV_17 occ_ht_stpt",,,,,,,,,@c-00ff,,,,,,,,,,,,M,M,,,,"Number",,,,,,,M,,,M,,,,,,,,,,,,@c-0000,M,,,M,"Detroit","°F",,,,,,,,,,,M,
+@c-0107,,,,,,,,,,,M,,,M,,,,,,"Charlie Floor-4 VAV_17 occ_status",,,,,,,"Unoccupied,Occupied",,@c-00ff,,,,,,,,,,,,,M,,,,"Bool",,,,,,,,M,,M,,,,,,,,,,,,@c-0000,,,,,"Detroit",,,,,,,,,,,,,
+@c-0108,,,,,,,,,,,,,,M,,,,,,"Charlie Floor-4 VAV_17 occ_switch",,,,,,,"Open,Closed",,@c-00ff,,,,,,,,,,,,,M,,,,"Bool",,,,,,,,M,,M,,,,,,,,,M,,,@c-0000,,,,,"Detroit",,,,,,,,,,,,,
+@c-0109,,,,M,,,,,,,,,,M,,,,,,"Charlie Floor-4 VAV_17 sa_temp",M,,,,,,,,@c-00ff,,,,,,,,,,,,,M,,,,"Number",,,,,,,,,,M,,,,,,,,,M,,,@c-0000,,,,M,"Detroit","°F",,,,,,,,,,,,
+@c-010a,,,,M,,,,,,,,,,M,,,,,,"Charlie Floor-4 VAV_17 space_temp",,,,,,,,,@c-00ff,,,,,,,,,,,,,M,,,,"Number",,,,,,,,,,M,,,,,,,,,M,,,@c-0000,,,,M,"Detroit","°F",,,,,,,,,,,M,
+@c-010b,,,,M,,,,,,,,,M,M,,,,,,"Charlie Floor-4 VAV_17 unocc_cl_stpt",,,,,,,,,@c-00ff,,,,,,,,,,,,,M,,,,"Number",,,,,,,,,,M,,,,,,,,,,,,@c-0000,M,,,M,"Detroit","°F",M,,,,,,,,,,M,
+@c-010c,,,,M,,,,,,,,,,M,,,,,,"Charlie Floor-4 VAV_17 unocc_ht_stpt",,,,,,,,,@c-00ff,,,,,,,,,,,,M,M,,,,"Number",,,,,,,,,,M,,,,,,,,,,,,@c-0000,M,,,M,"Detroit","°F",M,,,,,,,,,,M,
+@c-010d,,,,,,,,,,,,,,,,,,,,"Charlie Floor-4 VAV_18",,,,,,,,M,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,@c-0000,,,,,,,,,M,,,,,,,,,{equipGroup:"VAVs"}
+@c-010e,,,,M,,,,,,,,,,M,,M,,,,"Charlie Floor-4 VAV_18 dpr_pos",,,,,,,,,@c-010d,,,,,,,,,,,,,M,,,,"Number",,,,,,,,,,M,,,,,,,,,M,,,@c-0000,,,,,"Detroit","%",,,,,,,,,,,,
+@c-010f,,,,M,,,,,,,,,M,M,,,,,,"Charlie Floor-4 VAV_18 eff_cl_stpt",,M,,,,,,,@c-010d,,,,,,,,,,,,,M,,,,"Number",,,,,,,M,,,M,,,,,,,,,,,,@c-0000,M,,,M,"Detroit","°F",,,,,,,,,,,M,
+@c-0110,,,,M,,,,,,,,,,M,,,,,,"Charlie Floor-4 VAV_18 eff_ht_stpt",,M,,,,,,,@c-010d,,,,,,,,,,,,M,M,,,,"Number",,,,,,,M,,,M,,,,,,,,,,,,@c-0000,M,,,M,"Detroit","°F",,,,,,,,,,,M,
+@c-0111,,,,M,,,,,,,,,,M,,,,,,"Charlie Floor-4 VAV_18 flow_input",M,,,,,,,,@c-010d,,,M,,,,,,,,,,M,,,,"Number",,,96,,45,,,,,M,,,,,,,,,M,,,@c-0000,,,,,"Detroit","cfm",,,,,,,,,,,,{precision:0}
+@c-0112,,,,,,,,,,,,,,M,,,,,,"Charlie Floor-4 VAV_18 hw_valve",,,,,,,,,@c-010d,,,,,,,,,,,M,,M,,,,"Number",,,100,,0,,,,,M,,,,,,,,,M,,,@c-0000,,,,,"Detroit","%",,M,,,,,,,,,,{precision:0}
+@c-0113,,,,M,,,,,,,,,M,M,,,,,,"Charlie Floor-4 VAV_18 occ_cl_stpt",,,,,,,,,@c-010d,,,,,,,,,,,,,M,,,,"Number",,,,,,,M,,,M,,,,,,,,,,,,@c-0000,M,,,M,"Detroit","°F",,,,,,,,,,,M,
+@c-0114,,,,M,,,,,,,,,,M,,,,,,"Charlie Floor-4 VAV_18 occ_ht_stpt",,,,,,,,,@c-010d,,,,,,,,,,,,M,M,,,,"Number",,,,,,,M,,,M,,,,,,,,,,,,@c-0000,M,,,M,"Detroit","°F",,,,,,,,,,,M,
+@c-0115,,,,,,,,,,,M,,,M,,,,,,"Charlie Floor-4 VAV_18 occ_status",,,,,,,"Unoccupied,Occupied",,@c-010d,,,,,,,,,,,,,M,,,,"Bool",,,,,,,,M,,M,,,,,,,,,,,,@c-0000,,,,,"Detroit",,,,,,,,,,,,,
+@c-0116,,,,,,,,,,,,,,M,,,,,,"Charlie Floor-4 VAV_18 occ_switch",,,,,,,"Open,Closed",,@c-010d,,,,,,,,,,,,,M,,,,"Bool",,,,,,,,M,,M,,,,,,,,,M,,,@c-0000,,,,,"Detroit",,,,,,,,,,,,,
+@c-0117,,,,M,,,,,,,,,,M,,,,,,"Charlie Floor-4 VAV_18 sa_temp",M,,,,,,,,@c-010d,,,,,,,,,,,,,M,,,,"Number",,,,,,,,,,M,,,,,,,,,M,,,@c-0000,,,,M,"Detroit","°F",,,,,,,,,,,,
+@c-0118,,,,M,,,,,,,,,,M,,,,,,"Charlie Floor-4 VAV_18 space_temp",,,,,,,,,@c-010d,,,,,,,,,,,,,M,,,,"Number",,,,,,,,,,M,,,,,,,,,M,,,@c-0000,,,,M,"Detroit","°F",,,,,,,,,,,M,
+@c-0119,,,,M,,,,,,,,,M,M,,,,,,"Charlie Floor-4 VAV_18 unocc_cl_stpt",,,,,,,,,@c-010d,,,,,,,,,,,,,M,,,,"Number",,,,,,,,,,M,,,,,,,,,,,,@c-0000,M,,,M,"Detroit","°F",M,,,,,,,,,,M,
+@c-011a,,,,M,,,,,,,,,,M,,,,,,"Charlie Floor-4 VAV_18 unocc_ht_stpt",,,,,,,,,@c-010d,,,,,,,,,,,,M,M,,,,"Number",,,,,,,,,,M,,,,,,,,,,,,@c-0000,M,,,M,"Detroit","°F",M,,,,,,,,,,M,
+@c-011b,,,,,,,,,,,,,,,,,,,,"Charlie Floor-4 VAV_19",,,,,,,,M,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,@c-0000,,,,,,,,,M,,,,,,,,,{equipGroup:"VAVs"}
+@c-011c,,,,M,,,,,,,,,,M,,M,,,,"Charlie Floor-4 VAV_19 dpr_pos",,,,,,,,,@c-011b,,,,,,,,,,,,,M,,,,"Number",,,,,,,,,,M,,,,,,,,,M,,,@c-0000,,,,,"Detroit","%",,,,,,,,,,,,
+@c-011d,,,,M,,,,,,,,,M,M,,,,,,"Charlie Floor-4 VAV_19 eff_cl_stpt",,M,,,,,,,@c-011b,,,,,,,,,,,,,M,,,,"Number",,,,,,,M,,,M,,,,,,,,,,,,@c-0000,M,,,M,"Detroit","°F",,,,,,,,,,,M,
+@c-011e,,,,M,,,,,,,,,,M,,,,,,"Charlie Floor-4 VAV_19 eff_ht_stpt",,M,,,,,,,@c-011b,,,,,,,,,,,,M,M,,,,"Number",,,,,,,M,,,M,,,,,,,,,,,,@c-0000,M,,,M,"Detroit","°F",,,,,,,,,,,M,
+@c-011f,,,,M,,,,,,,,,,M,,,,,,"Charlie Floor-4 VAV_19 flow_input",M,,,,,,,,@c-011b,,,M,,,,,,,,,,M,,,,"Number",,,96,,45,,,,,M,,,,,,,,,M,,,@c-0000,,,,,"Detroit","cfm",,,,,,,,,,,,{precision:0}
+@c-0120,,,,,,,,,,,,,,M,,,,,,"Charlie Floor-4 VAV_19 hw_valve",,,,,,,,,@c-011b,,,,,,,,,,,M,,M,,,,"Number",,,100,,0,,,,,M,,,,,,,,,M,,,@c-0000,,,,,"Detroit","%",,M,,,,,,,,,,{precision:0}
+@c-0121,,,,M,,,,,,,,,M,M,,,,,,"Charlie Floor-4 VAV_19 occ_cl_stpt",,,,,,,,,@c-011b,,,,,,,,,,,,,M,,,,"Number",,,,,,,M,,,M,,,,,,,,,,,,@c-0000,M,,,M,"Detroit","°F",,,,,,,,,,,M,
+@c-0122,,,,M,,,,,,,,,,M,,,,,,"Charlie Floor-4 VAV_19 occ_ht_stpt",,,,,,,,,@c-011b,,,,,,,,,,,,M,M,,,,"Number",,,,,,,M,,,M,,,,,,,,,,,,@c-0000,M,,,M,"Detroit","°F",,,,,,,,,,,M,
+@c-0123,,,,,,,,,,,M,,,M,,,,,,"Charlie Floor-4 VAV_19 occ_status",,,,,,,"Unoccupied,Occupied",,@c-011b,,,,,,,,,,,,,M,,,,"Bool",,,,,,,,M,,M,,,,,,,,,,,,@c-0000,,,,,"Detroit",,,,,,,,,,,,,
+@c-0124,,,,,,,,,,,,,,M,,,,,,"Charlie Floor-4 VAV_19 occ_switch",,,,,,,"Open,Closed",,@c-011b,,,,,,,,,,,,,M,,,,"Bool",,,,,,,,M,,M,,,,,,,,,M,,,@c-0000,,,,,"Detroit",,,,,,,,,,,,,
+@c-0125,,,,M,,,,,,,,,,M,,,,,,"Charlie Floor-4 VAV_19 sa_temp",M,,,,,,,,@c-011b,,,,,,,,,,,,,M,,,,"Number",,,,,,,,,,M,,,,,,,,,M,,,@c-0000,,,,M,"Detroit","°F",,,,,,,,,,,,
+@c-0126,,,,M,,,,,,,,,,M,,,,,,"Charlie Floor-4 VAV_19 space_temp",,,,,,,,,@c-011b,,,,,,,,,,,,,M,,,,"Number",,,,,,,,,,M,,,,,,,,,M,,,@c-0000,,,,M,"Detroit","°F",,,,,,,,,,,M,
+@c-0127,,,,M,,,,,,,,,M,M,,,,,,"Charlie Floor-4 VAV_19 unocc_cl_stpt",,,,,,,,,@c-011b,,,,,,,,,,,,,M,,,,"Number",,,,,,,,,,M,,,,,,,,,,,,@c-0000,M,,,M,"Detroit","°F",M,,,,,,,,,,M,
+@c-0128,,,,M,,,,,,,,,,M,,,,,,"Charlie Floor-4 VAV_19 unocc_ht_stpt",,,,,,,,,@c-011b,,,,,,,,,,,,M,M,,,,"Number",,,,,,,,,,M,,,,,,,,,,,,@c-0000,M,,,M,"Detroit","°F",M,,,,,,,,,,M,
+@c-0129,,,,,,,,,,,,,,,,,,,,"Charlie Floor-4 VAV_2",,,,,,,,M,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,@c-0000,,,,,,,,,M,,,,,,,,,{equipGroup:"VAVs"}
+@c-012a,,,,M,,,,,,,,,,M,,M,,,,"Charlie Floor-4 VAV_2 dpr_pos",,,,,,,,,@c-0129,,,,,,,,,,,,,M,,,,"Number",,,,,,,,,,M,,,,,,,,,M,,,@c-0000,,,,,"Detroit","%",,,,,,,,,,,,
+@c-012b,,,,M,,,,,,,,,M,M,,,,,,"Charlie Floor-4 VAV_2 eff_cl_stpt",,M,,,,,,,@c-0129,,,,,,,,,,,,,M,,,,"Number",,,,,,,M,,,M,,,,,,,,,,,,@c-0000,M,,,M,"Detroit","°F",,,,,,,,,,,M,
+@c-012c,,,,M,,,,,,,,,,M,,,,,,"Charlie Floor-4 VAV_2 eff_ht_stpt",,M,,,,,,,@c-0129,,,,,,,,,,,,M,M,,,,"Number",,,,,,,M,,,M,,,,,,,,,,,,@c-0000,M,,,M,"Detroit","°F",,,,,,,,,,,M,
+@c-012d,,,,M,,,,,,,,,,M,,,,,,"Charlie Floor-4 VAV_2 flow_input",M,,,,,,,,@c-0129,,,M,,,,,,,,,,M,,,,"Number",,,96,,45,,,,,M,,,,,,,,,M,,,@c-0000,,,,,"Detroit","cfm",,,,,,,,,,,,{precision:0}
+@c-012e,,,,,,,,,,,,,,M,,,,,,"Charlie Floor-4 VAV_2 hw_valve",,,,,,,,,@c-0129,,,,,,,,,,,M,,M,,,,"Number",,,100,,0,,,,,M,,,,,,,,,M,,,@c-0000,,,,,"Detroit","%",,M,,,,,,,,,,{precision:0}
+@c-012f,,,,M,,,,,,,,,M,M,,,,,,"Charlie Floor-4 VAV_2 occ_cl_stpt",,,,,,,,,@c-0129,,,,,,,,,,,,,M,,,,"Number",,,,,,,M,,,M,,,,,,,,,,,,@c-0000,M,,,M,"Detroit","°F",,,,,,,,,,,M,
+@c-0130,,,,M,,,,,,,,,,M,,,,,,"Charlie Floor-4 VAV_2 occ_ht_stpt",,,,,,,,,@c-0129,,,,,,,,,,,,M,M,,,,"Number",,,,,,,M,,,M,,,,,,,,,,,,@c-0000,M,,,M,"Detroit","°F",,,,,,,,,,,M,
+@c-0131,,,,,,,,,,,M,,,M,,,,,,"Charlie Floor-4 VAV_2 occ_status",,,,,,,"Unoccupied,Occupied",,@c-0129,,,,,,,,,,,,,M,,,,"Bool",,,,,,,,M,,M,,,,,,,,,,,,@c-0000,,,,,"Detroit",,,,,,,,,,,,,
+@c-0132,,,,,,,,,,,,,,M,,,,,,"Charlie Floor-4 VAV_2 occ_switch",,,,,,,"Open,Closed",,@c-0129,,,,,,,,,,,,,M,,,,"Bool",,,,,,,,M,,M,,,,,,,,,M,,,@c-0000,,,,,"Detroit",,,,,,,,,,,,,
+@c-0133,,,,M,,,,,,,,,,M,,,,,,"Charlie Floor-4 VAV_2 sa_temp",M,,,,,,,,@c-0129,,,,,,,,,,,,,M,,,,"Number",,,,,,,,,,M,,,,,,,,,M,,,@c-0000,,,,M,"Detroit","°F",,,,,,,,,,,,
+@c-0134,,,,M,,,,,,,,,,M,,,,,,"Charlie Floor-4 VAV_2 space_temp",,,,,,,,,@c-0129,,,,,,,,,,,,,M,,,,"Number",,,,,,,,,,M,,,,,,,,,M,,,@c-0000,,,,M,"Detroit","°F",,,,,,,,,,,M,
+@c-0135,,,,M,,,,,,,,,M,M,,,,,,"Charlie Floor-4 VAV_2 unocc_cl_stpt",,,,,,,,,@c-0129,,,,,,,,,,,,,M,,,,"Number",,,,,,,,,,M,,,,,,,,,,,,@c-0000,M,,,M,"Detroit","°F",M,,,,,,,,,,M,
+@c-0136,,,,M,,,,,,,,,,M,,,,,,"Charlie Floor-4 VAV_2 unocc_ht_stpt",,,,,,,,,@c-0129,,,,,,,,,,,,M,M,,,,"Number",,,,,,,,,,M,,,,,,,,,,,,@c-0000,M,,,M,"Detroit","°F",M,,,,,,,,,,M,
+@c-0137,,,,,,,,,,,,,,,,,,,,"Charlie Floor-4 VAV_20",,,,,,,,M,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,@c-0000,,,,,,,,,M,,,,,,,,,{equipGroup:"VAVs"}
+@c-0138,,,,M,,,,,,,,,,M,,M,,,,"Charlie Floor-4 VAV_20 dpr_pos",,,,,,,,,@c-0137,,,,,,,,,,,,,M,,,,"Number",,,,,,,,,,M,,,,,,,,,M,,,@c-0000,,,,,"Detroit","%",,,,,,,,,,,,
+@c-0139,,,,M,,,,,,,,,M,M,,,,,,"Charlie Floor-4 VAV_20 eff_cl_stpt",,M,,,,,,,@c-0137,,,,,,,,,,,,,M,,,,"Number",,,,,,,M,,,M,,,,,,,,,,,,@c-0000,M,,,M,"Detroit","°F",,,,,,,,,,,M,
+@c-013a,,,,M,,,,,,,,,,M,,,,,,"Charlie Floor-4 VAV_20 eff_ht_stpt",,M,,,,,,,@c-0137,,,,,,,,,,,,M,M,,,,"Number",,,,,,,M,,,M,,,,,,,,,,,,@c-0000,M,,,M,"Detroit","°F",,,,,,,,,,,M,
+@c-013b,,,,M,,,,,,,,,,M,,,,,,"Charlie Floor-4 VAV_20 flow_input",M,,,,,,,,@c-0137,,,M,,,,,,,,,,M,,,,"Number",,,96,,45,,,,,M,,,,,,,,,M,,,@c-0000,,,,,"Detroit","cfm",,,,,,,,,,,,{precision:0}
+@c-013c,,,,,,,,,,,,,,M,,,,,,"Charlie Floor-4 VAV_20 hw_valve",,,,,,,,,@c-0137,,,,,,,,,,,M,,M,,,,"Number",,,100,,0,,,,,M,,,,,,,,,M,,,@c-0000,,,,,"Detroit","%",,M,,,,,,,,,,{precision:0}
+@c-013d,,,,M,,,,,,,,,M,M,,,,,,"Charlie Floor-4 VAV_20 occ_cl_stpt",,,,,,,,,@c-0137,,,,,,,,,,,,,M,,,,"Number",,,,,,,M,,,M,,,,,,,,,,,,@c-0000,M,,,M,"Detroit","°F",,,,,,,,,,,M,
+@c-013e,,,,M,,,,,,,,,,M,,,,,,"Charlie Floor-4 VAV_20 occ_ht_stpt",,,,,,,,,@c-0137,,,,,,,,,,,,M,M,,,,"Number",,,,,,,M,,,M,,,,,,,,,,,,@c-0000,M,,,M,"Detroit","°F",,,,,,,,,,,M,
+@c-013f,,,,,,,,,,,M,,,M,,,,,,"Charlie Floor-4 VAV_20 occ_status",,,,,,,"Unoccupied,Occupied",,@c-0137,,,,,,,,,,,,,M,,,,"Bool",,,,,,,,M,,M,,,,,,,,,,,,@c-0000,,,,,"Detroit",,,,,,,,,,,,,
+@c-0140,,,,,,,,,,,,,,M,,,,,,"Charlie Floor-4 VAV_20 occ_switch",,,,,,,"Open,Closed",,@c-0137,,,,,,,,,,,,,M,,,,"Bool",,,,,,,,M,,M,,,,,,,,,M,,,@c-0000,,,,,"Detroit",,,,,,,,,,,,,
+@c-0141,,,,M,,,,,,,,,,M,,,,,,"Charlie Floor-4 VAV_20 sa_temp",M,,,,,,,,@c-0137,,,,,,,,,,,,,M,,,,"Number",,,,,,,,,,M,,,,,,,,,M,,,@c-0000,,,,M,"Detroit","°F",,,,,,,,,,,,
+@c-0142,,,,M,,,,,,,,,,M,,,,,,"Charlie Floor-4 VAV_20 space_temp",,,,,,,,,@c-0137,,,,,,,,,,,,,M,,,,"Number",,,,,,,,,,M,,,,,,,,,M,,,@c-0000,,,,M,"Detroit","°F",,,,,,,,,,,M,
+@c-0143,,,,M,,,,,,,,,M,M,,,,,,"Charlie Floor-4 VAV_20 unocc_cl_stpt",,,,,,,,,@c-0137,,,,,,,,,,,,,M,,,,"Number",,,,,,,,,,M,,,,,,,,,,,,@c-0000,M,,,M,"Detroit","°F",M,,,,,,,,,,M,
+@c-0144,,,,M,,,,,,,,,,M,,,,,,"Charlie Floor-4 VAV_20 unocc_ht_stpt",,,,,,,,,@c-0137,,,,,,,,,,,,M,M,,,,"Number",,,,,,,,,,M,,,,,,,,,,,,@c-0000,M,,,M,"Detroit","°F",M,,,,,,,,,,M,
+@c-0145,,,,,,,,,,,,,,,,,,,,"Charlie Floor-4 VAV_21",,,,,,,,M,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,@c-0000,,,,,,,,,M,,,,,,,,,{equipGroup:"VAVs"}
+@c-0146,,,,M,,,,,,,,,,M,,M,,,,"Charlie Floor-4 VAV_21 dpr_pos",,,,,,,,,@c-0145,,,,,,,,,,,,,M,,,,"Number",,,,,,,,,,M,,,,,,,,,M,,,@c-0000,,,,,"Detroit","%",,,,,,,,,,,,
+@c-0147,,,,M,,,,,,,,,M,M,,,,,,"Charlie Floor-4 VAV_21 eff_cl_stpt",,M,,,,,,,@c-0145,,,,,,,,,,,,,M,,,,"Number",,,,,,,M,,,M,,,,,,,,,,,,@c-0000,M,,,M,"Detroit","°F",,,,,,,,,,,M,
+@c-0148,,,,M,,,,,,,,,,M,,,,,,"Charlie Floor-4 VAV_21 eff_ht_stpt",,M,,,,,,,@c-0145,,,,,,,,,,,,M,M,,,,"Number",,,,,,,M,,,M,,,,,,,,,,,,@c-0000,M,,,M,"Detroit","°F",,,,,,,,,,,M,
+@c-0149,,,,M,,,,,,,,,,M,,,,,,"Charlie Floor-4 VAV_21 flow_input",M,,,,,,,,@c-0145,,,M,,,,,,,,,,M,,,,"Number",,,96,,45,,,,,M,,,,,,,,,M,,,@c-0000,,,,,"Detroit","cfm",,,,,,,,,,,,{precision:0}
+@c-014a,,,,,,,,,,,,,,M,,,,,,"Charlie Floor-4 VAV_21 hw_valve",,,,,,,,,@c-0145,,,,,,,,,,,M,,M,,,,"Number",,,100,,0,,,,,M,,,,,,,,,M,,,@c-0000,,,,,"Detroit","%",,M,,,,,,,,,,{precision:0}
+@c-014b,,,,M,,,,,,,,,M,M,,,,,,"Charlie Floor-4 VAV_21 occ_cl_stpt",,,,,,,,,@c-0145,,,,,,,,,,,,,M,,,,"Number",,,,,,,M,,,M,,,,,,,,,,,,@c-0000,M,,,M,"Detroit","°F",,,,,,,,,,,M,
+@c-014c,,,,M,,,,,,,,,,M,,,,,,"Charlie Floor-4 VAV_21 occ_ht_stpt",,,,,,,,,@c-0145,,,,,,,,,,,,M,M,,,,"Number",,,,,,,M,,,M,,,,,,,,,,,,@c-0000,M,,,M,"Detroit","°F",,,,,,,,,,,M,
+@c-014d,,,,,,,,,,,M,,,M,,,,,,"Charlie Floor-4 VAV_21 occ_status",,,,,,,"Unoccupied,Occupied",,@c-0145,,,,,,,,,,,,,M,,,,"Bool",,,,,,,,M,,M,,,,,,,,,,,,@c-0000,,,,,"Detroit",,,,,,,,,,,,,
+@c-014e,,,,,,,,,,,,,,M,,,,,,"Charlie Floor-4 VAV_21 occ_switch",,,,,,,"Open,Closed",,@c-0145,,,,,,,,,,,,,M,,,,"Bool",,,,,,,,M,,M,,,,,,,,,M,,,@c-0000,,,,,"Detroit",,,,,,,,,,,,,
+@c-014f,,,,M,,,,,,,,,,M,,,,,,"Charlie Floor-4 VAV_21 sa_temp",M,,,,,,,,@c-0145,,,,,,,,,,,,,M,,,,"Number",,,,,,,,,,M,,,,,,,,,M,,,@c-0000,,,,M,"Detroit","°F",,,,,,,,,,,,
+@c-0150,,,,M,,,,,,,,,,M,,,,,,"Charlie Floor-4 VAV_21 space_temp",,,,,,,,,@c-0145,,,,,,,,,,,,,M,,,,"Number",,,,,,,,,,M,,,,,,,,,M,,,@c-0000,,,,M,"Detroit","°F",,,,,,,,,,,M,
+@c-0151,,,,M,,,,,,,,,M,M,,,,,,"Charlie Floor-4 VAV_21 unocc_cl_stpt",,,,,,,,,@c-0145,,,,,,,,,,,,,M,,,,"Number",,,,,,,,,,M,,,,,,,,,,,,@c-0000,M,,,M,"Detroit","°F",M,,,,,,,,,,M,
+@c-0152,,,,M,,,,,,,,,,M,,,,,,"Charlie Floor-4 VAV_21 unocc_ht_stpt",,,,,,,,,@c-0145,,,,,,,,,,,,M,M,,,,"Number",,,,,,,,,,M,,,,,,,,,,,,@c-0000,M,,,M,"Detroit","°F",M,,,,,,,,,,M,
+@c-0153,,,,,,,,,,,,,,,,,,,,"Charlie Floor-4 VAV_22",,,,,,,,M,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,@c-0000,,,,,,,,,M,,,,,,,,,{equipGroup:"VAVs"}
+@c-0154,,,,M,,,,,,,,,,M,,M,,,,"Charlie Floor-4 VAV_22 dpr_pos",,,,,,,,,@c-0153,,,,,,,,,,,,,M,,,,"Number",,,,,,,,,,M,,,,,,,,,M,,,@c-0000,,,,,"Detroit","%",,,,,,,,,,,,
+@c-0155,,,,M,,,,,,,,,M,M,,,,,,"Charlie Floor-4 VAV_22 eff_cl_stpt",,M,,,,,,,@c-0153,,,,,,,,,,,,,M,,,,"Number",,,,,,,M,,,M,,,,,,,,,,,,@c-0000,M,,,M,"Detroit","°F",,,,,,,,,,,M,
+@c-0156,,,,M,,,,,,,,,,M,,,,,,"Charlie Floor-4 VAV_22 eff_ht_stpt",,M,,,,,,,@c-0153,,,,,,,,,,,,M,M,,,,"Number",,,,,,,M,,,M,,,,,,,,,,,,@c-0000,M,,,M,"Detroit","°F",,,,,,,,,,,M,
+@c-0157,,,,M,,,,,,,,,,M,,,,,,"Charlie Floor-4 VAV_22 flow_input",M,,,,,,,,@c-0153,,,M,,,,,,,,,,M,,,,"Number",,,96,,45,,,,,M,,,,,,,,,M,,,@c-0000,,,,,"Detroit","cfm",,,,,,,,,,,,{precision:0}
+@c-0158,,,,,,,,,,,,,,M,,,,,,"Charlie Floor-4 VAV_22 hw_valve",,,,,,,,,@c-0153,,,,,,,,,,,M,,M,,,,"Number",,,100,,0,,,,,M,,,,,,,,,M,,,@c-0000,,,,,"Detroit","%",,M,,,,,,,,,,{precision:0}
+@c-0159,,,,M,,,,,,,,,M,M,,,,,,"Charlie Floor-4 VAV_22 occ_cl_stpt",,,,,,,,,@c-0153,,,,,,,,,,,,,M,,,,"Number",,,,,,,M,,,M,,,,,,,,,,,,@c-0000,M,,,M,"Detroit","°F",,,,,,,,,,,M,
+@c-015a,,,,M,,,,,,,,,,M,,,,,,"Charlie Floor-4 VAV_22 occ_ht_stpt",,,,,,,,,@c-0153,,,,,,,,,,,,M,M,,,,"Number",,,,,,,M,,,M,,,,,,,,,,,,@c-0000,M,,,M,"Detroit","°F",,,,,,,,,,,M,
+@c-015b,,,,,,,,,,,M,,,M,,,,,,"Charlie Floor-4 VAV_22 occ_status",,,,,,,"Unoccupied,Occupied",,@c-0153,,,,,,,,,,,,,M,,,,"Bool",,,,,,,,M,,M,,,,,,,,,,,,@c-0000,,,,,"Detroit",,,,,,,,,,,,,
+@c-015c,,,,,,,,,,,,,,M,,,,,,"Charlie Floor-4 VAV_22 occ_switch",,,,,,,"Open,Closed",,@c-0153,,,,,,,,,,,,,M,,,,"Bool",,,,,,,,M,,M,,,,,,,,,M,,,@c-0000,,,,,"Detroit",,,,,,,,,,,,,
+@c-015d,,,,M,,,,,,,,,,M,,,,,,"Charlie Floor-4 VAV_22 sa_temp",M,,,,,,,,@c-0153,,,,,,,,,,,,,M,,,,"Number",,,,,,,,,,M,,,,,,,,,M,,,@c-0000,,,,M,"Detroit","°F",,,,,,,,,,,,
+@c-015e,,,,M,,,,,,,,,,M,,,,,,"Charlie Floor-4 VAV_22 space_temp",,,,,,,,,@c-0153,,,,,,,,,,,,,M,,,,"Number",,,,,,,,,,M,,,,,,,,,M,,,@c-0000,,,,M,"Detroit","°F",,,,,,,,,,,M,
+@c-015f,,,,M,,,,,,,,,M,M,,,,,,"Charlie Floor-4 VAV_22 unocc_cl_stpt",,,,,,,,,@c-0153,,,,,,,,,,,,,M,,,,"Number",,,,,,,,,,M,,,,,,,,,,,,@c-0000,M,,,M,"Detroit","°F",M,,,,,,,,,,M,
+@c-0160,,,,M,,,,,,,,,,M,,,,,,"Charlie Floor-4 VAV_22 unocc_ht_stpt",,,,,,,,,@c-0153,,,,,,,,,,,,M,M,,,,"Number",,,,,,,,,,M,,,,,,,,,,,,@c-0000,M,,,M,"Detroit","°F",M,,,,,,,,,,M,
+@c-0161,,,,,,,,,,,,,,,,,,,,"Charlie Floor-4 VAV_23",,,,,,,,M,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,@c-0000,,,,,,,,,M,,,,,,,,,{equipGroup:"VAVs"}
+@c-0162,,,,M,,,,,,,,,,M,,M,,,,"Charlie Floor-4 VAV_23 dpr_pos",,,,,,,,,@c-0161,,,,,,,,,,,,,M,,,,"Number",,,,,,,,,,M,,,,,,,,,M,,,@c-0000,,,,,"Detroit","%",,,,,,,,,,,,
+@c-0163,,,,M,,,,,,,,,M,M,,,,,,"Charlie Floor-4 VAV_23 eff_cl_stpt",,M,,,,,,,@c-0161,,,,,,,,,,,,,M,,,,"Number",,,,,,,M,,,M,,,,,,,,,,,,@c-0000,M,,,M,"Detroit","°F",,,,,,,,,,,M,
+@c-0164,,,,M,,,,,,,,,,M,,,,,,"Charlie Floor-4 VAV_23 eff_ht_stpt",,M,,,,,,,@c-0161,,,,,,,,,,,,M,M,,,,"Number",,,,,,,M,,,M,,,,,,,,,,,,@c-0000,M,,,M,"Detroit","°F",,,,,,,,,,,M,
+@c-0165,,,,M,,,,,,,,,,M,,,,,,"Charlie Floor-4 VAV_23 flow_input",M,,,,,,,,@c-0161,,,M,,,,,,,,,,M,,,,"Number",,,96,,45,,,,,M,,,,,,,,,M,,,@c-0000,,,,,"Detroit","cfm",,,,,,,,,,,,{precision:0}
+@c-0166,,,,,,,,,,,,,,M,,,,,,"Charlie Floor-4 VAV_23 hw_valve",,,,,,,,,@c-0161,,,,,,,,,,,M,,M,,,,"Number",,,100,,0,,,,,M,,,,,,,,,M,,,@c-0000,,,,,"Detroit","%",,M,,,,,,,,,,{precision:0}
+@c-0167,,,,M,,,,,,,,,M,M,,,,,,"Charlie Floor-4 VAV_23 occ_cl_stpt",,,,,,,,,@c-0161,,,,,,,,,,,,,M,,,,"Number",,,,,,,M,,,M,,,,,,,,,,,,@c-0000,M,,,M,"Detroit","°F",,,,,,,,,,,M,
+@c-0168,,,,M,,,,,,,,,,M,,,,,,"Charlie Floor-4 VAV_23 occ_ht_stpt",,,,,,,,,@c-0161,,,,,,,,,,,,M,M,,,,"Number",,,,,,,M,,,M,,,,,,,,,,,,@c-0000,M,,,M,"Detroit","°F",,,,,,,,,,,M,
+@c-0169,,,,,,,,,,,M,,,M,,,,,,"Charlie Floor-4 VAV_23 occ_status",,,,,,,"Unoccupied,Occupied",,@c-0161,,,,,,,,,,,,,M,,,,"Bool",,,,,,,,M,,M,,,,,,,,,,,,@c-0000,,,,,"Detroit",,,,,,,,,,,,,
+@c-016a,,,,,,,,,,,,,,M,,,,,,"Charlie Floor-4 VAV_23 occ_switch",,,,,,,"Open,Closed",,@c-0161,,,,,,,,,,,,,M,,,,"Bool",,,,,,,,M,,M,,,,,,,,,M,,,@c-0000,,,,,"Detroit",,,,,,,,,,,,,
+@c-016b,,,,M,,,,,,,,,,M,,,,,,"Charlie Floor-4 VAV_23 sa_temp",M,,,,,,,,@c-0161,,,,,,,,,,,,,M,,,,"Number",,,,,,,,,,M,,,,,,,,,M,,,@c-0000,,,,M,"Detroit","°F",,,,,,,,,,,,
+@c-016c,,,,M,,,,,,,,,,M,,,,,,"Charlie Floor-4 VAV_23 space_temp",,,,,,,,,@c-0161,,,,,,,,,,,,,M,,,,"Number",,,,,,,,,,M,,,,,,,,,M,,,@c-0000,,,,M,"Detroit","°F",,,,,,,,,,,M,
+@c-016d,,,,M,,,,,,,,,M,M,,,,,,"Charlie Floor-4 VAV_23 unocc_cl_stpt",,,,,,,,,@c-0161,,,,,,,,,,,,,M,,,,"Number",,,,,,,,,,M,,,,,,,,,,,,@c-0000,M,,,M,"Detroit","°F",M,,,,,,,,,,M,
+@c-016e,,,,M,,,,,,,,,,M,,,,,,"Charlie Floor-4 VAV_23 unocc_ht_stpt",,,,,,,,,@c-0161,,,,,,,,,,,,M,M,,,,"Number",,,,,,,,,,M,,,,,,,,,,,,@c-0000,M,,,M,"Detroit","°F",M,,,,,,,,,,M,
+@c-016f,,,,,,,,,,,,,,,,,,,,"Charlie Floor-4 VAV_24",,,,,,,,M,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,@c-0000,,,,,,,,,M,,,,,,,,,{equipGroup:"VAVs"}
+@c-0170,,,,M,,,,,,,,,,M,,M,,,,"Charlie Floor-4 VAV_24 dpr_pos",,,,,,,,,@c-016f,,,,,,,,,,,,,M,,,,"Number",,,,,,,,,,M,,,,,,,,,M,,,@c-0000,,,,,"Detroit","%",,,,,,,,,,,,
+@c-0171,,,,M,,,,,,,,,M,M,,,,,,"Charlie Floor-4 VAV_24 eff_cl_stpt",,M,,,,,,,@c-016f,,,,,,,,,,,,,M,,,,"Number",,,,,,,M,,,M,,,,,,,,,,,,@c-0000,M,,,M,"Detroit","°F",,,,,,,,,,,M,
+@c-0172,,,,M,,,,,,,,,,M,,,,,,"Charlie Floor-4 VAV_24 eff_ht_stpt",,M,,,,,,,@c-016f,,,,,,,,,,,,M,M,,,,"Number",,,,,,,M,,,M,,,,,,,,,,,,@c-0000,M,,,M,"Detroit","°F",,,,,,,,,,,M,
+@c-0173,,,,M,,,,,,,,,,M,,,,,,"Charlie Floor-4 VAV_24 flow_input",M,,,,,,,,@c-016f,,,M,,,,,,,,,,M,,,,"Number",,,96,,45,,,,,M,,,,,,,,,M,,,@c-0000,,,,,"Detroit","cfm",,,,,,,,,,,,{precision:0}
+@c-0174,,,,,,,,,,,,,,M,,,,,,"Charlie Floor-4 VAV_24 hw_valve",,,,,,,,,@c-016f,,,,,,,,,,,M,,M,,,,"Number",,,100,,0,,,,,M,,,,,,,,,M,,,@c-0000,,,,,"Detroit","%",,M,,,,,,,,,,{precision:0}
+@c-0175,,,,M,,,,,,,,,M,M,,,,,,"Charlie Floor-4 VAV_24 occ_cl_stpt",,,,,,,,,@c-016f,,,,,,,,,,,,,M,,,,"Number",,,,,,,M,,,M,,,,,,,,,,,,@c-0000,M,,,M,"Detroit","°F",,,,,,,,,,,M,
+@c-0176,,,,M,,,,,,,,,,M,,,,,,"Charlie Floor-4 VAV_24 occ_ht_stpt",,,,,,,,,@c-016f,,,,,,,,,,,,M,M,,,,"Number",,,,,,,M,,,M,,,,,,,,,,,,@c-0000,M,,,M,"Detroit","°F",,,,,,,,,,,M,
+@c-0177,,,,,,,,,,,M,,,M,,,,,,"Charlie Floor-4 VAV_24 occ_status",,,,,,,"Unoccupied,Occupied",,@c-016f,,,,,,,,,,,,,M,,,,"Bool",,,,,,,,M,,M,,,,,,,,,,,,@c-0000,,,,,"Detroit",,,,,,,,,,,,,
+@c-0178,,,,,,,,,,,,,,M,,,,,,"Charlie Floor-4 VAV_24 occ_switch",,,,,,,"Open,Closed",,@c-016f,,,,,,,,,,,,,M,,,,"Bool",,,,,,,,M,,M,,,,,,,,,M,,,@c-0000,,,,,"Detroit",,,,,,,,,,,,,
+@c-0179,,,,M,,,,,,,,,,M,,,,,,"Charlie Floor-4 VAV_24 sa_temp",M,,,,,,,,@c-016f,,,,,,,,,,,,,M,,,,"Number",,,,,,,,,,M,,,,,,,,,M,,,@c-0000,,,,M,"Detroit","°F",,,,,,,,,,,,
+@c-017a,,,,M,,,,,,,,,,M,,,,,,"Charlie Floor-4 VAV_24 space_temp",,,,,,,,,@c-016f,,,,,,,,,,,,,M,,,,"Number",,,,,,,,,,M,,,,,,,,,M,,,@c-0000,,,,M,"Detroit","°F",,,,,,,,,,,M,
+@c-017b,,,,M,,,,,,,,,M,M,,,,,,"Charlie Floor-4 VAV_24 unocc_cl_stpt",,,,,,,,,@c-016f,,,,,,,,,,,,,M,,,,"Number",,,,,,,,,,M,,,,,,,,,,,,@c-0000,M,,,M,"Detroit","°F",M,,,,,,,,,,M,
+@c-017c,,,,M,,,,,,,,,,M,,,,,,"Charlie Floor-4 VAV_24 unocc_ht_stpt",,,,,,,,,@c-016f,,,,,,,,,,,,M,M,,,,"Number",,,,,,,,,,M,,,,,,,,,,,,@c-0000,M,,,M,"Detroit","°F",M,,,,,,,,,,M,
+@c-017d,,,,,,,,,,,,,,,,,,,,"Charlie Floor-4 VAV_25",,,,,,,,M,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,@c-0000,,,,,,,,,M,,,,,,,,,{equipGroup:"VAVs"}
+@c-017e,,,,M,,,,,,,,,,M,,M,,,,"Charlie Floor-4 VAV_25 dpr_pos",,,,,,,,,@c-017d,,,,,,,,,,,,,M,,,,"Number",,,,,,,,,,M,,,,,,,,,M,,,@c-0000,,,,,"Detroit","%",,,,,,,,,,,,
+@c-017f,,,,M,,,,,,,,,M,M,,,,,,"Charlie Floor-4 VAV_25 eff_cl_stpt",,M,,,,,,,@c-017d,,,,,,,,,,,,,M,,,,"Number",,,,,,,M,,,M,,,,,,,,,,,,@c-0000,M,,,M,"Detroit","°F",,,,,,,,,,,M,
+@c-0180,,,,M,,,,,,,,,,M,,,,,,"Charlie Floor-4 VAV_25 eff_ht_stpt",,M,,,,,,,@c-017d,,,,,,,,,,,,M,M,,,,"Number",,,,,,,M,,,M,,,,,,,,,,,,@c-0000,M,,,M,"Detroit","°F",,,,,,,,,,,M,
+@c-0181,,,,M,,,,,,,,,,M,,,,,,"Charlie Floor-4 VAV_25 flow_input",M,,,,,,,,@c-017d,,,M,,,,,,,,,,M,,,,"Number",,,96,,45,,,,,M,,,,,,,,,M,,,@c-0000,,,,,"Detroit","cfm",,,,,,,,,,,,{precision:0}
+@c-0182,,,,,,,,,,,,,,M,,,,,,"Charlie Floor-4 VAV_25 hw_valve",,,,,,,,,@c-017d,,,,,,,,,,,M,,M,,,,"Number",,,100,,0,,,,,M,,,,,,,,,M,,,@c-0000,,,,,"Detroit","%",,M,,,,,,,,,,{precision:0}
+@c-0183,,,,,,,,,,,,,,M,,,,,,"Charlie Floor-4 VAV_25 link_ahu_mode",,,,,,,"OFF,WARM\$2dUP,HEAT,COOL,FREECOOL,PRESSURIZE,EVACUATE,VENT",,@c-017d,,,,,,,,,,,,,M,,,,"Str",,,,,,,,,,M,,,,,,,,,M,,,@c-0000,,,,,"Detroit",,,,,,,,,,,,,
+@c-0184,,,,M,,,,,,,,,M,M,,,,,,"Charlie Floor-4 VAV_25 occ_cl_stpt",,,,,,,,,@c-017d,,,,,,,,,,,,,M,,,,"Number",,,,,,,M,,,M,,,,,,,,,,,,@c-0000,M,,,M,"Detroit","°F",,,,,,,,,,,M,
+@c-0185,,,,M,,,,,,,,,,M,,,,,,"Charlie Floor-4 VAV_25 occ_ht_stpt",,,,,,,,,@c-017d,,,,,,,,,,,,M,M,,,,"Number",,,,,,,M,,,M,,,,,,,,,,,,@c-0000,M,,,M,"Detroit","°F",,,,,,,,,,,M,
+@c-0186,,,,,,,,,,,M,,,M,,,,,,"Charlie Floor-4 VAV_25 occ_status",,,,,,,"Unoccupied,Occupied",,@c-017d,,,,,,,,,,,,,M,,,,"Bool",,,,,,,,M,,M,,,,,,,,,,,,@c-0000,,,,,"Detroit",,,,,,,,,,,,,
+@c-0187,,,,,,,,,,,,,,M,,,,,,"Charlie Floor-4 VAV_25 occ_switch",,,,,,,"Open,Closed",,@c-017d,,,,,,,,,,,,,M,,,,"Bool",,,,,,,,M,,M,,,,,,,,,M,,,@c-0000,,,,,"Detroit",,,,,,,,,,,,,
+@c-0188,,,,M,,,,,,,,,,M,,,,,,"Charlie Floor-4 VAV_25 sa_temp",M,,,,,,,,@c-017d,,,,,,,,,,,,,M,,,,"Number",,,,,,,,,,M,,,,,,,,,M,,,@c-0000,,,,M,"Detroit","°F",,,,,,,,,,,,
+@c-0189,,,,M,,,,,,,,,,M,,,,,,"Charlie Floor-4 VAV_25 space_temp",,,,,,,,,@c-017d,,,,,,,,,,,,,M,,,,"Number",,,,,,,,,,M,,,,,,,,,M,,,@c-0000,,,,M,"Detroit","°F",,,,,,,,,,,M,
+@c-018a,,,,,,,,,,,,,,M,,,,,,"Charlie Floor-4 VAV_25 terminal_status",,,,,,,"Off,Heating,Warm\$2dUp,Vent,N\$2fA,Cooling,Dehumidify,Reheat,Pressurize,Evacuate,Shutdown,IAQ\$20Override,Air\$20Balancing",,@c-017d,,,,,,,,,,,,,M,,,,"Str",,,,,,,,,,M,,,,,,,,,M,,,@c-0000,,,,,"Detroit",,,,,,,,,,,,,
+@c-018b,,,,M,,,,,,,,,M,M,,,,,,"Charlie Floor-4 VAV_25 unocc_cl_stpt",,,,,,,,,@c-017d,,,,,,,,,,,,,M,,,,"Number",,,,,,,,,,M,,,,,,,,,,,,@c-0000,M,,,M,"Detroit","°F",M,,,,,,,,,,M,
+@c-018c,,,,M,,,,,,,,,,M,,,,,,"Charlie Floor-4 VAV_25 unocc_ht_stpt",,,,,,,,,@c-017d,,,,,,,,,,,,M,M,,,,"Number",,,,,,,,,,M,,,,,,,,,,,,@c-0000,M,,,M,"Detroit","°F",M,,,,,,,,,,M,
+@c-018d,,,,,,,,,,,,,,,,,,,,"Charlie Floor-4 VAV_26",,,,,,,,M,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,@c-0000,,,,,,,,,M,,,,,,,,,{equipGroup:"VAVs"}
+@c-018e,,,,M,,,,,,,,,,M,,M,,,,"Charlie Floor-4 VAV_26 dpr_pos",,,,,,,,,@c-018d,,,,,,,,,,,,,M,,,,"Number",,,,,,,,,,M,,,,,,,,,M,,,@c-0000,,,,,"Detroit","%",,,,,,,,,,,,
+@c-018f,,,,M,,,,,,,,,M,M,,,,,,"Charlie Floor-4 VAV_26 eff_cl_stpt",,M,,,,,,,@c-018d,,,,,,,,,,,,,M,,,,"Number",,,,,,,M,,,M,,,,,,,,,,,,@c-0000,M,,,M,"Detroit","°F",,,,,,,,,,,M,
+@c-0190,,,,M,,,,,,,,,,M,,,,,,"Charlie Floor-4 VAV_26 eff_ht_stpt",,M,,,,,,,@c-018d,,,,,,,,,,,,M,M,,,,"Number",,,,,,,M,,,M,,,,,,,,,,,,@c-0000,M,,,M,"Detroit","°F",,,,,,,,,,,M,
+@c-0191,,,,M,,,,,,,,,,M,,,,,,"Charlie Floor-4 VAV_26 flow_input",M,,,,,,,,@c-018d,,,M,,,,,,,,,,M,,,,"Number",,,96,,45,,,,,M,,,,,,,,,M,,,@c-0000,,,,,"Detroit","cfm",,,,,,,,,,,,{precision:0}
+@c-0192,,,,M,,,,,,,,,M,M,,,,,,"Charlie Floor-4 VAV_26 occ_cl_stpt",,,,,,,,,@c-018d,,,,,,,,,,,,,M,,,,"Number",,,,,,,M,,,M,,,,,,,,,,,,@c-0000,M,,,M,"Detroit","°F",,,,,,,,,,,M,
+@c-0193,,,,M,,,,,,,,,,M,,,,,,"Charlie Floor-4 VAV_26 occ_ht_stpt",,,,,,,,,@c-018d,,,,,,,,,,,,M,M,,,,"Number",,,,,,,M,,,M,,,,,,,,,,,,@c-0000,M,,,M,"Detroit","°F",,,,,,,,,,,M,
+@c-0194,,,,,,,,,,,M,,,M,,,,,,"Charlie Floor-4 VAV_26 occ_status",,,,,,,"Unoccupied,Occupied",,@c-018d,,,,,,,,,,,,,M,,,,"Bool",,,,,,,,M,,M,,,,,,,,,,,,@c-0000,,,,,"Detroit",,,,,,,,,,,,,
+@c-0195,,,,,,,,,,,,,,M,,,,,,"Charlie Floor-4 VAV_26 occ_switch",,,,,,,"Open,Closed",,@c-018d,,,,,,,,,,,,,M,,,,"Bool",,,,,,,,M,,M,,,,,,,,,M,,,@c-0000,,,,,"Detroit",,,,,,,,,,,,,
+@c-0196,,,,M,,,,,,,,,,M,,,,,,"Charlie Floor-4 VAV_26 sa_temp",M,,,,,,,,@c-018d,,,,,,,,,,,,,M,,,,"Number",,,,,,,,,,M,,,,,,,,,M,,,@c-0000,,,,M,"Detroit","°F",,,,,,,,,,,,
+@c-0197,,,,M,,,,,,,,,,M,,,,,,"Charlie Floor-4 VAV_26 space_temp",,,,,,,,,@c-018d,,,,,,,,,,,,,M,,,,"Number",,,,,,,,,,M,,,,,,,,,M,,,@c-0000,,,,M,"Detroit","°F",,,,,,,,,,,M,
+@c-0198,,,,M,,,,,,,,,M,M,,,,,,"Charlie Floor-4 VAV_26 unocc_cl_stpt",,,,,,,,,@c-018d,,,,,,,,,,,,,M,,,,"Number",,,,,,,,,,M,,,,,,,,,,,,@c-0000,M,,,M,"Detroit","°F",M,,,,,,,,,,M,
+@c-0199,,,,M,,,,,,,,,,M,,,,,,"Charlie Floor-4 VAV_26 unocc_ht_stpt",,,,,,,,,@c-018d,,,,,,,,,,,,M,M,,,,"Number",,,,,,,,,,M,,,,,,,,,,,,@c-0000,M,,,M,"Detroit","°F",M,,,,,,,,,,M,
+@c-019a,,,,,,,,,,,,,,,,,,,,"Charlie Floor-4 VAV_27",,,,,,,,M,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,@c-0000,,,,,,,,,M,,,,,,,,,{equipGroup:"VAVs"}
+@c-019b,,,,M,,,,,,,,,,M,,M,,,,"Charlie Floor-4 VAV_27 dpr_pos",,,,,,,,,@c-019a,,,,,,,,,,,,,M,,,,"Number",,,,,,,,,,M,,,,,,,,,M,,,@c-0000,,,,,"Detroit","%",,,,,,,,,,,,
+@c-019c,,,,M,,,,,,,,,M,M,,,,,,"Charlie Floor-4 VAV_27 eff_cl_stpt",,M,,,,,,,@c-019a,,,,,,,,,,,,,M,,,,"Number",,,,,,,M,,,M,,,,,,,,,,,,@c-0000,M,,,M,"Detroit","°F",,,,,,,,,,,M,
+@c-019d,,,,M,,,,,,,,,,M,,,,,,"Charlie Floor-4 VAV_27 eff_ht_stpt",,M,,,,,,,@c-019a,,,,,,,,,,,,M,M,,,,"Number",,,,,,,M,,,M,,,,,,,,,,,,@c-0000,M,,,M,"Detroit","°F",,,,,,,,,,,M,
+@c-019e,,,,M,,,,,,,,,,M,,,,,,"Charlie Floor-4 VAV_27 flow_input",M,,,,,,,,@c-019a,,,M,,,,,,,,,,M,,,,"Number",,,96,,45,,,,,M,,,,,,,,,M,,,@c-0000,,,,,"Detroit","cfm",,,,,,,,,,,,{precision:0}
+@c-019f,,,,,,,,,,,,,,M,,,,,,"Charlie Floor-4 VAV_27 hw_valve",,,,,,,,,@c-019a,,,,,,,,,,,M,,M,,,,"Number",,,100,,0,,,,,M,,,,,,,,,M,,,@c-0000,,,,,"Detroit","%",,M,,,,,,,,,,{precision:0}
+@c-01a0,,,,M,,,,,,,,,M,M,,,,,,"Charlie Floor-4 VAV_27 occ_cl_stpt",,,,,,,,,@c-019a,,,,,,,,,,,,,M,,,,"Number",,,,,,,M,,,M,,,,,,,,,,,,@c-0000,M,,,M,"Detroit","°F",,,,,,,,,,,M,
+@c-01a1,,,,M,,,,,,,,,,M,,,,,,"Charlie Floor-4 VAV_27 occ_ht_stpt",,,,,,,,,@c-019a,,,,,,,,,,,,M,M,,,,"Number",,,,,,,M,,,M,,,,,,,,,,,,@c-0000,M,,,M,"Detroit","°F",,,,,,,,,,,M,
+@c-01a2,,,,,,,,,,,M,,,M,,,,,,"Charlie Floor-4 VAV_27 occ_status",,,,,,,"Unoccupied,Occupied",,@c-019a,,,,,,,,,,,,,M,,,,"Bool",,,,,,,,M,,M,,,,,,,,,,,,@c-0000,,,,,"Detroit",,,,,,,,,,,,,
+@c-01a3,,,,,,,,,,,,,,M,,,,,,"Charlie Floor-4 VAV_27 occ_switch",,,,,,,"Open,Closed",,@c-019a,,,,,,,,,,,,,M,,,,"Bool",,,,,,,,M,,M,,,,,,,,,M,,,@c-0000,,,,,"Detroit",,,,,,,,,,,,,
+@c-01a4,,,,M,,,,,,,,,,M,,,,,,"Charlie Floor-4 VAV_27 sa_temp",M,,,,,,,,@c-019a,,,,,,,,,,,,,M,,,,"Number",,,,,,,,,,M,,,,,,,,,M,,,@c-0000,,,,M,"Detroit","°F",,,,,,,,,,,,
+@c-01a5,,,,M,,,,,,,,,,M,,,,,,"Charlie Floor-4 VAV_27 space_temp",,,,,,,,,@c-019a,,,,,,,,,,,,,M,,,,"Number",,,,,,,,,,M,,,,,,,,,M,,,@c-0000,,,,M,"Detroit","°F",,,,,,,,,,,M,
+@c-01a6,,,,M,,,,,,,,,M,M,,,,,,"Charlie Floor-4 VAV_27 unocc_cl_stpt",,,,,,,,,@c-019a,,,,,,,,,,,,,M,,,,"Number",,,,,,,,,,M,,,,,,,,,,,,@c-0000,M,,,M,"Detroit","°F",M,,,,,,,,,,M,
+@c-01a7,,,,M,,,,,,,,,,M,,,,,,"Charlie Floor-4 VAV_27 unocc_ht_stpt",,,,,,,,,@c-019a,,,,,,,,,,,,M,M,,,,"Number",,,,,,,,,,M,,,,,,,,,,,,@c-0000,M,,,M,"Detroit","°F",M,,,,,,,,,,M,
+@c-01a8,,,,,,,,,,,,,,,,,,,,"Charlie Floor-4 VAV_28",,,,,,,,M,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,@c-0000,,,,,,,,,M,,,,,,,,,{equipGroup:"VAVs"}
+@c-01a9,,,,M,,,,,,,M,,,M,,M,,,,"Charlie Floor-4 VAV_28 VAVActuatorCommand",,,,,,,,,@c-01a8,,,,,,,,,,,,,M,,,,"Number",,,,,,,,,,M,,,,,,,,,,,,@c-0000,,,,,"Detroit","%",,,,,,,,,,,,{precision:1}
+@c-01aa,,M,,M,,,,,,,,,,M,,M,,,,"Charlie Floor-4 VAV_28 VAVActuatorPosition",,,,,,,,,@c-01a8,,,,,,,,,,,,,M,,,,"Number",,,,,,,,,,M,,,,,,,,,M,,,@c-0000,,,,,"Detroit","%",,,,,,,,,,,,{precision:1 position actuatorPosition}
+@c-01ab,,,,M,,,,,,,,,,M,,M,,,,"Charlie Floor-4 VAV_28 dpr_pos",,,,,,,,,@c-01a8,,,,,,,,,,,,,M,,,,"Number",,,,,,,,,,M,,,,,,,,,M,,,@c-0000,,,,,"Detroit","%",,,,,,,,,,,,
+@c-01ac,,,,M,,,,,,,,,M,M,,,,,,"Charlie Floor-4 VAV_28 eff_cl_stpt",,M,,,,,,,@c-01a8,,,,,,,,,,,,,M,,,,"Number",,,,,,,M,,,M,,,,,,,,,,,,@c-0000,M,,,M,"Detroit","°F",,,,,,,,,,,M,
+@c-01ad,,,,M,,,,,,,,,,M,,,,,,"Charlie Floor-4 VAV_28 eff_ht_stpt",,M,,,,,,,@c-01a8,,,,,,,,,,,,M,M,,,,"Number",,,,,,,M,,,M,,,,,,,,,,,,@c-0000,M,,,M,"Detroit","°F",,,,,,,,,,,M,
+@c-01ae,,,,M,,,,,,,,,,M,,,,,,"Charlie Floor-4 VAV_28 flow_input",M,,,,,,,,@c-01a8,,,M,,,,,,,,,,M,,,,"Number",,,96,,45,,,,,M,,,,,,,,,M,,,@c-0000,,,,,"Detroit","cfm",,,,,,,,,,,,{precision:0}
+@c-01af,,,,,,,,,,,,,,M,,,,,,"Charlie Floor-4 VAV_28 hw_valve",,,,,,,,,@c-01a8,,,,,,,,,,,M,,M,,,,"Number",,,100,,0,,,,,M,,,,,,,,,M,,,@c-0000,,,,,"Detroit","%",,M,,,,,,,,,,{precision:0}
+@c-01b0,,,,M,,,,,,,,,M,M,,,,,,"Charlie Floor-4 VAV_28 occ_cl_stpt",,,,,,,,,@c-01a8,,,,,,,,,,,,,M,,,,"Number",,,,,,,M,,,M,,,,,,,,,,,,@c-0000,M,,,M,"Detroit","°F",,,,,,,,,,,M,
+@c-01b1,,,,M,,,,,,,,,,M,,,,,,"Charlie Floor-4 VAV_28 occ_ht_stpt",,,,,,,,,@c-01a8,,,,,,,,,,,,M,M,,,,"Number",,,,,,,M,,,M,,,,,,,,,,,,@c-0000,M,,,M,"Detroit","°F",,,,,,,,,,,M,
+@c-01b2,,,,,,,,,,,M,,,M,,,,,,"Charlie Floor-4 VAV_28 occ_status",,,,,,,"Unoccupied,Occupied",,@c-01a8,,,,,,,,,,,,,M,,,,"Bool",,,,,,,,M,,M,,,,,,,,,,,,@c-0000,,,,,"Detroit",,,,,,,,,,,,,
+@c-01b3,,,,,,,,,,,,,,M,,,,,,"Charlie Floor-4 VAV_28 occ_switch",,,,,,,"Open,Closed",,@c-01a8,,,,,,,,,,,,,M,,,,"Bool",,,,,,,,M,,M,,,,,,,,,M,,,@c-0000,,,,,"Detroit",,,,,,,,,,,,,
+@c-01b4,,,,M,,,,,,,,,,M,,,,,,"Charlie Floor-4 VAV_28 sa_temp",M,,,,,,,,@c-01a8,,,,,,,,,,,,,M,,,,"Number",,,,,,,,,,M,,,,,,,,,M,,,@c-0000,,,,M,"Detroit","°F",,,,,,,,,,,,
+@c-01b5,,,,M,,,,,,,,,,M,,,,,,"Charlie Floor-4 VAV_28 space_temp",,,,,,,,,@c-01a8,,,,,,,,,,,,,M,,,,"Number",,,,,,,,,,M,,,,,,,,,M,,,@c-0000,,,,M,"Detroit","°F",,,,,,,,,,,M,
+@c-01b6,,,,M,,,,,,,,,M,M,,,,,,"Charlie Floor-4 VAV_28 unocc_cl_stpt",,,,,,,,,@c-01a8,,,,,,,,,,,,,M,,,,"Number",,,,,,,,,,M,,,,,,,,,,,,@c-0000,M,,,M,"Detroit","°F",M,,,,,,,,,,M,
+@c-01b7,,,,M,,,,,,,,,,M,,,,,,"Charlie Floor-4 VAV_28 unocc_ht_stpt",,,,,,,,,@c-01a8,,,,,,,,,,,,M,M,,,,"Number",,,,,,,,,,M,,,,,,,,,,,,@c-0000,M,,,M,"Detroit","°F",M,,,,,,,,,,M,
+@c-01b8,,,,,,,,,,,,,,,,,,,,"Charlie Floor-4 VAV_29",,,,,,,,M,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,@c-0000,,,,,,,,,M,,,,,,,,,{equipGroup:"VAVs"}
+@c-01b9,,,,M,,,,,,,,,,M,,M,,,,"Charlie Floor-4 VAV_29 dpr_pos",,,,,,,,,@c-01b8,,,,,,,,,,,,,M,,,,"Number",,,,,,,,,,M,,,,,,,,,M,,,@c-0000,,,,,"Detroit","%",,,,,,,,,,,,
+@c-01ba,,,,M,,,,,,,,,M,M,,,,,,"Charlie Floor-4 VAV_29 eff_cl_stpt",,M,,,,,,,@c-01b8,,,,,,,,,,,,,M,,,,"Number",,,,,,,M,,,M,,,,,,,,,,,,@c-0000,M,,,M,"Detroit","°F",,,,,,,,,,,M,
+@c-01bb,,,,M,,,,,,,,,,M,,,,,,"Charlie Floor-4 VAV_29 eff_ht_stpt",,M,,,,,,,@c-01b8,,,,,,,,,,,,M,M,,,,"Number",,,,,,,M,,,M,,,,,,,,,,,,@c-0000,M,,,M,"Detroit","°F",,,,,,,,,,,M,
+@c-01bc,,,,M,,,,,,,,,,M,,,,,,"Charlie Floor-4 VAV_29 flow_input",M,,,,,,,,@c-01b8,,,M,,,,,,,,,,M,,,,"Number",,,96,,45,,,,,M,,,,,,,,,M,,,@c-0000,,,,,"Detroit","cfm",,,,,,,,,,,,{precision:0}
+@c-01bd,,,,,,,,,,,,,,M,,,,,,"Charlie Floor-4 VAV_29 hw_valve",,,,,,,,,@c-01b8,,,,,,,,,,,M,,M,,,,"Number",,,100,,0,,,,,M,,,,,,,,,M,,,@c-0000,,,,,"Detroit","%",,M,,,,,,,,,,{precision:0}
+@c-01be,,,,M,,,,,,,,,M,M,,,,,,"Charlie Floor-4 VAV_29 occ_cl_stpt",,,,,,,,,@c-01b8,,,,,,,,,,,,,M,,,,"Number",,,,,,,M,,,M,,,,,,,,,,,,@c-0000,M,,,M,"Detroit","°F",,,,,,,,,,,M,
+@c-01bf,,,,M,,,,,,,,,,M,,,,,,"Charlie Floor-4 VAV_29 occ_ht_stpt",,,,,,,,,@c-01b8,,,,,,,,,,,,M,M,,,,"Number",,,,,,,M,,,M,,,,,,,,,,,,@c-0000,M,,,M,"Detroit","°F",,,,,,,,,,,M,
+@c-01c0,,,,,,,,,,,M,,,M,,,,,,"Charlie Floor-4 VAV_29 occ_status",,,,,,,"Unoccupied,Occupied",,@c-01b8,,,,,,,,,,,,,M,,,,"Bool",,,,,,,,M,,M,,,,,,,,,,,,@c-0000,,,,,"Detroit",,,,,,,,,,,,,
+@c-01c1,,,,,,,,,,,,,,M,,,,,,"Charlie Floor-4 VAV_29 occ_switch",,,,,,,"Open,Closed",,@c-01b8,,,,,,,,,,,,,M,,,,"Bool",,,,,,,,M,,M,,,,,,,,,M,,,@c-0000,,,,,"Detroit",,,,,,,,,,,,,
+@c-01c2,,,,M,,,,,,,,,,M,,,,,,"Charlie Floor-4 VAV_29 sa_temp",M,,,,,,,,@c-01b8,,,,,,,,,,,,,M,,,,"Number",,,,,,,,,,M,,,,,,,,,M,,,@c-0000,,,,M,"Detroit","°F",,,,,,,,,,,,
+@c-01c3,,,,M,,,,,,,,,,M,,,,,,"Charlie Floor-4 VAV_29 space_temp",,,,,,,,,@c-01b8,,,,,,,,,,,,,M,,,,"Number",,,,,,,,,,M,,,,,,,,,M,,,@c-0000,,,,M,"Detroit","°F",,,,,,,,,,,M,
+@c-01c4,,,,M,,,,,,,,,M,M,,,,,,"Charlie Floor-4 VAV_29 unocc_cl_stpt",,,,,,,,,@c-01b8,,,,,,,,,,,,,M,,,,"Number",,,,,,,,,,M,,,,,,,,,,,,@c-0000,M,,,M,"Detroit","°F",M,,,,,,,,,,M,
+@c-01c5,,,,M,,,,,,,,,,M,,,,,,"Charlie Floor-4 VAV_29 unocc_ht_stpt",,,,,,,,,@c-01b8,,,,,,,,,,,,M,M,,,,"Number",,,,,,,,,,M,,,,,,,,,,,,@c-0000,M,,,M,"Detroit","°F",M,,,,,,,,,,M,
+@c-01c6,,,,,,,,,,,,,,,,,,,,"Charlie Floor-4 VAV_3",,,,,,,,M,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,@c-0000,,,,,,,,,M,,,,,,,,,{equipGroup:"VAVs"}
+@c-01c7,,,,M,,,,,,,,,,M,,M,,,,"Charlie Floor-4 VAV_3 dpr_pos",,,,,,,,,@c-01c6,,,,,,,,,,,,,M,,,,"Number",,,,,,,,,,M,,,,,,,,,M,,,@c-0000,,,,,"Detroit","%",,,,,,,,,,,,
+@c-01c8,,,,M,,,,,,,,,M,M,,,,,,"Charlie Floor-4 VAV_3 eff_cl_stpt",,M,,,,,,,@c-01c6,,,,,,,,,,,,,M,,,,"Number",,,,,,,M,,,M,,,,,,,,,,,,@c-0000,M,,,M,"Detroit","°F",,,,,,,,,,,M,
+@c-01c9,,,,M,,,,,,,,,,M,,,,,,"Charlie Floor-4 VAV_3 eff_ht_stpt",,M,,,,,,,@c-01c6,,,,,,,,,,,,M,M,,,,"Number",,,,,,,M,,,M,,,,,,,,,,,,@c-0000,M,,,M,"Detroit","°F",,,,,,,,,,,M,
+@c-01ca,,,,M,,,,,,,,,,M,,,,,,"Charlie Floor-4 VAV_3 flow_input",M,,,,,,,,@c-01c6,,,M,,,,,,,,,,M,,,,"Number",,,96,,45,,,,,M,,,,,,,,,M,,,@c-0000,,,,,"Detroit","cfm",,,,,,,,,,,,{precision:0}
+@c-01cb,,,,,,,,,,,,,,M,,,,,,"Charlie Floor-4 VAV_3 hw_valve",,,,,,,,,@c-01c6,,,,,,,,,,,M,,M,,,,"Number",,,100,,0,,,,,M,,,,,,,,,M,,,@c-0000,,,,,"Detroit","%",,M,,,,,,,,,,{precision:0}
+@c-01cc,,,,M,,,,,,,,,M,M,,,,,,"Charlie Floor-4 VAV_3 occ_cl_stpt",,,,,,,,,@c-01c6,,,,,,,,,,,,,M,,,,"Number",,,,,,,M,,,M,,,,,,,,,,,,@c-0000,M,,,M,"Detroit","°F",,,,,,,,,,,M,
+@c-01cd,,,,M,,,,,,,,,,M,,,,,,"Charlie Floor-4 VAV_3 occ_ht_stpt",,,,,,,,,@c-01c6,,,,,,,,,,,,M,M,,,,"Number",,,,,,,M,,,M,,,,,,,,,,,,@c-0000,M,,,M,"Detroit","°F",,,,,,,,,,,M,
+@c-01ce,,,,,,,,,,,M,,,M,,,,,,"Charlie Floor-4 VAV_3 occ_status",,,,,,,"Unoccupied,Occupied",,@c-01c6,,,,,,,,,,,,,M,,,,"Bool",,,,,,,,M,,M,,,,,,,,,,,,@c-0000,,,,,"Detroit",,,,,,,,,,,,,
+@c-01cf,,,,,,,,,,,,,,M,,,,,,"Charlie Floor-4 VAV_3 occ_switch",,,,,,,"Open,Closed",,@c-01c6,,,,,,,,,,,,,M,,,,"Bool",,,,,,,,M,,M,,,,,,,,,M,,,@c-0000,,,,,"Detroit",,,,,,,,,,,,,
+@c-01d0,,,,M,,,,,,,,,,M,,,,,,"Charlie Floor-4 VAV_3 sa_temp",M,,,,,,,,@c-01c6,,,,,,,,,,,,,M,,,,"Number",,,,,,,,,,M,,,,,,,,,M,,,@c-0000,,,,M,"Detroit","°F",,,,,,,,,,,,
+@c-01d1,,,,M,,,,,,,,,,M,,,,,,"Charlie Floor-4 VAV_3 space_temp",,,,,,,,,@c-01c6,,,,,,,,,,,,,M,,,,"Number",,,,,,,,,,M,,,,,,,,,M,,,@c-0000,,,,M,"Detroit","°F",,,,,,,,,,,M,
+@c-01d2,,,,M,,,,,,,,,M,M,,,,,,"Charlie Floor-4 VAV_3 unocc_cl_stpt",,,,,,,,,@c-01c6,,,,,,,,,,,,,M,,,,"Number",,,,,,,,,,M,,,,,,,,,,,,@c-0000,M,,,M,"Detroit","°F",M,,,,,,,,,,M,
+@c-01d3,,,,M,,,,,,,,,,M,,,,,,"Charlie Floor-4 VAV_3 unocc_ht_stpt",,,,,,,,,@c-01c6,,,,,,,,,,,,M,M,,,,"Number",,,,,,,,,,M,,,,,,,,,,,,@c-0000,M,,,M,"Detroit","°F",M,,,,,,,,,,M,
+@c-01d4,,,,,,,,,,,,,,,,,,,,"Charlie Floor-4 VAV_30",,,,,,,,M,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,@c-0000,,,,,,,,,M,,,,,,,,,{equipGroup:"VAVs"}
+@c-01d5,,,,M,,,,,,,,,,M,,M,,,,"Charlie Floor-4 VAV_30 dpr_pos",,,,,,,,,@c-01d4,,,,,,,,,,,,,M,,,,"Number",,,,,,,,,,M,,,,,,,,,M,,,@c-0000,,,,,"Detroit","%",,,,,,,,,,,,
+@c-01d6,,,,M,,,,,,,,,M,M,,,,,,"Charlie Floor-4 VAV_30 eff_cl_stpt",,M,,,,,,,@c-01d4,,,,,,,,,,,,,M,,,,"Number",,,,,,,M,,,M,,,,,,,,,,,,@c-0000,M,,,M,"Detroit","°F",,,,,,,,,,,M,
+@c-01d7,,,,M,,,,,,,,,,M,,,,,,"Charlie Floor-4 VAV_30 eff_ht_stpt",,M,,,,,,,@c-01d4,,,,,,,,,,,,M,M,,,,"Number",,,,,,,M,,,M,,,,,,,,,,,,@c-0000,M,,,M,"Detroit","°F",,,,,,,,,,,M,
+@c-01d8,,,,M,,,,,,,,,,M,,,,,,"Charlie Floor-4 VAV_30 flow_input",M,,,,,,,,@c-01d4,,,M,,,,,,,,,,M,,,,"Number",,,96,,45,,,,,M,,,,,,,,,M,,,@c-0000,,,,,"Detroit","cfm",,,,,,,,,,,,{precision:0}
+@c-01d9,,,,,,,,,,,,,,M,,,,,,"Charlie Floor-4 VAV_30 hw_valve",,,,,,,,,@c-01d4,,,,,,,,,,,M,,M,,,,"Number",,,100,,0,,,,,M,,,,,,,,,M,,,@c-0000,,,,,"Detroit","%",,M,,,,,,,,,,{precision:0}
+@c-01da,,,,M,,,,,,,,,M,M,,,,,,"Charlie Floor-4 VAV_30 occ_cl_stpt",,,,,,,,,@c-01d4,,,,,,,,,,,,,M,,,,"Number",,,,,,,M,,,M,,,,,,,,,,,,@c-0000,M,,,M,"Detroit","°F",,,,,,,,,,,M,
+@c-01db,,,,M,,,,,,,,,,M,,,,,,"Charlie Floor-4 VAV_30 occ_ht_stpt",,,,,,,,,@c-01d4,,,,,,,,,,,,M,M,,,,"Number",,,,,,,M,,,M,,,,,,,,,,,,@c-0000,M,,,M,"Detroit","°F",,,,,,,,,,,M,
+@c-01dc,,,,,,,,,,,M,,,M,,,,,,"Charlie Floor-4 VAV_30 occ_status",,,,,,,"Unoccupied,Occupied",,@c-01d4,,,,,,,,,,,,,M,,,,"Bool",,,,,,,,M,,M,,,,,,,,,,,,@c-0000,,,,,"Detroit",,,,,,,,,,,,,
+@c-01dd,,,,,,,,,,,,,,M,,,,,,"Charlie Floor-4 VAV_30 occ_switch",,,,,,,"Open,Closed",,@c-01d4,,,,,,,,,,,,,M,,,,"Bool",,,,,,,,M,,M,,,,,,,,,M,,,@c-0000,,,,,"Detroit",,,,,,,,,,,,,
+@c-01de,,,,M,,,,,,,,,,M,,,,,,"Charlie Floor-4 VAV_30 sa_temp",M,,,,,,,,@c-01d4,,,,,,,,,,,,,M,,,,"Number",,,,,,,,,,M,,,,,,,,,M,,,@c-0000,,,,M,"Detroit","°F",,,,,,,,,,,,
+@c-01df,,,,M,,,,,,,,,,M,,,,,,"Charlie Floor-4 VAV_30 space_temp",,,,,,,,,@c-01d4,,,,,,,,,,,,,M,,,,"Number",,,,,,,,,,M,,,,,,,,,M,,,@c-0000,,,,M,"Detroit","°F",,,,,,,,,,,M,
+@c-01e0,,,,M,,,,,,,,,M,M,,,,,,"Charlie Floor-4 VAV_30 unocc_cl_stpt",,,,,,,,,@c-01d4,,,,,,,,,,,,,M,,,,"Number",,,,,,,,,,M,,,,,,,,,,,,@c-0000,M,,,M,"Detroit","°F",M,,,,,,,,,,M,
+@c-01e1,,,,M,,,,,,,,,,M,,,,,,"Charlie Floor-4 VAV_30 unocc_ht_stpt",,,,,,,,,@c-01d4,,,,,,,,,,,,M,M,,,,"Number",,,,,,,,,,M,,,,,,,,,,,,@c-0000,M,,,M,"Detroit","°F",M,,,,,,,,,,M,
+@c-01e2,,,,,,,,,,,,,,,,,,,,"Charlie Floor-4 VAV_4",,,,,,,,M,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,@c-0000,,,,,,,,,M,,,,,,,,,{equipGroup:"VAVs"}
+@c-01e3,,,,M,,,,,,,,,,M,,M,,,,"Charlie Floor-4 VAV_4 dpr_pos",,,,,,,,,@c-01e2,,,,,,,,,,,,,M,,,,"Number",,,,,,,,,,M,,,,,,,,,M,,,@c-0000,,,,,"Detroit","%",,,,,,,,,,,,
+@c-01e4,,,,M,,,,,,,,,M,M,,,,,,"Charlie Floor-4 VAV_4 eff_cl_stpt",,M,,,,,,,@c-01e2,,,,,,,,,,,,,M,,,,"Number",,,,,,,M,,,M,,,,,,,,,,,,@c-0000,M,,,M,"Detroit","°F",,,,,,,,,,,M,
+@c-01e5,,,,M,,,,,,,,,,M,,,,,,"Charlie Floor-4 VAV_4 eff_ht_stpt",,M,,,,,,,@c-01e2,,,,,,,,,,,,M,M,,,,"Number",,,,,,,M,,,M,,,,,,,,,,,,@c-0000,M,,,M,"Detroit","°F",,,,,,,,,,,M,
+@c-01e6,,,,M,,,,,,,,,,M,,,,,,"Charlie Floor-4 VAV_4 flow_input",M,,,,,,,,@c-01e2,,,M,,,,,,,,,,M,,,,"Number",,,96,,45,,,,,M,,,,,,,,,M,,,@c-0000,,,,,"Detroit","cfm",,,,,,,,,,,,{precision:0}
+@c-01e7,,,,,,,,,,,,,,M,,,,,,"Charlie Floor-4 VAV_4 hw_valve",,,,,,,,,@c-01e2,,,,,,,,,,,M,,M,,,,"Number",,,100,,0,,,,,M,,,,,,,,,M,,,@c-0000,,,,,"Detroit","%",,M,,,,,,,,,,{precision:0}
+@c-01e8,,,,M,,,,,,,,,M,M,,,,,,"Charlie Floor-4 VAV_4 occ_cl_stpt",,,,,,,,,@c-01e2,,,,,,,,,,,,,M,,,,"Number",,,,,,,M,,,M,,,,,,,,,,,,@c-0000,M,,,M,"Detroit","°F",,,,,,,,,,,M,
+@c-01e9,,,,M,,,,,,,,,,M,,,,,,"Charlie Floor-4 VAV_4 occ_ht_stpt",,,,,,,,,@c-01e2,,,,,,,,,,,,M,M,,,,"Number",,,,,,,M,,,M,,,,,,,,,,,,@c-0000,M,,,M,"Detroit","°F",,,,,,,,,,,M,
+@c-01ea,,,,,,,,,,,M,,,M,,,,,,"Charlie Floor-4 VAV_4 occ_status",,,,,,,"Unoccupied,Occupied",,@c-01e2,,,,,,,,,,,,,M,,,,"Bool",,,,,,,,M,,M,,,,,,,,,,,,@c-0000,,,,,"Detroit",,,,,,,,,,,,,
+@c-01eb,,,,,,,,,,,,,,M,,,,,,"Charlie Floor-4 VAV_4 occ_switch",,,,,,,"Open,Closed",,@c-01e2,,,,,,,,,,,,,M,,,,"Bool",,,,,,,,M,,M,,,,,,,,,M,,,@c-0000,,,,,"Detroit",,,,,,,,,,,,,
+@c-01ec,,,,M,,,,,,,,,,M,,,,,,"Charlie Floor-4 VAV_4 sa_temp",M,,,,,,,,@c-01e2,,,,,,,,,,,,,M,,,,"Number",,,,,,,,,,M,,,,,,,,,M,,,@c-0000,,,,M,"Detroit","°F",,,,,,,,,,,,
+@c-01ed,,,,M,,,,,,,,,,M,,,,,,"Charlie Floor-4 VAV_4 space_temp",,,,,,,,,@c-01e2,,,,,,,,,,,,,M,,,,"Number",,,,,,,,,,M,,,,,,,,,M,,,@c-0000,,,,M,"Detroit","°F",,,,,,,,,,,M,
+@c-01ee,,,,M,,,,,,,,,M,M,,,,,,"Charlie Floor-4 VAV_4 unocc_cl_stpt",,,,,,,,,@c-01e2,,,,,,,,,,,,,M,,,,"Number",,,,,,,,,,M,,,,,,,,,,,,@c-0000,M,,,M,"Detroit","°F",M,,,,,,,,,,M,
+@c-01ef,,,,M,,,,,,,,,,M,,,,,,"Charlie Floor-4 VAV_4 unocc_ht_stpt",,,,,,,,,@c-01e2,,,,,,,,,,,,M,M,,,,"Number",,,,,,,,,,M,,,,,,,,,,,,@c-0000,M,,,M,"Detroit","°F",M,,,,,,,,,,M,
+@c-01f0,,,,,,,,,,,,,,,,,,,,"Charlie Floor-4 VAV_5",,,,,,,,M,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,@c-0000,,,,,,,,,M,,,,,,,,,{equipGroup:"VAVs"}
+@c-01f1,,,,M,,,,,,,,,,M,,M,,,,"Charlie Floor-4 VAV_5 dpr_pos",,,,,,,,,@c-01f0,,,,,,,,,,,,,M,,,,"Number",,,,,,,,,,M,,,,,,,,,M,,,@c-0000,,,,,"Detroit","%",,,,,,,,,,,,
+@c-01f2,,,,M,,,,,,,,,M,M,,,,,,"Charlie Floor-4 VAV_5 eff_cl_stpt",,M,,,,,,,@c-01f0,,,,,,,,,,,,,M,,,,"Number",,,,,,,M,,,M,,,,,,,,,,,,@c-0000,M,,,M,"Detroit","°F",,,,,,,,,,,M,
+@c-01f3,,,,M,,,,,,,,,,M,,,,,,"Charlie Floor-4 VAV_5 eff_ht_stpt",,M,,,,,,,@c-01f0,,,,,,,,,,,,M,M,,,,"Number",,,,,,,M,,,M,,,,,,,,,,,,@c-0000,M,,,M,"Detroit","°F",,,,,,,,,,,M,
+@c-01f4,,,,M,,,,,,,,,,M,,,,,,"Charlie Floor-4 VAV_5 flow_input",M,,,,,,,,@c-01f0,,,M,,,,,,,,,,M,,,,"Number",,,96,,45,,,,,M,,,,,,,,,M,,,@c-0000,,,,,"Detroit","cfm",,,,,,,,,,,,{precision:0}
+@c-01f5,,,,,,,,,,,,,,M,,,,,,"Charlie Floor-4 VAV_5 hw_valve",,,,,,,,,@c-01f0,,,,,,,,,,,M,,M,,,,"Number",,,100,,0,,,,,M,,,,,,,,,M,,,@c-0000,,,,,"Detroit","%",,M,,,,,,,,,,{precision:0}
+@c-01f6,,,,M,,,,,,,,,M,M,,,,,,"Charlie Floor-4 VAV_5 occ_cl_stpt",,,,,,,,,@c-01f0,,,,,,,,,,,,,M,,,,"Number",,,,,,,M,,,M,,,,,,,,,,,,@c-0000,M,,,M,"Detroit","°F",,,,,,,,,,,M,
+@c-01f7,,,,M,,,,,,,,,,M,,,,,,"Charlie Floor-4 VAV_5 occ_ht_stpt",,,,,,,,,@c-01f0,,,,,,,,,,,,M,M,,,,"Number",,,,,,,M,,,M,,,,,,,,,,,,@c-0000,M,,,M,"Detroit","°F",,,,,,,,,,,M,
+@c-01f8,,,,,,,,,,,M,,,M,,,,,,"Charlie Floor-4 VAV_5 occ_status",,,,,,,"Unoccupied,Occupied",,@c-01f0,,,,,,,,,,,,,M,,,,"Bool",,,,,,,,M,,M,,,,,,,,,,,,@c-0000,,,,,"Detroit",,,,,,,,,,,,,
+@c-01f9,,,,,,,,,,,,,,M,,,,,,"Charlie Floor-4 VAV_5 occ_switch",,,,,,,"Open,Closed",,@c-01f0,,,,,,,,,,,,,M,,,,"Bool",,,,,,,,M,,M,,,,,,,,,M,,,@c-0000,,,,,"Detroit",,,,,,,,,,,,,
+@c-01fa,,,,M,,,,,,,,,,M,,,,,,"Charlie Floor-4 VAV_5 sa_temp",M,,,,,,,,@c-01f0,,,,,,,,,,,,,M,,,,"Number",,,,,,,,,,M,,,,,,,,,M,,,@c-0000,,,,M,"Detroit","°F",,,,,,,,,,,,
+@c-01fb,,,,M,,,,,,,,,,M,,,,,,"Charlie Floor-4 VAV_5 space_temp",,,,,,,,,@c-01f0,,,,,,,,,,,,,M,,,,"Number",,,,,,,,,,M,,,,,,,,,M,,,@c-0000,,,,M,"Detroit","°F",,,,,,,,,,,M,
+@c-01fc,,,,M,,,,,,,,,M,M,,,,,,"Charlie Floor-4 VAV_5 unocc_cl_stpt",,,,,,,,,@c-01f0,,,,,,,,,,,,,M,,,,"Number",,,,,,,,,,M,,,,,,,,,,,,@c-0000,M,,,M,"Detroit","°F",M,,,,,,,,,,M,
+@c-01fd,,,,M,,,,,,,,,,M,,,,,,"Charlie Floor-4 VAV_5 unocc_ht_stpt",,,,,,,,,@c-01f0,,,,,,,,,,,,M,M,,,,"Number",,,,,,,,,,M,,,,,,,,,,,,@c-0000,M,,,M,"Detroit","°F",M,,,,,,,,,,M,
+@c-01fe,,,,,,,,,,,,,,,,,,,,"Charlie Floor-4 VAV_6",,,,,,,,M,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,@c-0000,,,,,,,,,M,,,,,,,,,{equipGroup:"VAVs"}
+@c-01ff,,,,M,,,,,,,,,,M,,M,,,,"Charlie Floor-4 VAV_6 dpr_pos",,,,,,,,,@c-01fe,,,,,,,,,,,,,M,,,,"Number",,,,,,,,,,M,,,,,,,,,M,,,@c-0000,,,,,"Detroit","%",,,,,,,,,,,,
+@c-0200,,,,M,,,,,,,,,M,M,,,,,,"Charlie Floor-4 VAV_6 eff_cl_stpt",,M,,,,,,,@c-01fe,,,,,,,,,,,,,M,,,,"Number",,,,,,,M,,,M,,,,,,,,,,,,@c-0000,M,,,M,"Detroit","°F",,,,,,,,,,,M,
+@c-0201,,,,M,,,,,,,,,,M,,,,,,"Charlie Floor-4 VAV_6 eff_ht_stpt",,M,,,,,,,@c-01fe,,,,,,,,,,,,M,M,,,,"Number",,,,,,,M,,,M,,,,,,,,,,,,@c-0000,M,,,M,"Detroit","°F",,,,,,,,,,,M,
+@c-0202,,,,M,,,,,,,,,,M,,,,,,"Charlie Floor-4 VAV_6 flow_input",M,,,,,,,,@c-01fe,,,M,,,,,,,,,,M,,,,"Number",,,96,,45,,,,,M,,,,,,,,,M,,,@c-0000,,,,,"Detroit","cfm",,,,,,,,,,,,{precision:0}
+@c-0203,,,,,,,,,,,,,,M,,,,,,"Charlie Floor-4 VAV_6 hw_valve",,,,,,,,,@c-01fe,,,,,,,,,,,M,,M,,,,"Number",,,100,,0,,,,,M,,,,,,,,,M,,,@c-0000,,,,,"Detroit","%",,M,,,,,,,,,,{precision:0}
+@c-0204,,,,M,,,,,,,,,M,M,,,,,,"Charlie Floor-4 VAV_6 occ_cl_stpt",,,,,,,,,@c-01fe,,,,,,,,,,,,,M,,,,"Number",,,,,,,M,,,M,,,,,,,,,,,,@c-0000,M,,,M,"Detroit","°F",,,,,,,,,,,M,
+@c-0205,,,,M,,,,,,,,,,M,,,,,,"Charlie Floor-4 VAV_6 occ_ht_stpt",,,,,,,,,@c-01fe,,,,,,,,,,,,M,M,,,,"Number",,,,,,,M,,,M,,,,,,,,,,,,@c-0000,M,,,M,"Detroit","°F",,,,,,,,,,,M,
+@c-0206,,,,,,,,,,,M,,,M,,,,,,"Charlie Floor-4 VAV_6 occ_status",,,,,,,"Unoccupied,Occupied",,@c-01fe,,,,,,,,,,,,,M,,,,"Bool",,,,,,,,M,,M,,,,,,,,,,,,@c-0000,,,,,"Detroit",,,,,,,,,,,,,
+@c-0207,,,,,,,,,,,,,,M,,,,,,"Charlie Floor-4 VAV_6 occ_switch",,,,,,,"Open,Closed",,@c-01fe,,,,,,,,,,,,,M,,,,"Bool",,,,,,,,M,,M,,,,,,,,,M,,,@c-0000,,,,,"Detroit",,,,,,,,,,,,,
+@c-0208,,,,M,,,,,,,,,,M,,,,,,"Charlie Floor-4 VAV_6 sa_temp",M,,,,,,,,@c-01fe,,,,,,,,,,,,,M,,,,"Number",,,,,,,,,,M,,,,,,,,,M,,,@c-0000,,,,M,"Detroit","°F",,,,,,,,,,,,
+@c-0209,,,,M,,,,,,,,,,M,,,,,,"Charlie Floor-4 VAV_6 space_temp",,,,,,,,,@c-01fe,,,,,,,,,,,,,M,,,,"Number",,,,,,,,,,M,,,,,,,,,M,,,@c-0000,,,,M,"Detroit","°F",,,,,,,,,,,M,
+@c-020a,,,,M,,,,,,,,,M,M,,,,,,"Charlie Floor-4 VAV_6 unocc_cl_stpt",,,,,,,,,@c-01fe,,,,,,,,,,,,,M,,,,"Number",,,,,,,,,,M,,,,,,,,,,,,@c-0000,M,,,M,"Detroit","°F",M,,,,,,,,,,M,
+@c-020b,,,,M,,,,,,,,,,M,,,,,,"Charlie Floor-4 VAV_6 unocc_ht_stpt",,,,,,,,,@c-01fe,,,,,,,,,,,,M,M,,,,"Number",,,,,,,,,,M,,,,,,,,,,,,@c-0000,M,,,M,"Detroit","°F",M,,,,,,,,,,M,
+@c-020c,,,,,,,,,,,,,,,,,,,,"Charlie Floor-4 VAV_7",,,,,,,,M,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,@c-0000,,,,,,,,,M,,,,,,,,,{equipGroup:"VAVs"}
+@c-020d,,,,M,,,,,,,,,,M,,M,,,,"Charlie Floor-4 VAV_7 dpr_pos",,,,,,,,,@c-020c,,,,,,,,,,,,,M,,,,"Number",,,,,,,,,,M,,,,,,,,,M,,,@c-0000,,,,,"Detroit","%",,,,,,,,,,,,
+@c-020e,,,,M,,,,,,,,,M,M,,,,,,"Charlie Floor-4 VAV_7 eff_cl_stpt",,M,,,,,,,@c-020c,,,,,,,,,,,,,M,,,,"Number",,,,,,,M,,,M,,,,,,,,,,,,@c-0000,M,,,M,"Detroit","°F",,,,,,,,,,,M,
+@c-020f,,,,M,,,,,,,,,,M,,,,,,"Charlie Floor-4 VAV_7 eff_ht_stpt",,M,,,,,,,@c-020c,,,,,,,,,,,,M,M,,,,"Number",,,,,,,M,,,M,,,,,,,,,,,,@c-0000,M,,,M,"Detroit","°F",,,,,,,,,,,M,
+@c-0210,,,,M,,,,,,,,,,M,,,,,,"Charlie Floor-4 VAV_7 flow_input",M,,,,,,,,@c-020c,,,M,,,,,,,,,,M,,,,"Number",,,96,,45,,,,,M,,,,,,,,,M,,,@c-0000,,,,,"Detroit","cfm",,,,,,,,,,,,{precision:0}
+@c-0211,,,,,,,,,,,,,,M,,,,,,"Charlie Floor-4 VAV_7 hw_valve",,,,,,,,,@c-020c,,,,,,,,,,,M,,M,,,,"Number",,,100,,0,,,,,M,,,,,,,,,M,,,@c-0000,,,,,"Detroit","%",,M,,,,,,,,,,{precision:0}
+@c-0212,,,,M,,,,,,,,,M,M,,,,,,"Charlie Floor-4 VAV_7 occ_cl_stpt",,,,,,,,,@c-020c,,,,,,,,,,,,,M,,,,"Number",,,,,,,M,,,M,,,,,,,,,,,,@c-0000,M,,,M,"Detroit","°F",,,,,,,,,,,M,
+@c-0213,,,,M,,,,,,,,,,M,,,,,,"Charlie Floor-4 VAV_7 occ_ht_stpt",,,,,,,,,@c-020c,,,,,,,,,,,,M,M,,,,"Number",,,,,,,M,,,M,,,,,,,,,,,,@c-0000,M,,,M,"Detroit","°F",,,,,,,,,,,M,
+@c-0214,,,,,,,,,,,M,,,M,,,,,,"Charlie Floor-4 VAV_7 occ_status",,,,,,,"Unoccupied,Occupied",,@c-020c,,,,,,,,,,,,,M,,,,"Bool",,,,,,,,M,,M,,,,,,,,,,,,@c-0000,,,,,"Detroit",,,,,,,,,,,,,
+@c-0215,,,,,,,,,,,,,,M,,,,,,"Charlie Floor-4 VAV_7 occ_switch",,,,,,,"Open,Closed",,@c-020c,,,,,,,,,,,,,M,,,,"Bool",,,,,,,,M,,M,,,,,,,,,M,,,@c-0000,,,,,"Detroit",,,,,,,,,,,,,
+@c-0216,,,,M,,,,,,,,,,M,,,,,,"Charlie Floor-4 VAV_7 sa_temp",M,,,,,,,,@c-020c,,,,,,,,,,,,,M,,,,"Number",,,,,,,,,,M,,,,,,,,,M,,,@c-0000,,,,M,"Detroit","°F",,,,,,,,,,,,
+@c-0217,,,,M,,,,,,,,,,M,,,,,,"Charlie Floor-4 VAV_7 space_temp",,,,,,,,,@c-020c,,,,,,,,,,,,,M,,,,"Number",,,,,,,,,,M,,,,,,,,,M,,,@c-0000,,,,M,"Detroit","°F",,,,,,,,,,,M,
+@c-0218,,,,M,,,,,,,,,M,M,,,,,,"Charlie Floor-4 VAV_7 unocc_cl_stpt",,,,,,,,,@c-020c,,,,,,,,,,,,,M,,,,"Number",,,,,,,,,,M,,,,,,,,,,,,@c-0000,M,,,M,"Detroit","°F",M,,,,,,,,,,M,
+@c-0219,,,,M,,,,,,,,,,M,,,,,,"Charlie Floor-4 VAV_7 unocc_ht_stpt",,,,,,,,,@c-020c,,,,,,,,,,,,M,M,,,,"Number",,,,,,,,,,M,,,,,,,,,,,,@c-0000,M,,,M,"Detroit","°F",M,,,,,,,,,,M,
+@c-021a,,,,,,,,,,,,,,,,,,,,"Charlie Floor-4 VAV_8",,,,,,,,M,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,@c-0000,,,,,,,,,M,,,,,,,,,{equipGroup:"VAVs"}
+@c-021b,,,,M,,,,,,,,,,M,,M,,,,"Charlie Floor-4 VAV_8 dpr_pos",,,,,,,,,@c-021a,,,,,,,,,,,,,M,,,,"Number",,,,,,,,,,M,,,,,,,,,M,,,@c-0000,,,,,"Detroit","%",,,,,,,,,,,,
+@c-021c,,,,M,,,,,,,,,M,M,,,,,,"Charlie Floor-4 VAV_8 eff_cl_stpt",,M,,,,,,,@c-021a,,,,,,,,,,,,,M,,,,"Number",,,,,,,M,,,M,,,,,,,,,,,,@c-0000,M,,,M,"Detroit","°F",,,,,,,,,,,M,
+@c-021d,,,,M,,,,,,,,,,M,,,,,,"Charlie Floor-4 VAV_8 eff_ht_stpt",,M,,,,,,,@c-021a,,,,,,,,,,,,M,M,,,,"Number",,,,,,,M,,,M,,,,,,,,,,,,@c-0000,M,,,M,"Detroit","°F",,,,,,,,,,,M,
+@c-021e,,,,M,,,,,,,,,,M,,,,,,"Charlie Floor-4 VAV_8 flow_input",M,,,,,,,,@c-021a,,,M,,,,,,,,,,M,,,,"Number",,,96,,45,,,,,M,,,,,,,,,M,,,@c-0000,,,,,"Detroit","cfm",,,,,,,,,,,,{precision:0}
+@c-021f,,,,,,,,,,,,,,M,,,,,,"Charlie Floor-4 VAV_8 hw_valve",,,,,,,,,@c-021a,,,,,,,,,,,M,,M,,,,"Number",,,100,,0,,,,,M,,,,,,,,,M,,,@c-0000,,,,,"Detroit","%",,M,,,,,,,,,,{precision:0}
+@c-0220,,,,M,,,,,,,,,M,M,,,,,,"Charlie Floor-4 VAV_8 occ_cl_stpt",,,,,,,,,@c-021a,,,,,,,,,,,,,M,,,,"Number",,,,,,,M,,,M,,,,,,,,,,,,@c-0000,M,,,M,"Detroit","°F",,,,,,,,,,,M,
+@c-0221,,,,M,,,,,,,,,,M,,,,,,"Charlie Floor-4 VAV_8 occ_ht_stpt",,,,,,,,,@c-021a,,,,,,,,,,,,M,M,,,,"Number",,,,,,,M,,,M,,,,,,,,,,,,@c-0000,M,,,M,"Detroit","°F",,,,,,,,,,,M,
+@c-0222,,,,,,,,,,,M,,,M,,,,,,"Charlie Floor-4 VAV_8 occ_status",,,,,,,"Unoccupied,Occupied",,@c-021a,,,,,,,,,,,,,M,,,,"Bool",,,,,,,,M,,M,,,,,,,,,,,,@c-0000,,,,,"Detroit",,,,,,,,,,,,,
+@c-0223,,,,,,,,,,,,,,M,,,,,,"Charlie Floor-4 VAV_8 occ_switch",,,,,,,"Open,Closed",,@c-021a,,,,,,,,,,,,,M,,,,"Bool",,,,,,,,M,,M,,,,,,,,,M,,,@c-0000,,,,,"Detroit",,,,,,,,,,,,,
+@c-0224,,,,M,,,,,,,,,,M,,,,,,"Charlie Floor-4 VAV_8 sa_temp",M,,,,,,,,@c-021a,,,,,,,,,,,,,M,,,,"Number",,,,,,,,,,M,,,,,,,,,M,,,@c-0000,,,,M,"Detroit","°F",,,,,,,,,,,,
+@c-0225,,,,M,,,,,,,,,,M,,,,,,"Charlie Floor-4 VAV_8 space_temp",,,,,,,,,@c-021a,,,,,,,,,,,,,M,,,,"Number",,,,,,,,,,M,,,,,,,,,M,,,@c-0000,,,,M,"Detroit","°F",,,,,,,,,,,M,
+@c-0226,,,,M,,,,,,,,,M,M,,,,,,"Charlie Floor-4 VAV_8 unocc_cl_stpt",,,,,,,,,@c-021a,,,,,,,,,,,,,M,,,,"Number",,,,,,,,,,M,,,,,,,,,,,,@c-0000,M,,,M,"Detroit","°F",M,,,,,,,,,,M,
+@c-0227,,,,M,,,,,,,,,,M,,,,,,"Charlie Floor-4 VAV_8 unocc_ht_stpt",,,,,,,,,@c-021a,,,,,,,,,,,,M,M,,,,"Number",,,,,,,,,,M,,,,,,,,,,,,@c-0000,M,,,M,"Detroit","°F",M,,,,,,,,,,M,
+@c-0228,,,,,,,,,,,,,,,,,,,,"Charlie Floor-4 VAV_9",,,,,,,,M,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,@c-0000,,,,,,,,,M,,,,,,,,,{equipGroup:"VAVs"}
+@c-0229,,,,M,,,,,,,,,,M,,M,,,,"Charlie Floor-4 VAV_9 dpr_pos",,,,,,,,,@c-0228,,,,,,,,,,,,,M,,,,"Number",,,,,,,,,,M,,,,,,,,,M,,,@c-0000,,,,,"Detroit","%",,,,,,,,,,,,
+@c-022a,,,,M,,,,,,,,,M,M,,,,,,"Charlie Floor-4 VAV_9 eff_cl_stpt",,M,,,,,,,@c-0228,,,,,,,,,,,,,M,,,,"Number",,,,,,,M,,,M,,,,,,,,,,,,@c-0000,M,,,M,"Detroit","°F",,,,,,,,,,,M,
+@c-022b,,,,M,,,,,,,,,,M,,,,,,"Charlie Floor-4 VAV_9 eff_ht_stpt",,M,,,,,,,@c-0228,,,,,,,,,,,,M,M,,,,"Number",,,,,,,M,,,M,,,,,,,,,,,,@c-0000,M,,,M,"Detroit","°F",,,,,,,,,,,M,
+@c-022c,,,,M,,,,,,,,,,M,,,,,,"Charlie Floor-4 VAV_9 flow_input",M,,,,,,,,@c-0228,,,M,,,,,,,,,,M,,,,"Number",,,96,,45,,,,,M,,,,,,,,,M,,,@c-0000,,,,,"Detroit","cfm",,,,,,,,,,,,{precision:0}
+@c-022d,,,,,,,,,,,,,,M,,,,,,"Charlie Floor-4 VAV_9 hw_valve",,,,,,,,,@c-0228,,,,,,,,,,,M,,M,,,,"Number",,,100,,0,,,,,M,,,,,,,,,M,,,@c-0000,,,,,"Detroit","%",,M,,,,,,,,,,{precision:0}
+@c-022e,,,,,,,,,,,,,,M,,,,,,"Charlie Floor-4 VAV_9 link_ahu_mode",,,,,,,"OFF,WARM\$2dUP,HEAT,COOL,FREECOOL,PRESSURIZE,EVACUATE,VENT",,@c-0228,,,,,,,,,,,,,M,,,,"Str",,,,,,,,,,M,,,,,,,,,M,,,@c-0000,,,,,"Detroit",,,,,,,,,,,,,
+@c-022f,,,,M,,,,,,,,,M,M,,,,,,"Charlie Floor-4 VAV_9 occ_cl_stpt",,,,,,,,,@c-0228,,,,,,,,,,,,,M,,,,"Number",,,,,,,M,,,M,,,,,,,,,,,,@c-0000,M,,,M,"Detroit","°F",,,,,,,,,,,M,
+@c-0230,,,,M,,,,,,,,,,M,,,,,,"Charlie Floor-4 VAV_9 occ_ht_stpt",,,,,,,,,@c-0228,,,,,,,,,,,,M,M,,,,"Number",,,,,,,M,,,M,,,,,,,,,,,,@c-0000,M,,,M,"Detroit","°F",,,,,,,,,,,M,
+@c-0231,,,,,,,,,,,M,,,M,,,,,,"Charlie Floor-4 VAV_9 occ_status",,,,,,,"Unoccupied,Occupied",,@c-0228,,,,,,,,,,,,,M,,,,"Bool",,,,,,,,M,,M,,,,,,,,,,,,@c-0000,,,,,"Detroit",,,,,,,,,,,,,
+@c-0232,,,,,,,,,,,,,,M,,,,,,"Charlie Floor-4 VAV_9 occ_switch",,,,,,,"Open,Closed",,@c-0228,,,,,,,,,,,,,M,,,,"Bool",,,,,,,,M,,M,,,,,,,,,M,,,@c-0000,,,,,"Detroit",,,,,,,,,,,,,
+@c-0233,,,,M,,,,,,,,,,M,,,,,,"Charlie Floor-4 VAV_9 sa_temp",M,,,,,,,,@c-0228,,,,,,,,,,,,,M,,,,"Number",,,,,,,,,,M,,,,,,,,,M,,,@c-0000,,,,M,"Detroit","°F",,,,,,,,,,,,
+@c-0234,,,,M,,,,,,,,,,M,,,,,,"Charlie Floor-4 VAV_9 space_temp",,,,,,,,,@c-0228,,,,,,,,,,,,,M,,,,"Number",,,,,,,,,,M,,,,,,,,,M,,,@c-0000,,,,M,"Detroit","°F",,,,,,,,,,,M,
+@c-0235,,,,,,,,,,,,,,M,,,,,,"Charlie Floor-4 VAV_9 terminal_status",,,,,,,"Off,Heating,Warm\$2dUp,Vent,N\$2fA,Cooling,Dehumidify,Reheat,Pressurize,Evacuate,Shutdown,IAQ\$20Override,Air\$20Balancing",,@c-0228,,,,,,,,,,,,,M,,,,"Str",,,,,,,,,,M,,,,,,,,,M,,,@c-0000,,,,,"Detroit",,,,,,,,,,,,,
+@c-0236,,,,M,,,,,,,,,M,M,,,,,,"Charlie Floor-4 VAV_9 unocc_cl_stpt",,,,,,,,,@c-0228,,,,,,,,,,,,,M,,,,"Number",,,,,,,,,,M,,,,,,,,,,,,@c-0000,M,,,M,"Detroit","°F",M,,,,,,,,,,M,
+@c-0237,,,,M,,,,,,,,,,M,,,,,,"Charlie Floor-4 VAV_9 unocc_ht_stpt",,,,,,,,,@c-0228,,,,,,,,,,,,M,M,,,,"Number",,,,,,,,,,M,,,,,,,,,,,,@c-0000,M,,,M,"Detroit","°F",M,,,,,,,,,,M,
+@c-0238,,,M,,,,,,,,,,,,,,,,,"Charlie HEATING UNIT-1",,,,,,,,M,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,@c-0000,,,,,,,,,,,,,,,,,,{unitHeater equipGroup:"AHUs"}
+@c-0239,,,,M,,,,,,,,,,M,,,,,,"Charlie HEATING UNIT-1 Discharge Air Temp",M,,,,,,,,@c-0238,,,,,,,,,,,,,M,,,,"Number",,,,,,,,,,M,,,,,,,,,M,,,@c-0000,,,,M,"New_York","°F",,,,,,,,,,,,
+@c-023a,,,,M,,,,,,,,,,M,,,,,,"Charlie HEATING UNIT-1 HeatUnit-SF~2dS",M,,,,,,"Off,On",,@c-0238,M,,,,,,,,,,,,M,,,,"Bool",,,,,,,,,,M,,,,,,,,,M,,,@c-0000,,,,,"New_York",,,,,,,,,,,,,
+@c-023b,,,,M,,,,,,,,,,M,,,,,,"Charlie HEATING UNIT-1 HeatUnit1-DA~2dP--",M,,,,,,,,@c-0238,,,,,,,,,,,,,M,,,,"Number",,,,,,,,,,M,,,M,,,,,,M,,,@c-0000,,,,,"New_York","in/wc",,,,,,,,,,,,{precision:2}
+@c-023c,,,,M,,,,,,,,,,M,,,,,,"Charlie HEATING UNIT-1 HeatUnit1-DA~2dP-SetPoint",M,,,,,,,,@c-0238,,,,,,,,,,,,,M,,,,"Number",,,,,,,,,,M,,,M,,,,,,,,,@c-0000,M,,,,"New_York","in/wc",,,,,,,,,,,,{precision:2}
+@c-023d,,,,M,,,,,,,,,,M,,,,,,"Charlie HEATING UNIT-1 HeatUnit1-Discharge Air Temp-Reset",M,,,,,,,,@c-0238,,,,,,,,,,,,,M,,,,"Number",,,,,,,,,,M,,,,,,,,,,,,@c-0000,M,,,M,"New_York","°F",,,,,,,,,,,,{reset}
+@c-023e,,,,,,,,,,,M,,,M,,,,,,"Charlie HEATING UNIT-1 HeatUnit1-HW~2dValve",,,,,,,,,@c-0238,,,,,,,,,,,,,M,,M,,"Number",,,,,,,,,,M,,,,,,,,,,,,@c-0000,,,,,"New_York","%",,M,,,M,,,,,,,
+@c-023f,,,,,,,,,,,M,,,M,,,,,,"Charlie HEATING UNIT-1 HeatUnit1-OCC~2dC",,,,,,,"UnOccupied,Occupied",,@c-0238,,,,,,,,,,,,,M,,,,"Bool",,,,,,,,M,,M,,,,,,,,,,,,@c-0000,,,,,"New_York",,,,,,,,,,,,,
+@c-0240,,,,M,,,,,,,M,,,M,,,,,,"Charlie HEATING UNIT-1 HeatUnit1-SF~2dC",M,,,,,,"Off,On",,@c-0238,M,,,,,,,,,,,,M,,,,"Bool",,,,,,,,,,M,,,,,,,,,,,,@c-0000,,,,,"New_York",,,,,,,,,,,,,
+@c-0241,,,,M,,,,,,,M,,,M,,,,,,"Charlie HEATING UNIT-1 HeatUnit1-SF~2dVFD",M,,,,,,,,@c-0238,M,,,,,,,,,,,,M,,,,"Number",,,,,,,,,,M,,,,,,,,,,,,@c-0000,,M,,,"New_York","%",,,,,,,,,,,,
+@c-0242,,,,M,,,,,,,M,,,M,,,,,,"Charlie HEATING UNIT-1 SupplyFan",M,,,,,,"false,true",,@c-0238,M,,,,,,,,,,,,M,,,,"Bool",,,,,,,,,,M,,,,,,,,,,,,@c-0000,,,,,"New_York",,,,,,,,,,,,,
+@c-0243,,,,M,,,,,,,,,,M,,,,,,"Charlie HEATING UNIT-1 SupplyfanStatus",M,,,,,,"false,true",,@c-0238,M,,,,,,,,,,,,M,,,,"Bool",,,,,,,,,,M,,,,,,,,M,M,,,@c-0000,,,,,"New_York",,,,,,,,,,,,,
+@c-0244,,,,M,,,,,,,,,,M,,,,,,"Charlie HEATING UNIT-1 Zone Air Temp Sensor",,,,,,,,,@c-0238,,,,,,,,,,,,,M,,,,"Number",,,,,,,,,,M,,,,,,,,,M,,,@c-0000,,,,M,"New_York","°F",,,,,,,,,,,M,
+@c-0245,,,M,,,,,,,,,,,,,,,,,"Charlie HEATING UNIT-2",,,,,,,,M,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,@c-0000,,,,,,,,,,,,,,,,,,{unitHeater equipGroup:"AHUs"}
+@c-0246,,,,M,,,,,,,,,,M,,,,,,"Charlie HEATING UNIT-2 Discharge Air Temp",M,,,,,,,,@c-0245,,,,,,,,,,,,,M,,,,"Number",,,,,,,,,,M,,,,,,,,,M,,,@c-0000,,,,M,"New_York","°F",,,,,,,,,,,,
+@c-0247,,,,M,,,,,,,,,,M,,,,,,"Charlie HEATING UNIT-2 HeatUnit2-DA~2dP",M,,,,,,,,@c-0245,,,,,,,,,,,,,M,,,,"Number",,,,,,,,,,M,,,M,,,,,,M,,,@c-0000,,,,,"New_York","in/wc",,,,,,,,,,,,{precision:2}
+@c-0248,,,,M,,,,,,,,,,M,,,,,,"Charlie HEATING UNIT-2 HeatUnit2-DA~2dP-SetPoint",M,,,,,,,,@c-0245,,,,,,,,,,,,,M,,,,"Number",,,,,,,,,,M,,,M,,,,,,,,,@c-0000,M,,,,"New_York","in/wc",,,,,,,,,,,,{precision:2}
+@c-0249,,,,,,,,,,,M,,,M,,,,,,"Charlie HEATING UNIT-2 HeatUnit2-HW~2dValve",,,,,,,,,@c-0245,,,,,,,,,,,,,M,,M,,"Number",,,,,,,,,,M,,,,,,,,,,,,@c-0000,,,,,"New_York","%",,M,,,M,,,,,,,
+@c-024a,,,,,,,,,,,M,,,M,,,,,,"Charlie HEATING UNIT-2 HeatUnit2-OCC~2dC",,,,,,,"UnOccupied,Occupied",,@c-0245,,,,,,,,,,,,,M,,,,"Bool",,,,,,,,M,,M,,,,,,,,,,,,@c-0000,,,,,"New_York",,,,,,,,,,,,,
+@c-024b,,,,M,,,,,,,M,,,M,,,,,,"Charlie HEATING UNIT-2 HeatUnit2-SF~2dC",M,,,,,,"Off,On",,@c-0245,M,,,,,,,,,,,,M,,,,"Bool",,,,,,,,,,M,,,,,,,,,,,,@c-0000,,,,,"New_York",,,,,,,,,,,,,
+@c-024c,,,,M,,,,,,,,,,M,,,,,,"Charlie HEATING UNIT-2 HeatUnit2-SF~2dS",M,,,,,,"Off,On",,@c-0245,M,,,,,,,,,,,,M,,,,"Bool",,,,,,,,,,M,,,,,,,,,M,,,@c-0000,,,,,"New_York",,,,,,,,,,,,,
+@c-024d,,,,M,,,,,,,M,,,M,,,,,,"Charlie HEATING UNIT-2 HeatUnit2-SF~2dVFD",M,,,,,,,,@c-0245,M,,,,,,,,,,,,M,,,,"Number",,,,,,,,,,M,,,,,,,,,,,,@c-0000,,M,,,"New_York","%",,,,,,,,,,,,
+@c-024e,,,,M,,,,,,,M,,,M,,,,,,"Charlie HEATING UNIT-2 SupplyFan",M,,,,,,"false,true",,@c-0245,M,,,,,,,,,,,,M,,,,"Bool",,,,,,,,,,M,,,,,,,,,,,,@c-0000,,,,,"New_York",,,,,,,,,,,,,
+@c-024f,,,,M,,,,,,,,,,M,,,,,,"Charlie HEATING UNIT-2 SupplyfanStatus",M,,,,,,"false,true",,@c-0245,M,,,,,,,,,,,,M,,,,"Bool",,,,,,,,,,M,,,,,,,,M,M,,,@c-0000,,,,,"New_York",,,,,,,,,,,,,
+@c-0250,,,,M,,,,,,,,,,M,,,,,,"Charlie HEATING UNIT-2 Zone Air Temp Sensor",,,,,,,,,@c-0245,,,,,,,,,,,,,M,,,,"Number",,,,,,,,,,M,,,,,,,,,M,,,@c-0000,,,,M,"New_York","°F",,,,,,,,,,,M,
+@c-0251,,,,,,,,,,,,,,,,,,,,"Charlie LIBERTY_100_LIGHTING",,,,,,,,M,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,@c-0000,,,,,,,,,,,,,,,,,,{lightsGroup equipGroup:"Lighting System"}
+@c-0252,,,,,,,,,,,,,,M,,,,,,"Charlie LIBERTY_100_LIGHTING Photo-Cell",,,,,,,,,@c-0251,,,,,,,,,,,,,M,,,,"Number",,M,,,,,,,,M,,,,,,,,,M,,,@c-0000,,,,,"New_York","lx",,,,,,,,,,,,{precision:1}
+@c-0253,,,,M,,,,,,,M,,,M,,M,,,,"Charlie LIBERTY_100_LIGHTING VAVActuatorCommand",,,,,,,,,@c-0251,,,,,,,,,,,,,M,,,,"Number",,,,,,,,,,M,,,,,,,,,,,,@c-0000,,,,,"Detroit","%",,,,,,,,,,,,{precision:1}
+@c-0254,,,,M,,,,,,,M,,,M,,M,,,,"Charlie LIBERTY_100_LIGHTING VAVActuatorCommand",,,,,,,,,@c-0251,,,,,,,,,,,,,M,,,,"Number",,,,,,,,,,M,,,,,,,,,,,,@c-0000,,,,,"Detroit","%",,,,,,,,,,,,{precision:1}
+@c-0255,,M,,M,,,,,,,,,,M,,M,,,,"Charlie LIBERTY_100_LIGHTING VAVActuatorPosition",,,,,,,,,@c-0251,,,,,,,,,,,,,M,,,,"Number",,,,,,,,,,M,,,,,,,,,M,,,@c-0000,,,,,"Detroit","%",,,,,,,,,,,,{precision:1 position actuatorPosition}
+@c-0256,,M,,M,,,,,,,,,,M,,M,,,,"Charlie LIBERTY_100_LIGHTING VAVActuatorPosition",,,,,,,,,@c-0251,,,,,,,,,,,,,M,,,,"Number",,,,,,,,,,M,,,,,,,,,M,,,@c-0000,,,,,"Detroit","%",,,,,,,,,,,,{precision:1 position actuatorPosition}
+@c-0257,M,,,,,,,,,,,,,,,,,,,"Charlie Water_Main_100_Meter",,,M,,,,,M,,,,,,,,,,,,,,,,,,,,,,M,,,,,,,,,,,,,,,,,,@c-0000,,,,,,,,,,,M,,,,,,,{equipGroup:"Meters"}
+@c-0258,,,,,,,,,,,,,,M,,,,,,"Charlie Water_Main_100_Meter chA mass flow",,,,,,,,,@c-0257,,,,,,,,,,,,,M,,,,"Number",,,,,,,,,,M,,,,,,,,,M,,,@c-0000,,,,,"Detroit","lb/h",,,,,,,,,,,,
+@c-0259,,,,,,,,,,,,,,M,,,,,,"Charlie Water_Main_100_Meter chA volumetric flow rate",,,,,,,,,@c-0257,,,M,,,,,,,,,,M,,,,"Number",,,,,,,,,,M,,,,,,,,,M,,,@c-0000,,,,,"Detroit","gal/min",,,,M,M,,,,,,,{pointType:""}
+@c-025a,,,,,,,,,,,,,,M,,,,,,"Charlie Water_Main_100_Meter chA volumetric flow rate, + totalizer",,,,,,,,,@c-0257,,,,,,,,,,,,,M,,,,"Number",,,,,,,,,,M,,,,,,,,,M,,,@c-0000,,,,,"Detroit","gal",,,,,,,,,,,,
+@c-025b,M,,,,,,,,,,,,,,,,,,,"Charlie West_Return_Fan_Meter",,,M,,,,,M,@c-001a,,,,,,,,,,,,,,,,,,,,,M,,,,,,,,,,,,,,,,,,@c-0000,,,@c-007d,,,,,,,,,,,,,,,{equipGroup:"Meters"}
+@c-025c,,,,,,,,,,,,,,M,M,,,,,"Charlie West_Return_Fan_Meter Current Sum Element G",,,,,,,,,@c-025b,,,,,,,,,,,,,M,,,,"Number",,,,,,,,,,M,,,,,,,,,M,,,@c-0000,,,,,"Detroit","A",,,,,,,,,,,,
+@c-025d,,,,,,,,,,,,,,M,,,,,,"Charlie West_Return_Fan_Meter Fan VA Sum Element G",,,,,,,,,@c-025b,,,,,,,,,,,,,M,,,,"Number",,,,,,,,,,M,,,,,,M,,,M,,,@c-0000,,,,,"Detroit","kVA",,,,,,,,,,,,
+@c-025e,M,,,,,,,,,,,,,M,,,,M,,"Charlie West_Return_Fan_Meter Power Demand Peak Element G",,,M,,,,,,@c-025b,,,,,,,,,,,,,M,,,,"Number",,,,,,,,,,M,M,,,,,,,,M,,,@c-0000,,,,,"Detroit","kW",,,,,,,,,,,,
+@c-025f,M,,,,,,,,,,,,,M,,,,,,"Charlie West_Return_Fan_Meter Power Sum Element G",,,M,,,,,,@c-025b,,,,,,,,,,,,,M,,,,"Number",,,,,,,,,,M,M,,,,,,,,M,,,@c-0000,,,,,"Detroit","kW",,,,,,,,,,,,
+@c-0260,,,,,,,,,,,,,,M,,,,,,"Charlie West_Return_Fan_Meter VA Demand Peak Element G",,,,,,,,,@c-025b,,,,,,,,,,,,,M,,,,"Number",,,,,,,,,,M,,,,,,M,,,M,,,@c-0000,,,,,"Detroit","kVA",,,,,,,,,,,,
+@c-0261,M,,,,,,,,,,,,,,,,,,,"Charlie West_Supply_Fan_Meter",,,M,,,,,M,@c-001a,,,,,,,,,,,,,M,,,,,,,,M,,,,,,,,,,,,,,,,,,@c-0000,,,@c-007d,,,,,,,,,,,,,,,{equipGroup:"Meters"}
+@c-0262,,,,,,,,,,,,,,M,M,,,,,"Charlie West_Supply_Fan_Meter Current Sum Element P",,,,,,,,,@c-0261,,,,,,,,,,,,,M,,,,"Number",,,,,,,,,,M,,,,,,,,,M,,,@c-0000,,,,,"Detroit","A",,,,,,,,,,,,
+@c-0263,M,,,,,,,,,,,,,M,,,,M,,"Charlie West_Supply_Fan_Meter Power Demand Peak Element P",,,M,,,,,,@c-0261,,,,,,,,,,,,,M,,,,"Number",,,,,,,,,,M,M,,,,,,,,M,,,@c-0000,,,,,"Detroit","kW",,,,,,,,,,,,
+@c-0264,M,,,,,,,,,,,,,M,,,,,,"Charlie West_Supply_Fan_Meter Power Sum Element P",,,M,,,,,,@c-0261,,,,,,,,,,,,,M,,,,"Number",,,,,,,,,,M,M,,,,,,,,M,,,@c-0000,,,,,"Detroit","kW",,,,,,,,,,,,
+@c-0265,,,,,,,,,,,,,,M,,,,,,"Charlie West_Supply_Fan_Meter VA Demand Peak Element P",,,,,,,,,@c-0261,,,,,,,,,,,,,M,,,,"Number",,,,,,,,,,M,,,,,,M,,,M,,,@c-0000,,,,,"Detroit","kVA",,,,,,,,,,,,
+@c-0266,,,,,,,,,,,,,,M,,,,,,"Charlie West_Supply_Fan_Meter VA Sum Element P",,,,,,,,,@c-0261,,,,,,,,,,,,,M,,,,"Number",,,,,,,,,,M,,,,,,M,,,M,,,@c-0000,,,,,"Detroit","kVA",,,,,,,,,,,,
+@c-0267,,,,,,,,,,,,,,,,,,,,"Troy, MI",,,,,,,,,,,,,,"Troy",C(42.606,-83.15),"US",,"MI",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,"Detroit",,,,,,,,,,M,,,
+@c-0268,,,,,,,M,,,,,,,,,,,,,"Troy, MI Barometric Pressure",,,,,,,,,,,,,,,,,,,,,,M,,,,"Number",,,,,,,,,,M,,,M,,,,,,M,,,,,,,,"Detroit","inHg",,,,,,M,,@c-0267,,,,
+@c-0269,,,,,,,,,,,,,,,,,,,,"Troy, MI Condition",,,,,,,"unknown,clear,partlyCloudy,cloudy,showers,rain,thunderstorms,ice,flurries,snow",,,,,,,,,,,,,,,M,,,,"Str",,,,,,,,,,M,,,,,,,,,M,,,,,,,,"Detroit",,,,,,,M,M,@c-0267,,,,
+@c-026a,,,,,,,,,,,,,,,,,,,M,"Troy, MI Dew Point",,,,,,,,,,,,,,,,,,,,,,M,,,,"Number",,,,,,,,,,M,,,,,,,,,M,,,,,,,M,"Detroit","°F",,,,,,M,,@c-0267,,,,
+@c-026b,,,,,,,,,,,,,,,,,,,,"Troy, MI Feels Like",,,,,,,,,,,M,,,,,,,,,,,M,,,,"Number",,,,,,,,,,M,,,,,,,,,M,,,,,,,M,"Detroit","°F",,,,,,M,,@c-0267,,,,
+@c-026c,,,,M,,,,,,,,,,,,,,,,"Troy, MI Humidity",,,,,,,,,,,,,,,,,,,,,,M,,,M,"Number",,,,,,,,,,M,,,,,,,,,M,,,,,,,,"Detroit","%RH",,,,,,M,,@c-0267,,,,
+@c-026d,,,,,,,,,,,,,,,,,,,,"Troy, MI Precipitation",,,,,,,,,,,,,,,,,,,,,,M,,,,"Number",,,,,,,,,,M,,M,,,,,,,M,,,,,,,,"Detroit","in",,,,,,M,,@c-0267,,,,
+@c-026e,,,,,,,,,,,,,,,,,M,,,"Troy, MI Sunrise",,,,,,,,,,,,,,,,,,,,,,M,,,,"Bool",,,,,,,,,,M,,,,,,,,,M,,,,,,,,"Detroit",,,,,,,M,,@c-0267,,,,
+@c-026f,,,,M,,,,,,,,,,,,,,,,"Troy, MI Temp",,,,,,,,,,,,,,,,,,,,,,M,,,,"Number",,,,,,,,,,M,,,,,,,,,M,,,,,,,M,"Detroit","°F",,,,,,M,,@c-0267,,,,

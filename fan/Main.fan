@@ -100,11 +100,11 @@ class Main : AbstractMain
     } 
     else if (theseMatches.isEmpty)
     {
-      echo("   " + toDis(point) + ": NO MATCH")
+      echo("   " + toDis(point) + "->" + reduceProtoToTagList(point)  + ": NO MATCH")
     }
     else
     {
-      echo("   " + toDis(point) + ": PARTIAL MATCHES")
+      echo("   " + toDis(point) + "->" + reduceProtoToTagList(point) + ": AMBIGUOUS MATCH")
       theseMatches.each |matchList| {
         echo("     - $matchList")
       }
