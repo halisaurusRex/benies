@@ -49,7 +49,6 @@ class Main : AbstractMain
   ** Validate a single equip record
   Void validateEquip(Dict equip)
   {
-    echo
     echo("-- " + toDis(equip) + " --")
 
     // reflect the equip subtypes
@@ -62,6 +61,8 @@ class Main : AbstractMain
 
     // process points under this equip
     validatePoints(equip)
+
+    findMultipleProtoMatches(equip)
   }
 
   ** Validate the points under the given equip
@@ -96,7 +97,7 @@ class Main : AbstractMain
     // return output to console that aligns with point's match condition
     if (hasFullMatch) 
     {
-      a:=1 //echo("   " + toDis(point) + " | proto:" + theseMatches)
+      a:=null // echo("   " + toDis(point) + " | proto:" + theseMatches)
     } 
     else if (theseMatches.isEmpty)
     {
@@ -119,7 +120,7 @@ class Main : AbstractMain
     
     // if the protos variable is empty, return an empty list.
     if (protos.isEmpty) return [,]
-      
+
     // iterate the protos and if a match is found, add to matchedProtos list
     protos.each |row| 
     {
@@ -136,10 +137,12 @@ class Main : AbstractMain
     bestMatchPercent:= closeMatches[0]->percentMatch
     
     // if there is a full match (100%), return the list of tags of the matched prototype (returns Str[])
+    
     if (bestMatchPercent == Number(100)) 
     {
       thisTagList:= closeMatches[0]->tagList
-      point= Etc.dictSet(point, "protoMatch", thisTagList)
+      setRecProtoMatch(point, thisTagList)
+      
       return thisTagList
     }
     // if not, return a list of the matched prototypes tags (returns List[])
@@ -162,6 +165,59 @@ class Main : AbstractMain
       
       return thesePartialMatches
     }
+    
+  }
+
+  Void setRecProtoMatch(Dict point, List tagList) 
+  {
+    acc:= [,]
+
+    grid:= this.recs.dup
+
+    grid.each |rec|
+    {
+      if(rec["id"] == point["id"]) 
+        acc= acc.add(Etc.dictSet(rec, "protoMatch", tagList)) 
+      else
+        acc= acc.add(rec)
+    }
+
+    this.recs= acc
+  }
+
+  Void findMultipleProtoMatches(Dict equip)
+  {
+    // access updated records and find children points
+    pointsAndProtos := recs.findAll |rec| { rec.has("point") && rec["equipRef"] == equip.id && rec.has("protoMatch")}
+    
+    if(pointsAndProtos.isEmpty) return null
+    // get the list of unique protoMatches for this equip
+    protoMatchList:= Etc.makeDictsGrid(null, pointsAndProtos).unique(["protoMatch"]).colToList("protoMatch")
+    
+    acc:= [,]
+    
+    if (protoMatchList.isEmpty) return null 
+    
+    // for each item on the protoMatchList, add findAll.size > 1 to acc
+    protoMatchList.each |protoListItr| 
+    {
+      protoRows:= pointsAndProtos.findAll |point| {point["protoMatch"] == protoListItr}
+      if (protoRows.size > 1) 
+      {
+        protoRows.each |thisProtoRow| 
+        {
+          acc= acc.add(thisProtoRow)
+        }
+      }
+    }
+
+    pointsMultiProtos:= Etc.makeDictsGrid(null, acc)
+  
+    pointsMultiProtos.each |point|
+    {
+      thisProto:= point->protoMatch
+      echo("   " + toDis(point) + " | DUPLICATE PROTO:" + thisProto)
+    } 
     
   }
 
