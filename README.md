@@ -6,7 +6,7 @@
  3. Download benies.pod from the `lib/fan/` folder and drop it in the `lib/fan/` directory of your Haxall installation
  4. From the command line, run with the location of the Zinc file you would like to test as a parameter
  
- *for example:*
+ *for example (run from the `haxall/bin/` directory):*
  ```
  fan benies c:\fan\files\alpha.zinc
  ```
