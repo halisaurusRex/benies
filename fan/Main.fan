@@ -97,7 +97,7 @@ class Main : AbstractMain
     // return output to console that aligns with point's match condition
     if (hasFullMatch) 
     {
-      a:=null // echo("   " + toDis(point) + " | proto:" + theseMatches)
+      echo("   " + toDis(point) + " | proto:" + theseMatches)
     } 
     else if (theseMatches.isEmpty)
     {
